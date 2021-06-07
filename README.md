@@ -18,11 +18,11 @@ Hay que recalcar también que nuestro **target principal tiene una posición eco
 
 ### Líneas de productos:
 
-1-Gourmet
+* Gourmet
 
-2-Almacén
+* Almacén
 
-3-Cosmética
+* Cosmética
 
 
 ## Nuestro Equipo:
