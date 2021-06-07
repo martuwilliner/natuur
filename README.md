@@ -1,4 +1,4 @@
-![logo.png][/design/logo.png "Natuur"]
+![logo.png][design/logo.png "Natuur"]
 
 ## Market Place
 Nuestra app y página web en el fondo amerita hablar de un nicho. Un público muy específico y detallado al respecto.
@@ -40,14 +40,14 @@ Manejo: Node.js , Express, React, MySQL, JavaScript, HTML, CSS, Bootstrap, Angul
 Entre mi formación y conocimientos en el ámbito de la tecnología, cuento con un curso de Python realizado en la Universidad Austral así como un seminario de Ingeniería en sistemas donde se trataba cuestiones sobre el dominio y codominio de páginas web. Aunque tambien cuento con un curso introductorio a la creación de videojuegos en la Universidad de Buenos Aires.
 
 **Roman Borla**
-*IamRoman-rb*
+*@IamRoman-rb*
 
 Mi nombre es Roman Borla, soy Dj Producer de tech house. Un interesador en la tecnología y la programación, apasionado del deporte.
 
 Soy estudiante de nivel secundario, con el sueño de ser ingeniero informático, experto en programación.
 
 **Delfina Casarino**
-*delficasarino*
+*@delficasarino*
 
 Tengo 31 años, soy Licenciada en Publicidad y emprendedora. Tengo una agencia de comunciación y un emprendimiento de alojamientos temporarios. Mi objetivo es dedicarme a programación full stack de forma freelancer. 
 
