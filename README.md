@@ -1,4 +1,4 @@
-# being_nature
+![logo.png][/design/logo.png "Natuur"]
 
 ## Market Place
 Nuestra app y página web en el fondo amerita hablar de un nicho. Un público muy específico y detallado al respecto.
@@ -27,16 +27,40 @@ Hay que recalcar también que nuestro **target principal tiene una posición eco
 
 ## Nuestro Equipo:
 
+**Martín Williner**
+*@martuwilliner*
 
+Por un lado soy Full Stack Developer jr ya que estoy dando mis primeros pasos en el campo pero, por el otro lado, Licenciado en Comunicación Social especializado en Marketing.
+
+Gracias al gobierno de la Ciudad de Buenos Aires, gané una beca para poder asistir al IESE Business School (Universidad de Navarra - España )para seguir desarrollándome en un curso de "Marketing Estratégico". No obstante, gracias a la facultad a la que concurrí, tuve la chance de poder asistir a diversos congresos de comunicación, medios y marketing digital.
+
+Por el lado de programación Full Stack, concurro, hasta el mes de Octubre del 2021, a la escuela de programación Digital House aunque comencé mis primeros trabajos a modo freelance.
+Manejo: Node.js , Express, React, MySQL, JavaScript, HTML, CSS, Bootstrap, Angular JS y Python.
+
+Entre mi formación y conocimientos en el ámbito de la tecnología, cuento con un curso de Python realizado en la Universidad Austral así como un seminario de Ingeniería en sistemas donde se trataba cuestiones sobre el dominio y codominio de páginas web. Aunque tambien cuento con un curso introductorio a la creación de videojuegos en la Universidad de Buenos Aires.
+
+**Roman Borla**
+*IamRoman-rb*
+
+Mi nombre es Roman Borla, soy Dj Producer de tech house. Un interesador en la tecnología y la programación, apasionado del deporte.
+
+Soy estudiante de nivel secundario, con el sueño de ser ingeniero informático, experto en programación.
+
+**Delfina Casarino**
+*delficasarino*
+
+Tengo 31 años, soy Licenciada en Publicidad y emprendedora. Tengo una agencia de comunciación y un emprendimiento de alojamientos temporarios. Mi objetivo es dedicarme a programación full stack de forma freelancer. 
+
+Tengo experiencia en diseño web y programación: HTML, CSS, MySQL, PHP.
 
 ## Referencias WEB:
 
-[GitHub Pages](https://pages.github.com/)
+[Green Eat](https://www.greeneat.com.ar/)
 
-[GitHub Pages](https://pages.github.com/)
+[Tea Connection](https://teaconnection.com.ar/)
 
-[GitHub Pages](https://pages.github.com/)
+[New Garden](https://newgarden.com.ar/)
 
-[GitHub Pages](https://pages.github.com/)
+[Bee Pure](https://beepure.com.ar/)
 
-[GitHub Pages](https://pages.github.com/)
+[Flora Almacen](https://floraalmacen.com/)
