@@ -4,7 +4,7 @@
 Nuestra app y página web en el fondo amerita hablar de un nicho. Un público muy específico y detallado al respecto.
 
 Cuando mencionamos a este público principal y de nicho, no hacemos diferencia sobre el sexo de la persona, ya que ambos representan a este nicho.
-No obstante, no hablamos de un rango etario aún joven o adolescente (menor a 18/21 años), sino que **nuestro público oscila entre los 21 años hasta los 60 como mucho**.
+No obstante, no hablamos de un rango etario aún joven o adolescente (menor a 18/21 años), sino que **nuestro público oscila entre los 21 años hasta los 40 como mucho**.
 
 Este rango extenso es porque, en principio hablamos de **personas que tienen un trabajo, estudian y tienen también la posibilidad de entrenar su cuerpo y mente**.
 
