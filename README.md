@@ -1,4 +1,4 @@
-![logo.png](/design/logo-natuur.png)
+![logo.png](/design/logo.png)
 
 ## Market Place
 Nuestra app y página web en el fondo amerita hablar de un nicho. Un público muy específico y detallado al respecto.
