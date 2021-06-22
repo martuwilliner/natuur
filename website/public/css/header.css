@@ -10,16 +10,16 @@
 }
 body{
     font-family: 'Noto Sans', sans-serif;
+    
 }
 
 header{
     width: 100vw;
     display: flex;
     padding: 1rem;
-    position: fixed;
-    top: 0;
     background-color: rgb(230, 158, 44);
     height: 450px;
+    overflow: hidden;
 }
 
 #main-menu{
@@ -27,8 +27,11 @@ header{
     flex-wrap: wrap;
     flex-direction: row;
     width: 100vw;
+    padding: 1rem;
     /* background-color: burlywood; */
     margin: auto;
+    position: fixed;
+    top: 0vw;
 }
 
 #main-menu figure{
@@ -36,7 +39,7 @@ header{
     width: 45vw;
 }
 img{
-    max-width: 100%;
+    max-width: 200px;
 }
 
 #hamburguer-menu{
@@ -48,6 +51,7 @@ img{
     justify-content: flex-end;
     align-items: center;
     /* background-color: brown; */
+    padding-right: 1rem;
 }
 
 .fa-bars{
@@ -64,10 +68,7 @@ img{
     display: none;
 }
 
-main{
-    margin-top: 450px;
-    /* actualizar con el alto del header */
-}
+
 
 @media screen and (min-width: 768px){
     #main-menu{
@@ -79,6 +80,9 @@ main{
     }
     #main-menu figure{
        width: 45vw; 
+    }
+    #main-menu figure img{
+        max-width: 200px;
     }
     #user-list{
         display: flex;
@@ -126,4 +130,12 @@ main{
         color: #f1ba33;
         font-weight: 700;   
     }
+}
+
+@media screen and (min-width: 1080px){
+    #head-list li a{
+        padding: 0 2rem;
+    }
+
+    
 }
