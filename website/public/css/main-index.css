@@ -1,0 +1,236 @@
+/*MAIN*/
+main {
+    display: flex;
+    width: 90vw;
+    flex-flow: column wrap;
+    margin: auto;
+}
+
+/*DESTACADOS*/
+#destacados, #kits {
+    display: flex;
+    width: 90vw;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+#destacados h1, #kits h1 {
+    width: 90vw;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #3f3f3f;
+    margin: 2rem 0;
+}
+
+#destacados article {
+/*  NO HACE FALTA
+    width: 50vw;
+*/
+    /* box-shadow: 0px 0px 10px rgb(100, 100, 100); */
+    transition: all 400ms ease-in-out; 
+    margin: auto;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    background-color: #D4CFD5;
+
+    position: relative; 
+}
+
+#destacados article:hover {
+    box-shadow: 0px 0px 10px rgb(242, 186, 51);
+}
+
+#destacados article img, #kits article img {
+    width: 100%;
+}
+
+#destacados .product-info {
+    display: flex;
+    width: 100%;
+    flex-flow: column wrap;
+    /* align-items: flex-end; */
+
+    align-items: center;
+    
+}
+
+#destacados .descripcion {
+    font-size: 1.2rem;
+
+    position: absolute;
+    top: 10vw;
+    color: #3f3f3f; 
+    font-weight: 700;
+    background-color: #f1ba33;
+    padding: 1rem;
+    width: 100%;
+
+    transition: all 400ms ease-in-out;
+}
+
+#destacados article:hover .descripcion {
+    box-shadow: 0px 0px 10px rgb(242, 186, 51);
+}
+
+#destacados .precio {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #3f3f3f; 
+
+    /* border: none;
+    border-radius: 50%;
+    background-color: #f1ba33;
+    padding: 1rem; */
+    position: absolute;
+    bottom: 5vw;
+    right: 5vw;
+}
+
+/*KITS*/
+#kits article {
+    margin: auto;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    background-color: #D4CFD5;
+        
+    opacity: 1.0;
+    position: relative; 
+    transition: all 400ms ease-in-out; 
+    }
+    
+#kits article:hover img{
+    opacity: 0.3;
+    }
+    
+#kits .product-info {
+    Display: flex;
+    width: 100%;
+    flex-flow: column wrap;
+    /* align-items: flex-end; */
+  
+    align-items: center;  
+    }
+    
+#almacen .descripcion {
+    font-size: 2rem;
+    position: absolute;
+    top: 50vw;
+    color: #3f3f3f; 
+    background-color: #f1ba33;
+    border-radius: .5rem;
+    padding: 0.8rem;
+    font-weight: 700;
+
+    visibility: hidden;
+    transition: all 400ms ease-in-out;
+    }
+
+#gourmet .descripcion {
+    font-size: 2rem;
+    position: absolute;
+    top: 50vw;
+    color: #3f3f3f; 
+    background-color: #469e9d;
+    border-radius: .5rem;
+    padding: 0.8rem;
+    font-weight: 700;
+
+    visibility: hidden;
+    transition: all 400ms ease-in-out;
+    }
+
+#cosmetica .descripcion {
+    font-size: 2rem;
+    position: absolute;
+    top: 50vw;
+    color: #3f3f3f; 
+    background-color: #e58976;
+    border-radius: .5rem;
+    padding: 0.8rem;
+    font-weight: 700;
+
+    visibility: hidden;
+    transition: all 400ms ease-in-out;
+    }
+
+#kits article:hover .descripcion{
+    visibility: visible;
+    }
+
+
+/**TABLET**/
+@media screen and (min-width: 768px) {
+
+    /*DESTACADOS*/
+    #destacados article {
+        display: flex;
+        width: 40vw;
+        flex-flow: row wrap;
+        }
+
+    #destacados .descripcion {
+        top: 5vw;
+        }
+        
+    #destacados .precio {
+        bottom: 2vw;
+        right: 2vw;
+        }
+
+    /*KITS*/  
+    #almacen .descripcion {
+        font-size: 1.3rem;
+        top: 10vw;
+        text-align: center;
+        }
+
+    #gourmet .descripcion {
+        font-size: 1.3rem;
+        top: 10vw;
+        text-align: center;
+        }
+
+    #cosmetica .descripcion {
+        font-size: 1.3rem;
+        top: 10vw;
+        text-align: center;
+        }
+
+    #kits article:hover .descripcion{
+        visibility: visible;
+        }
+
+}
+
+@media screen and (min-width: 1080px) {
+
+    /*DESTACADOS*/
+    #destacados article {
+        width: 20vw;
+    }
+
+    #destacados .descripcion {
+        font-size: 1rem;
+        top: 2vw;
+    }
+    
+    #destacados .precio {
+        font-size: 1rem;
+        bottom: 1vw;
+        right: 1vw;
+    }
+
+    /*KITS*/
+    #kits article {
+        width: 20vw;
+        flex-flow: row wrap;
+    }
+
+
+}
