@@ -1,0 +1,167 @@
+footer {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100vw;
+    background-color: #f1ba33;
+    margin-top: 2rem;
+}
+
+#footer-first-section {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100vw;
+    align-items: center;
+}
+
+#footer-first-section h3 {
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    text-align: center;
+    line-height: 1.7rem;
+    font-size: 1.3rem;
+    width: 100%;
+    color: #3f3f3f;
+}
+
+#footer-first-section h3 a{
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.methods-p {
+    width: 60vw;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    color: #3f3f3f;
+}
+
+.footer-item {
+    display: flex;
+    width: 100vw;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.footer-item p{
+    padding: 0.5rem;
+    line-height: 1.7rem;
+}
+
+.footer-item a{
+    text-decoration: none;
+    color: #3f3f3f;
+    transition: all 400ms ease-in-out;
+}
+
+.footer-item a:hover{
+    color: white;
+}
+
+#footer-linea {
+    width:50vw;
+    background-color: #ccc;
+}
+
+
+form {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+input[type="email"] {
+    border: none;
+    border-radius: 3rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.footer-item button {
+    border: none;
+    background-color: #3f3f3f;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin-top: 0.8rem;
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    transition: all 400ms ease-in-out;
+}
+
+.footer-item button:hover {
+    background-color: #fff;
+    color:#3f3f3f ;
+}
+
+.social-media {
+    color: #3f3f3f;
+    font-size: 2rem;
+    width: 40vw;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+#footer-second-section p{
+ text-align: center;
+ margin-top: 2rem;
+ font-size: 0.8rem;
+}
+
+@media screen and (min-width: 768px) {
+    #footer-first-section {
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .footer-item {
+        display: flex;
+        width: 33vw;
+    }
+
+    .methods-p {
+        width: 30vw;
+        font-size: 2rem;
+    }
+
+    .social-media {
+        width: 20vw;
+    }
+
+    #footer-linea {
+        display: none;
+    }
+
+    .footer-item p{
+        padding: 0rem;
+        line-height: 2rem;
+        text-align: center;
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    .methods-p {
+        font-size: 3rem;
+        margin-top: 1.5rem;
+    }
+
+    .social-media {
+        width: 15vw;
+        font-size: 3rem;
+    }
+
+    #footer-linea {
+        display: none;
+    }
+
+    .footer-item p{
+        line-height: 3rem;
+        font-size: 1rem;
+    }
+}

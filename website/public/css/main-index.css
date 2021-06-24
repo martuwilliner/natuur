@@ -98,6 +98,7 @@ main {
     flex-flow: column wrap;
     align-items: center;
     background-color: #D4CFD5;
+    width: 50vw;
         
     opacity: 1.0;
     position: relative; 

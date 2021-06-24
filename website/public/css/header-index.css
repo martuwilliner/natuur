@@ -11,15 +11,13 @@ header{
 /*MAIN MENU*/
 #main-menu{
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    width: 100vw;
-    /* background-color: burlywood; */
-    margin: auto;
+    flex-flow: row wrap;
+    width: 100%;
     position: fixed;
     top: 0vw;
     padding: 1rem;
     z-index: 1;
+    background-color: #fff; /*HASTA SABER HACERLO BIEN*/
 }
 
 #main-menu figure{
@@ -72,7 +70,7 @@ header{
     /*MAIN MENU*/
     #main-menu{
         display: flex;
-        padding: 2rem;
+        padding: 1rem;
     }
 
     #main-menu figure{
@@ -89,15 +87,11 @@ header{
         width: 45vw;
         justify-content: flex-end;
         align-items: center;
-        /* background-color: aquamarine; */
     }
 
     #user-list a{
         text-decoration: none;
         color: #3f3f3f;
-        /* background-color: #f1ba33;
-        border: none;
-        border-radius: 50%; */
         margin-left: 0.8rem;
     }
 
@@ -114,7 +108,7 @@ header{
         display: flex;
         width: 100vw;
         justify-content: center;
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
     
     #head-list ul{
@@ -149,5 +143,10 @@ header{
     
     #head-list a{
         font-size: 0.9rem; 
+    }
+
+    /*MAIN MENU*/
+    #main-menu{
+        padding: 2rem;
     }
 }
