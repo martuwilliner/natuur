@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="/css/body.css">
     <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/main-product.css">
+    <link rel="stylesheet" href="/css/mainAlmacenProductDetail.css">
     <link rel="stylesheet" href="/css/footer.css">
     <title>Natuur</title>
 </head>
@@ -53,41 +53,73 @@
     </header>
     <!-- --------------------------------------------- -->
     <main>
-        <section id="carrito">
-            <section id="product-info">
-                <figure>
-                    <img class="photo" src="/img/productos/almacen/almacen-natuur (78).jpg" alt="">
-                </figure>
-                <section id="product-unit">
-                    <h3 class="product-id">PRODUCTO</h3>
-                    <p class="precio">PRECIO</p>
-                    <form class="cantidad" action="/" method="POST">
+        <section id="detalleProducto">
+            <nav id="socialMedia">
+                <a href=""><i class="fab fa-facebook-f"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+                <a href=""><i class="fab fa-twitter"></i></a>
+            </nav>
+            <figure><img src="/img/productos/almacen/almacen-natuur (107).jpg"></figure>
+            <article class="infoProducto">
+                <h2 class="nombreProducto">FIDEOS INTEGRALES CON AJO NEGRO</h2>
+                <h3 class="precio">$420</h3>
+                <p>Los fusillis integrales con ajo negro son 100% artesanales y agroecológicos.</p>
+                <p>Ingredientes: Harina integral de trigo candeal, ajo negro.</p>    
+                <p>Contenido: 400 grs</p>
+                <section id="botones">
+                    <form class="shopping" action="/comprar" method="POST">
                         <input type="number" id="cantidad" name="cantidad">
+                        <button type="submit">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </form>
+                    <form class="favorito" action="/favoritos"  method="POST">
+                        <button type="submit">
+                            <i class="fas fa-heart"></i>
+                        </button>
                     </form>
                 </section>
-                <form id="product-delete">
-                    <button type="reset">ELIMINAR</button>
-                </form>
-            </section>
-            <hr class="linea">
-            <form id="code-box" method="POST" action="/">
-                <input class="info" type="text" placeholder="Ingrese su código de descuento">
-                <input class="info" type="text">
-            </form>
-            <hr class="linea">
-            <section id="check-out">
-                <input type="number" id="cantidad" name="cantidad" placeholder="Total Compra">
-            </section>
-            <section id="check-out-button">
-                <button>SEGUIR COMPRANDO</button>
-                <button>CHECK OUT</button>
-            </section>
-                
-            <section class="other-options">
-
-            </section>
+            </article>
         </section>
-        
+        <section id="interesar">
+            <h1>TE PUEDEN INTERESAR</h1>
+            <article>
+                <figure>
+                    <img src="/img/productos/destacados/cosmetica-natuur (1).jpg" alt="">
+                </figure>
+                <section class="product-info">
+                    <p class="descripcion">Shampoo</p>
+                    <p class="precio">$530</p>
+                </section>
+            </article>
+            <article>
+                <figure>
+                    <img src="/img/productos/destacados/cosmetica-natuur (1).jpg" alt="">
+                </figure>
+                <section class="product-info">
+                    <p class="descripcion">Shampoo</p>
+                    <p class="precio">$530</p>
+                </section>
+            </article>
+            <article>
+                <figure>
+                    <img src="/img/productos/destacados/cosmetica-natuur (1).jpg" alt="">
+                </figure>
+                <section class="product-info">
+                    <p class="descripcion">Shampoo</p>
+                    <p class="precio">$530</p>
+                </section>
+            </article>
+            <article>
+                <figure>
+                    <img src="/img/productos/destacados/cosmetica-natuur (1).jpg" alt="">
+                </figure>
+                <section class="product-info">
+                    <p class="descripcion">Shampoo</p>
+                    <p class="precio">$530</p>
+                </section>
+            </article>
+        </section>      
     </main>
     <!-- --------------------------------------------- -->
     <footer>
