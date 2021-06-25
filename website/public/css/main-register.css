@@ -1,0 +1,150 @@
+main {
+    margin-top: 183px 
+}
+main.main-register{
+    display: flex;
+    flex-direction:row;
+    justify-content: flex-end;
+    background-color: whitesmoke;
+    width: 100vw;
+    margin: auto;
+    margin-top: 180px;
+    margin-right: 10%;
+}
+p.bienvenido{
+    display: flex;
+    margin: 20px;
+    width: 25vw;
+    background-color: rgb(243, 239, 239);
+    padding: 15px;
+    border-radius: 5%;
+    justify-content: center;
+    font-weight: 700;
+}
+section.nombre{
+    display: flex;
+    justify-content: center;
+}
+section.nombre input{
+    display: flex;
+    margin: 10px;
+    width: 30vw;
+    height: 50px;
+    padding: 5px;
+    border: none;
+    border-radius: 3%;
+}
+section.usuario{
+    display: flex;
+    justify-content: center;
+}
+section.usuario input{
+    display: flex;
+    margin: 10px;
+    width: 30vw;
+    height: 50px;
+    padding: 5px;
+    border: none;
+    border-radius: 3%;
+}
+section.email{
+    display: flex;
+    justify-content: center;
+}
+section.email input{
+    display: flex;
+    margin: 10px;
+    width: 30vw;
+    height: 50px;
+    padding: 5px;
+    border: none;
+    border-radius: 3%;
+    text-align: left;
+}
+fieldset.password{
+    display: flex;
+    justify-content: end;
+}
+fieldset.password input{
+    display: flex;
+    margin: 10px;
+    width: 30vw;
+    height: 50px;
+    padding: 5px;
+    border: none;
+    border-radius: 3%; 
+}
+fieldset.confirm-password input{
+    display: flex;
+    margin: 10px;
+    width: 30vw;
+    height: 50px;
+    padding: 5px;
+    border: none;
+    border-radius: 3%; 
+}
+i.fa-google{
+    color: #3f3f3f;
+}
+section.button-google button{
+    display: flex;
+    margin: 10px;
+    width: 5vw;
+    height: 50px;
+    padding: 5px;
+    border: none;
+    border-radius: 3%; 
+    align-items: center;
+    justify-content: center;
+    background-color: #F1BA33;
+}
+section.button-enviar button{
+    display: flex;
+    margin: 10px;
+    width: 5vw;
+    height: 50px;
+    padding: 5px;
+    border: none;
+    border-radius: 3%; 
+    align-items: center;
+    justify-content: center;
+    background-color: #F1BA33;
+}
+
+@media screen and (min-width: 320px) {
+    main {
+        margin-top: 183px 
+    }
+    main.main-register{
+        justify-content: center;
+        width: 100vw;
+        margin-right: none;
+    }
+    p.bienvenido{
+        width: 80vw;
+        justify-content: center;
+        text-align: center;
+    }
+    section.nombre input{
+        width: 80vw;
+    }
+    section.usuario input{
+        width: 80vw;
+    }
+    section.email input{
+        width: 80vw;
+    }
+    fieldset.password input{
+        width: 80vw;
+    }
+    fieldset.confirm-password input{
+        width: 80vw;
+    }
+    section.button-google button{
+        width: 30vw;
+    }
+    section.button-enviar button{
+        width: 30vw;
+    }    
+}
+
