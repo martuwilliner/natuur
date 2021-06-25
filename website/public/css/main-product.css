@@ -1,0 +1,50 @@
+main {
+    margin-top: 183px 
+}
+
+.product-info{
+    display: flex;
+    width: 90vw;
+    justify-content: center;
+    margin: auto;
+}
+
+.product-info figure{
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    /* padding-left:10rem; */
+}
+.product-info img{
+    width: 100px;
+    justify-content: flex-end;
+}
+
+.product-unit h3{
+    font-weight: 700;
+}
+
+.code-box{
+    display:flex;
+    /* flex-wrap: wrap; */
+    /* flex-direction: row; */
+    width: 90%;
+}
+
+form .code{
+    display: flex;
+    /* width: 90%; */}
+
+
+form .info1{
+    display: flex;
+    width: 100%;
+    background-color: brown;
+}
+form .info{
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: row;
+    width: 50%;
+    background-color: blue;
+}
