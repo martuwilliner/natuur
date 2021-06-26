@@ -147,4 +147,76 @@ section.button-enviar button{
         width: 30vw;
     }    
 }
+@media screen and (min-width: 768px) {
+    main {
+        margin-top: 183px 
+    }
+    main.main-register{
+        justify-content: center;
+        width: 100vw;
+        margin-right: none;
+    }
+    p.bienvenido{
+        width: 80vw;
+        justify-content: center;
+        text-align: center;
+    }
+    section.nombre input{
+        width: 80vw;
+    }
+    section.usuario input{
+        width: 80vw;
+    }
+    section.email input{
+        width: 80vw;
+    }
+    fieldset.password input{
+        width: 80vw;
+    }
+    fieldset.confirm-password input{
+        width: 80vw;
+    }
+    section.button-google button{
+        width: 30vw;
+    }
+    section.button-enviar button{
+        width: 30vw;
+    }    
+}
+@media screen and (min-width: 1080px) {
+    main {
+        margin-top: 183px 
+    }
+    main.main-register{
+        justify-content: center;
+        width: 100vw;
+        margin-right: none;
+    }
+    p.bienvenido{
+        width: 80vw;
+        justify-content: center;
+        text-align: center;
+    }
+    section.nombre input{
+        width: 60vw;
+    }
+    section.usuario input{
+        width: 60vw;
+    }
+    section.email input{
+        width: 60vw;
+    }
+    fieldset.password input{
+        width: 60vw;
+    }
+    fieldset.confirm-password input{
+        width: 60vw;
+    }
+    section.button-google button{
+        width: 15vw;
+    }
+    section.button-enviar button{
+        width: 15vw;
+    }    
+}
 

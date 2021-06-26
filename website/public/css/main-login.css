@@ -1,0 +1,195 @@
+main {
+    margin-top: 183px 
+}
+
+main#main-register{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: whitesmoke;
+    width: 100vw;
+    margin: auto;
+    margin-top: 180px;
+    margin-right: 10%;
+}
+p#mensaje-bienvenida-login{
+    display: flex;
+    margin: 20px;
+    width: 25vw;
+    background-color: rgb(243, 239, 239);
+    padding: 15px;
+    border-radius: 5%;
+    justify-content: center;
+    font-weight: 700;
+    text-align: center;
+}
+section#nombre-de-usuario-login{
+    display: flex;
+    justify-content: center;
+}
+section#nombre-de-usuario-login input{
+    display: flex;
+    margin: 10px;
+    width: 30vw;
+    height: 50px;
+    padding: 5px;
+    border: none;
+    border-radius: 3%;
+}
+section#password-login{
+    display: flex;
+    justify-content: center;
+}
+section#password-login input{
+    display: flex;
+    margin: 10px;
+    width: 30vw;
+    height: 50px;
+    padding: 5px;
+    border: none;
+    border-radius: 3%;
+}
+section#confirm-password-login{
+    display: flex;
+    justify-content: center;
+}
+section#confirm-password-login input{
+    display: flex;
+    margin: 10px;
+    width: 30vw;
+    height: 50px;
+    padding: 5px;
+    border: none;
+    border-radius: 3%;
+}
+i.fa-google{
+    color: #3f3f3f;
+}
+section.button-google-login button{
+    display: flex;
+    margin: 10px;
+    width: 5vw;
+    height: 50px;
+    padding: 5px;
+    border: none;
+    border-radius: 3%; 
+    align-items: center;
+    justify-content: center;
+    background-color: #F1BA33;
+}
+section.button-enviar-login button{
+    display: flex;
+    margin: 10px;
+    width: 5vw;
+    height: 50px;
+    padding: 5px;
+    border: none;
+    border-radius: 3%; 
+    align-items: center;
+    justify-content: center;
+    background-color: #F1BA33;
+    color: #3f3f3f;
+    font-weight: 400;
+}
+@media screen and (min-width: 320px) {
+    main {
+        margin-top: 183px 
+    }
+    
+    main#main-register{
+        width: 80vw;
+        height: 70vh;
+        border-radius: 1%;
+    }
+    p#mensaje-bienvenida-login{
+        width: 70vw;
+        font-size: 13px;
+    }
+    section#nombre-de-usuario-login input{
+        width: 60vw;
+        height: 40px;
+    }
+    section#password-login input{
+        width: 60vw;
+        height: 40px;
+    }
+    section#confirm-password-login input{
+        width: 60vw;
+        height: 40px;
+    }
+    section.button-google-login button{
+        width: 22vw;
+    }
+    section.button-enviar-login button{
+        width: 22vw;
+        font-size: 15px;
+    }
+}
+@media screen and (min-width: 768px) {
+    main {
+        margin-top: 183px 
+    }
+    
+    main#main-register{
+        width: 80vw;
+        height: 80vh;
+        border-radius: 1%;
+    }
+    p#mensaje-bienvenida-login{
+        width: 70vw;
+        font-size: 13px;
+    }
+    section#nombre-de-usuario-login input{
+        width: 60vw;
+        height: 40px;
+        padding: 10px;
+    }
+    section#password-login input{
+        width: 60vw;
+        height: 40px;
+        padding: 10px;
+    }
+    section#confirm-password-login input{
+        width: 60vw;
+        height: 40px;
+        padding: 10px;
+    }
+    section.button-google-login button{
+        width: 15vw;
+    }
+    section.button-enviar-login button{
+        width: 15vw;
+    }
+}@media screen and (min-width: 1080px) {
+    main {
+        margin-top: 183px 
+    }
+    
+    main#main-register{
+        width: 80vw;
+        height: 60vh;
+        border-radius: 1%;
+    }
+    p#mensaje-bienvenida-login{
+        width: 45vw;
+        font-size: 13px;
+    }
+    section#nombre-de-usuario-login input{
+        width: 40vw;
+        height: 40px;
+    }
+    section#password-login input{
+        width: 40vw;
+        height: 40px;
+    }
+    section#confirm-password-login input{
+        width: 40vw;
+        height: 40px;
+    }
+    section.button-google-login button{
+        width: 10vw;
+    }
+    section.button-enviar-login button{
+        width: 10vw;
+    }
+}
