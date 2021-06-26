@@ -98,7 +98,7 @@ main {
     flex-flow: column wrap;
     align-items: center;
     background-color: #D4CFD5;
-    width: 50vw;
+    width: 80vw;
         
     opacity: 1.0;
     position: relative; 
@@ -117,53 +117,38 @@ main {
   
     align-items: center;  
     }
-    
-#almacen .descripcion {
-    font-size: 2rem;
+
+#kits    .descripcion {
+    font-size: 1.5rem;
     position: absolute;
-    top: 50vw;
+    top: 35vw;
     color: #3f3f3f; 
-    background-color: #f1ba33;
+    
     border-radius: .5rem;
     padding: 0.8rem;
     font-weight: 700;
-
-    visibility: hidden;
     transition: all 0.4s ease-in-out;
+    }
+    
+#kits article:hover .descripcion{
+    transform: scale(1.2);
+    box-shadow: 0px 0px 10px rgb(95, 95, 95);
+    }
+    
+#almacen .descripcion {
+    background-color: #f1ba33;
+/*     visibility: hidden; */
     }
 
 #gourmet .descripcion {
-    font-size: 2rem;
-    position: absolute;
-    top: 50vw;
-    color: #3f3f3f; 
     background-color: #469e9d;
-    border-radius: .5rem;
-    padding: 0.8rem;
-    font-weight: 700;
-
-    visibility: hidden;
-    transition: all 0.4s ease-in-out;
+/*     visibility: hidden; */
     }
 
 #cosmetica .descripcion {
-    font-size: 2rem;
-    position: absolute;
-    top: 50vw;
-    color: #3f3f3f; 
     background-color: #e58976;
-    border-radius: .5rem;
-    padding: 0.8rem;
-    font-weight: 700;
-
-    visibility: hidden;
-    transition: all 0.4s ease-in-out;
+   /*  visibility: hidden; */
     }
-
-#kits article:hover .descripcion{
-    visibility: visible;
-    }
-
 
 /**TABLET**/
 @media screen and (min-width: 768px) {
@@ -185,24 +170,15 @@ main {
         }
 
     /*KITS*/  
-    #almacen .descripcion {
-        font-size: 1.3rem;
-        top: 10vw;
-        text-align: center;
+    #kits article {
+        width: 50vw;
         }
 
-    #gourmet .descripcion {
+    #kits .descripcion {
         font-size: 1.3rem;
-        top: 10vw;
+        top: 22vw;
         text-align: center;
-        }
-
-    #cosmetica .descripcion {
-        font-size: 1.3rem;
-        top: 10vw;
-        text-align: center;
-        }
-
+    }
 }
 
 @media screen and (min-width: 1080px) {
@@ -226,8 +202,10 @@ main {
     /*KITS*/
     #kits article {
         width: 20vw;
-        flex-flow: row wrap;
-    }
+        }
 
+    #kits .descripcion {
+        top: 9vw;
+    }
 
 }

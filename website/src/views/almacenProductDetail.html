@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="/css/fonts.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="/css/body.css">
-    <link rel="stylesheet" href="/css/header-index.css">
-    <link rel="stylesheet" href="/css/main-index.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/mainAlmacenProductDetail.css">
     <link rel="stylesheet" href="/css/footer.css">
     <title>Natuur</title>
 </head>
@@ -24,9 +24,8 @@
             </a>
             <nav id="user-list">
                 <a href="#"><i class="fas fa-search"></i></a>
-                <a href="/register"><i class="fas fa-user"></i></a>
-                
-                <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>
+                <a href="#"><i class="fas fa-user"></i></a>
+                <a href="#"><i class="fas fa-shopping-cart"></i></a>
             </nav>
             <nav id="head-list">
                 <ul>
@@ -54,33 +53,43 @@
     </header>
     <!-- --------------------------------------------- -->
     <main>
-        <section id="destacados">
-            <h1>DESTACADOS</h1>
-            <article>
-                <figure>
-                    <img src="/img/productos/destacados/gourmet-natuur19.jpg" alt="">
-                </figure>
-                <section class="product-info">
-                    <p class="descripcion">Tarta de vegetales</p>
-                    <p class="precio">$300</p>
+        <section id="detalleProducto">
+            <nav id="socialMedia">
+                <a href=""><i class="fab fa-facebook-f"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+                <a href=""><i class="fab fa-twitter"></i></a>
+            </nav>
+            <figure><img src="/img/productos/almacen/almacen-natuur (107).jpg"></figure>
+            <article class="infoProducto">
+                <h2 class="nombreProducto">FIDEOS INTEGRALES CON AJO NEGRO</h2>
+                <h3 class="precio">$420</h3>
+                <p>Los fusillis integrales con ajo negro son 100% artesanales y agroecológicos.</p>
+                <p>Ingredientes: Harina integral de trigo candeal, ajo negro.</p>    
+                <p>Contenido: 400 grs</p>
+                <section id="botones">
+                    <form class="shopping" action="/comprar" method="POST">
+                        <input type="number" id="cantidad" name="cantidad">
+                        <button type="submit">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </form>
+                    <form class="favorito" action="/favoritos"  method="POST">
+                        <button type="submit">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </form>
                 </section>
             </article>
+        </section>
+        <section id="interesar">
+            <h1>TE PUEDEN INTERESAR</h1>
             <article>
                 <figure>
-                    <img src="/img/productos/destacados/almacen-natuur (47).jpg" alt="">
+                    <img src="/img/productos/destacados/cosmetica-natuur (1).jpg" alt="">
                 </figure>
                 <section class="product-info">
-                    <p class="descripcion">Granola FIT</p>
-                    <p class="precio">$1.200</p>
-                </section>
-            </article>
-            <article>
-                <figure>
-                    <img src="/img/productos/destacados/gourmet-natuur (3).jpg" alt="">
-                </figure>
-                <section class="product-info">
-                    <p class="descripcion">Chocotorta</p>
-                    <p class="precio">$420</p>
+                    <p class="descripcion">Shampoo</p>
+                    <p class="precio">$530</p>
                 </section>
             </article>
             <article>
@@ -92,34 +101,25 @@
                     <p class="precio">$530</p>
                 </section>
             </article>
-        </section>
-        <section id="kits">
-            <h1>NUESTROS KITS</h1>
-            <article id="almacen">
+            <article>
                 <figure>
-                    <img src="/img/productos/kits/energia.jpg" alt="">
+                    <img src="/img/productos/destacados/cosmetica-natuur (1).jpg" alt="">
                 </figure>
                 <section class="product-info">
-                    <p class="descripcion">Recargate de energía</p>
+                    <p class="descripcion">Shampoo</p>
+                    <p class="precio">$530</p>
                 </section>
             </article>
-            <article id="gourmet">
+            <article>
                 <figure>
-                    <img src="/img/productos/kits/gourmet.jpg" alt="">
+                    <img src="/img/productos/destacados/cosmetica-natuur (1).jpg" alt="">
                 </figure>
                 <section class="product-info">
-                    <p class="descripcion">Date un gustito</p>
+                    <p class="descripcion">Shampoo</p>
+                    <p class="precio">$530</p>
                 </section>
             </article>
-            <article id="cosmetica">
-                <figure>
-                    <img src="/img/productos/kits/cosmetica.jpg" alt="">
-                </figure>
-                <section class="product-info">
-                    <p class="descripcion">Cuidado personal</p>
-                </section>
-            </article>
-        </section>
+        </section>      
     </main>
     <!-- --------------------------------------------- -->
     <footer>

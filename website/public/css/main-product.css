@@ -1,0 +1,153 @@
+main {
+    margin-top: 120px;
+}
+
+#carrito {
+    background-color: whitesmoke;
+    width: 90vw;
+    margin: auto;
+/*     padding: 0.5rem; */
+}
+#product-info{
+    display: flex;
+    flex-flow: row wrap;
+    width: 90vw;
+    margin: auto;
+/*     align-items: flex-start; */
+}
+
+#product-info figure{
+    display: flex;
+    justify-content: center;
+    width: 25vw;
+    /* padding-left:10rem; */
+}
+
+#product-info img{
+    width: 100%;
+/*     justify-content: flex-end; */
+}
+
+#product-unit {
+    display: flex;
+    flex-flow: row wrap;
+    width: 30vw;
+/*     align-items: center; */
+/*     padding: 0.5rem; */
+    margin-left: 1rem;
+    align-content: center;
+
+}
+
+#product-unit h3{
+    font-weight: 700;
+    width: 100%;
+}
+
+#product-unit p.precio {
+    align-self: center;
+    font-size: 0.8rem;
+}
+
+#product-unit p.precio, #product-unit form.cantidad {
+    width: 50%;
+    margin-top: 0.5rem;
+}
+
+.cantidad input {
+    border: none;
+    border-radius: 1rem;
+    background-color: #ccc;
+    padding: 0.8rem ;
+    width: 3rem;
+    height: 1rem;
+    margin-left: 0.5rem;
+}
+
+#product-delete {
+    width: 30vw;
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1 0 auto;
+    justify-content: center;
+
+}
+
+#product-delete button{
+    border: none;
+    background-color: #3f3f3f;
+    padding: 0.8rem;
+    border-radius: 1.3rem;
+    transition: all 0.4s ease-in-out;
+    color: #ccc;
+    font-size: 0.8rem;
+}
+
+#product-delete button:hover{
+    background-color: #f1ba33;
+}
+
+.linea {
+    margin: 1rem 0;
+}
+
+#code-box{
+    display: flex;
+    flex-flow: row wrap;
+    width: 90vw;
+    justify-content: space-around;
+}
+
+form .info {
+    width: 40vw;
+}
+
+form input.info {
+    border: none;
+    background-color: #ccc;
+    border-radius: 0.5rem;
+    padding: 0.3rem;
+}
+
+#check-out {
+    display: flex;
+    flex-flow: column wrap;
+    width: 90vw;
+    justify-content: space-around;
+}
+
+#check-out input{
+    width: 30vw;
+    border: none;
+    background-color: #ccc;
+    border-radius: 0.5rem;
+    padding: 0.3rem;
+    margin: auto;
+}
+
+button{
+    width: 40vw;
+    border: none;
+    background-color: #3f3f3f;
+    padding: 0.8rem;
+    border-radius: 1.3rem;
+    transition: all 0.4s ease-in-out;
+    color: #ccc;
+    font-size: 0.8rem;
+}
+
+#check-out-button {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 2rem ;
+    justify-content: space-around;
+}
+
+#check-out-button button{
+    width: auto;
+}
+
+#check-out-button button:hover{
+    background-color: #f1ba33;
+}
+
