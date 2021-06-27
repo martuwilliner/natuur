@@ -1,6 +1,3 @@
-main {
-    margin-top: 183px 
-}
 main.main-register{
     display: flex;
     flex-direction:row;
@@ -8,8 +5,7 @@ main.main-register{
     background-color: whitesmoke;
     width: 100vw;
     margin: auto;
-    margin-top: 180px;
-    margin-right: 10%;
+    margin-top: 120px;
 }
 p.bienvenido{
     display: flex;
@@ -21,100 +17,39 @@ p.bienvenido{
     justify-content: center;
     font-weight: 700;
 }
-section.nombre{
+input.formulario-register{
     display: flex;
     justify-content: center;
-}
-section.nombre input{
-    display: flex;
     margin: 10px;
-    width: 30vw;
-    height: 50px;
-    padding: 5px;
-    border: none;
-    border-radius: 3%;
-}
-section.usuario{
-    display: flex;
-    justify-content: center;
-}
-section.usuario input{
-    display: flex;
-    margin: 10px;
-    width: 30vw;
-    height: 50px;
-    padding: 5px;
-    border: none;
-    border-radius: 3%;
-}
-section.email{
-    display: flex;
-    justify-content: center;
-}
-section.email input{
-    display: flex;
-    margin: 10px;
-    width: 30vw;
+    width: 80vw;
     height: 50px;
     padding: 5px;
     border: none;
     border-radius: 3%;
     text-align: left;
 }
-fieldset.password{
-    display: flex;
-    justify-content: end;
-}
-fieldset.password input{
-    display: flex;
-    margin: 10px;
-    width: 30vw;
-    height: 50px;
-    padding: 5px;
-    border: none;
-    border-radius: 3%; 
-}
-fieldset.confirm-password input{
-    display: flex;
-    margin: 10px;
-    width: 30vw;
-    height: 50px;
-    padding: 5px;
-    border: none;
-    border-radius: 3%; 
-}
 i.fa-google{
-    color: #3f3f3f;
+    color: white;
 }
-section.button-google button{
+main.main-register button{
     display: flex;
     margin: 10px;
     width: 5vw;
-    height: 50px;
     padding: 5px;
     border: none;
     border-radius: 3%; 
     align-items: center;
     justify-content: center;
-    background-color: #F1BA33;
+    background-color: #3f3f3f;
+    color: white;
+    transition: all 0.4s ease-in-out;
 }
-section.button-enviar button{
-    display: flex;
-    margin: 10px;
-    width: 5vw;
-    height: 50px;
-    padding: 5px;
-    border: none;
-    border-radius: 3%; 
-    align-items: center;
-    justify-content: center;
-    background-color: #F1BA33;
+
+main.main-register button:hover{
+    background-color: #f1ba33;
 }
 
 @media screen and (min-width: 320px) {
-    main {
-        margin-top: 183px 
-    }
     main.main-register{
         justify-content: center;
         width: 100vw;
@@ -125,27 +60,12 @@ section.button-enviar button{
         justify-content: center;
         text-align: center;
     }
-    section.nombre input{
+    input.formulario-register{
         width: 80vw;
-    }
-    section.usuario input{
-        width: 80vw;
-    }
-    section.email input{
-        width: 80vw;
-    }
-    fieldset.password input{
-        width: 80vw;
-    }
-    fieldset.confirm-password input{
-        width: 80vw;
-    }
-    section.button-google button{
+    } 
+    main.main-register button{
         width: 30vw;
     }
-    section.button-enviar button{
-        width: 30vw;
-    }    
 }
 @media screen and (min-width: 768px) {
     main {
@@ -161,32 +81,14 @@ section.button-enviar button{
         justify-content: center;
         text-align: center;
     }
-    section.nombre input{
+    input.formulario-register{
         width: 80vw;
     }
-    section.usuario input{
-        width: 80vw;
-    }
-    section.email input{
-        width: 80vw;
-    }
-    fieldset.password input{
-        width: 80vw;
-    }
-    fieldset.confirm-password input{
-        width: 80vw;
-    }
-    section.button-google button{
+    main.main-register button{
         width: 30vw;
     }
-    section.button-enviar button{
-        width: 30vw;
-    }    
 }
 @media screen and (min-width: 1080px) {
-    main {
-        margin-top: 183px 
-    }
     main.main-register{
         justify-content: center;
         width: 100vw;
@@ -197,25 +99,10 @@ section.button-enviar button{
         justify-content: center;
         text-align: center;
     }
-    section.nombre input{
+    input.formulario-register{
         width: 60vw;
     }
-    section.usuario input{
-        width: 60vw;
-    }
-    section.email input{
-        width: 60vw;
-    }
-    fieldset.password input{
-        width: 60vw;
-    }
-    fieldset.confirm-password input{
-        width: 60vw;
-    }
-    section.button-google button{
-        width: 15vw;
-    }
-    section.button-enviar button{
+    main.main-register button{
         width: 15vw;
     }    
 }

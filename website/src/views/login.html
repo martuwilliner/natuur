@@ -52,34 +52,26 @@
              </nav>
         </section>
     </header>
-    <main id="main-register">
-        <form action="" method="GET">
+    <main class="main-login">
+        <form action="/" method="GET">
         <p id="mensaje-bienvenida-login">INGRESA TU CUENTA DE FORMA SANA Y SEGURA</p>
-        <section id="nombre-de-usuario-login">
-            <label for="nombre">
-            <input type="text" placeholder="Nombre De Usuario"name="nombre-de-usuario-login" id="nombre-de-usuario-login" required>
-            </label>
-            </section>
-            <section id="password-login">
-                <label>
-                  <input type="password" placeholder="Contraseña" name="password-login"id="password-login">
-                </label>
-            </section>
-            <section id="confirm-password-login">
-                <label>
-                  <input type="password" placeholder="Repetir Contraseña" name="confirm-password-login" id="confirm-password-login">
-                </label>
-            </section>
-            <section class="button-google-login">
-                <label>
-                  <a href="#"><button type="button" name="google"><i class="fab fa-google"></i></a></button>
-                </label>
-              </section>
-            <section class="button-enviar-login">
-                <label>
-                  <button type="button" name="enviar">Registrate</button>
-                </label>
-              </section>
+  
+            <input class="formulario-login" type="text" placeholder="Nombre de Usuario"name="usuario" id="usuario" required>
+
+                  <input class="formulario-login" type="password" placeholder="Contraseña" name="password">
+
+                  <input class="formulario-login" type="password" placeholder="Repetir Contraseña" name="confirm-password">
+
+        <section class="button-login">
+              <a href="#">
+                  <button type="submit" name="google">
+                      <i class="fab fa-google"></i>
+                </button>
+            </a>
+          </section>
+          <section class="button-login">
+              <button type="submit" name="enviar">Registrate</button>
+          </section>
         </form>
     </main>
     <footer>
