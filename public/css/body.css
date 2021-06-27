@@ -5,6 +5,14 @@
     grisoscuro: #3f3f3f
 */
 
+/*
+botones de input de cantidad: 
+    border: none;
+    border-radius: 1rem;
+    background-color: white;
+    padding: 0.8rem;
+*/
+
 *{
     box-sizing: border-box;
     margin: 0;

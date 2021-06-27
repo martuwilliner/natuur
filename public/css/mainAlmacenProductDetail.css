@@ -82,7 +82,7 @@ main {
 .infoProducto .shopping input {
     border: none;
     border-radius: 1rem;
-    background-color: #ccc;
+    background-color: white;
     padding: 0.8rem ;
     width: 25vw;
 }
@@ -166,6 +166,11 @@ main {
 @media screen and (min-width: 768px) {
     main {
         margin-top: 160px;
+    }
+
+    #detalleProducto {
+        background-color: rgba(241, 186, 51, 0.3);
+        padding: 1.2rem;
     }
     
   #detalleProducto nav i{

@@ -1,0 +1,263 @@
+main {
+    margin-top: 120px;
+}
+
+#detalleProducto { 
+    display: flex;
+    flex-flow: row wrap;
+    width: 90vw;
+    justify-content: center;
+    margin: auto;
+}
+
+#detalleProducto nav{
+    display: flex;
+    flex-flow: column wrap;
+    width: 5vw;
+    align-content: flex-end;
+    /* padding-right: 1rem; */
+}
+
+#detalleProducto nav i{
+    font-size: 1rem;
+    color: #469e9d;
+    padding-bottom: 0.8rem;
+}
+
+#detalleProducto figure{
+    margin: 0 0.5rem;
+    width: 80vw;
+}
+
+#detalleProducto img{
+    width: 100%;
+    border: solid 0.2rem #469e9d;
+}
+
+.infoProducto {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    margin: 0.8rem 1.3rem;
+    width: 70vw;
+}
+
+.infoProducto h2{
+    display: flex;
+    flex-flow: row wrap;
+    width: 50%;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.infoProducto .precio{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    width: 50%;
+    font-weight: 600;
+}
+
+.infoProducto p{
+    line-height: 1.5rem;
+    font-size: 0.8rem;   
+    margin-top: 1rem; 
+}
+
+.infoProducto #botones {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    width: 100vw;
+    margin-top: 1rem;
+    justify-content: flex-end;
+} 
+
+.infoProducto .shopping {
+    display: flex;
+    flex-flow: row wrap;
+    width: auto;
+}
+
+.infoProducto .shopping input {
+    border: none;
+    border-radius: 1rem;
+    background-color: white;
+    padding: 0.8rem ;
+    width: 25vw;
+}
+
+.infoProducto .shopping button{
+    margin: 0 1rem;
+}
+
+.infoProducto button {
+    border: none;
+    background-color: transparent;
+    color: #469e9d;
+    font-size: 1.5rem;
+}
+
+.infoProducto .favorito {
+    width: auto;
+}
+
+/*Te puede interesar*/
+#interesar {
+    display: flex;
+    width: 90vw;
+    flex-flow: row wrap;
+    margin-top: 1rem;
+    margin: auto;
+}
+
+#interesar h1 {
+    width: 100vw;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #3f3f3f;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+#interesar article {
+    margin: auto;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    background-color: #D4CFD5;
+    position: relative; 
+}
+
+#interesar article img{
+    width: 100%;
+}
+
+#interesar .product-info {
+    display: flex;
+    width: 100%;
+    flex-flow: column wrap;
+    align-items: center; 
+}
+
+#interesar .descripcion {
+    font-size: 1.2rem;
+    position: absolute;
+    top: 10vw;
+    color: #3f3f3f; 
+    font-weight: 700;
+    background-color: #f1ba33;
+    padding: 1rem;
+    width: 100%;
+}
+
+#interesar .precio {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #3f3f3f; 
+    position: absolute;
+    bottom: 5vw;
+    right: 5vw;
+}
+    
+/**TABLET**/
+@media screen and (min-width: 768px) {
+    main {
+        margin-top: 160px;
+    }
+
+    #detalleProducto {
+        background-color: rgba(70, 158, 157, 0.3);
+        padding: 1.2rem;
+    }
+    
+  #detalleProducto nav i{
+        font-size: 1.5rem;
+
+    }
+    
+    #detalleProducto figure{
+        margin: 0 0.5rem;
+        width: 40vw;
+    }
+    
+    .infoProducto {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        width: 30vw;
+        align-content: flex-start;
+    }
+    
+    .infoProducto h2{
+        width: 100%;
+    }
+    
+    .infoProducto .precio{
+        justify-content: flex-start;
+        width: 100%;
+        margin: 1.2rem 0;
+    }
+    
+    .infoProducto p{
+        line-height: 1.5rem;
+        font-size: 0.8rem;   
+        margin: 0.5rem 0; 
+    }
+    
+    .infoProducto #botones {
+        margin-top: 0.8rem;
+        justify-content: flex-start;
+    } 
+    
+    .infoProducto .shopping {
+        display: flex;
+        flex-flow: row wrap;
+        width: auto;
+    }
+    
+    .infoProducto .shopping input {
+        width: 8vw;
+    }
+    
+    /*te pueden interesar*/
+    #interesar article {
+        display: flex;
+        width: 20vw;
+        flex-flow: row wrap;
+        }
+
+    #interesar .descripcion {
+        top: 5vw;
+        }
+        
+    #interesar .precio {
+        bottom: 2vw;
+        right: 2vw;
+        }
+}
+
+@media screen and (min-width: 1080px) {
+    main {
+        margin-top: 180px;
+    }
+
+    #detalleProducto figure{
+        width: 30vw;
+    }
+
+    .infoProducto h2{
+        font-size: 1.2rem;
+    }
+    
+    .infoProducto .precio{
+        font-size: 1.2rem;
+    }
+    
+    .infoProducto p{
+        font-size: 0.9rem;   
+    }
+
+}
