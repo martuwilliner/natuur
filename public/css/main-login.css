@@ -1,8 +1,4 @@
-main {
-    margin-top: 183px 
-}
-
-main#main-register{
+main.main-login{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,38 +19,9 @@ p#mensaje-bienvenida-login{
     font-weight: 700;
     text-align: center;
 }
-section#nombre-de-usuario-login{
+.formulario-login{
     display: flex;
     justify-content: center;
-}
-section#nombre-de-usuario-login input{
-    display: flex;
-    margin: 10px;
-    width: 30vw;
-    height: 50px;
-    padding: 5px;
-    border: none;
-    border-radius: 3%;
-}
-section#password-login{
-    display: flex;
-    justify-content: center;
-}
-section#password-login input{
-    display: flex;
-    margin: 10px;
-    width: 30vw;
-    height: 50px;
-    padding: 5px;
-    border: none;
-    border-radius: 3%;
-}
-section#confirm-password-login{
-    display: flex;
-    justify-content: center;
-}
-section#confirm-password-login input{
-    display: flex;
     margin: 10px;
     width: 30vw;
     height: 50px;
@@ -63,40 +30,27 @@ section#confirm-password-login input{
     border-radius: 3%;
 }
 i.fa-google{
-    color: #3f3f3f;
+    color: white;
 }
-section.button-google-login button{
+.main-login button{
     display: flex;
     margin: 10px;
     width: 5vw;
-    height: 50px;
     padding: 5px;
     border: none;
     border-radius: 3%; 
     align-items: center;
     justify-content: center;
-    background-color: #F1BA33;
+    background-color: #3f3f3f;
+    color: white;
+    transition: all 0.4s ease-in-out;
 }
-section.button-enviar-login button{
-    display: flex;
-    margin: 10px;
-    width: 5vw;
-    height: 50px;
-    padding: 5px;
-    border: none;
-    border-radius: 3%; 
-    align-items: center;
-    justify-content: center;
-    background-color: #F1BA33;
-    color: #3f3f3f;
-    font-weight: 400;
+
+.main-login button:hover{
+    background-color: #f1ba33;
 }
 @media screen and (min-width: 320px) {
-    main {
-        margin-top: 183px 
-    }
-    
-    main#main-register{
+    main.main-login{
         width: 80vw;
         height: 70vh;
         border-radius: 1%;
@@ -105,32 +59,16 @@ section.button-enviar-login button{
         width: 70vw;
         font-size: 13px;
     }
-    section#nombre-de-usuario-login input{
+    .formulario-login{
         width: 60vw;
         height: 40px;
     }
-    section#password-login input{
-        width: 60vw;
-        height: 40px;
-    }
-    section#confirm-password-login input{
-        width: 60vw;
-        height: 40px;
-    }
-    section.button-google-login button{
-        width: 22vw;
-    }
-    section.button-enviar-login button{
-        width: 22vw;
-        font-size: 15px;
+    .main-login button{
+        width: 25vw;
     }
 }
 @media screen and (min-width: 768px) {
-    main {
-        margin-top: 183px 
-    }
-    
-    main#main-register{
+    main.main-login{
         width: 80vw;
         height: 80vh;
         border-radius: 1%;
@@ -139,33 +77,16 @@ section.button-enviar-login button{
         width: 70vw;
         font-size: 13px;
     }
-    section#nombre-de-usuario-login input{
+    .formulario-login{
         width: 60vw;
         height: 40px;
         padding: 10px;
     }
-    section#password-login input{
-        width: 60vw;
-        height: 40px;
-        padding: 10px;
-    }
-    section#confirm-password-login input{
-        width: 60vw;
-        height: 40px;
-        padding: 10px;
-    }
-    section.button-google-login button{
-        width: 15vw;
-    }
-    section.button-enviar-login button{
-        width: 15vw;
+    .main-login button{
+        width: 13vw;
     }
 }@media screen and (min-width: 1080px) {
-    main {
-        margin-top: 183px 
-    }
-    
-    main#main-register{
+    main.main-login{
         width: 80vw;
         height: 60vh;
         border-radius: 1%;
@@ -174,22 +95,11 @@ section.button-enviar-login button{
         width: 45vw;
         font-size: 13px;
     }
-    section#nombre-de-usuario-login input{
+    .formulario-login{
         width: 40vw;
         height: 40px;
     }
-    section#password-login input{
-        width: 40vw;
-        height: 40px;
-    }
-    section#confirm-password-login input{
-        width: 40vw;
-        height: 40px;
-    }
-    section.button-google-login button{
-        width: 10vw;
-    }
-    section.button-enviar-login button{
+    .main-login button{
         width: 10vw;
     }
 }
