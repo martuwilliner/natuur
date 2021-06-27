@@ -64,3 +64,7 @@ Tengo experiencia en diseño web y programación: HTML, CSS, MySQL, PHP.
 [Bee Pure](https://beepure.com.ar/)
 
 [Flora Almacen](https://floraalmacen.com/)
+
+
+## Link TRELLO
+(https://trello.com/b/fUp49NLg/proyecto-final)
