@@ -184,7 +184,7 @@ main {
     }
 }
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 1200px) {
     /*DESTACADOS*/
     #destacados article {
         width: 20vw;

@@ -88,7 +88,7 @@ main.main-register button:hover{
         width: 30vw;
     }
 }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 1200px) {
     main.main-register{
         justify-content: center;
         width: 100vw;

@@ -134,7 +134,7 @@ header{
 }
 
 /**PC**/
-@media screen and (min-width: 1080px){
+@media screen and (min-width: 1200px){
 
     /*MENU PRINCIPAL*/
     #head-list li a{

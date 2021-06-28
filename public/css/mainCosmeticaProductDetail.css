@@ -148,7 +148,7 @@ main {
     top: 10vw;
     color: #3f3f3f; 
     font-weight: 700;
-    background-color: #e58976;
+    background-color: #f1ba33;
     padding: 1rem;
     width: 100%;
 }
@@ -239,7 +239,7 @@ main {
         }
 }
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 1200px) {
     main {
         margin-top: 180px;
     }

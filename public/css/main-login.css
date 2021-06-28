@@ -85,7 +85,7 @@ i.fa-google{
     .main-login button{
         width: 13vw;
     }
-}@media screen and (min-width: 1080px) {
+}@media screen and (min-width: 1200px) {
     main.main-login{
         width: 80vw;
         height: 60vh;
