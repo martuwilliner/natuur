@@ -11,7 +11,7 @@ main {
     display: flex;
     width: 90vw;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 1rem;
 }
 
@@ -91,6 +91,7 @@ main {
 }
 
 /*KITS*/
+
 #kits article {
     margin: auto;
     margin-bottom: 2rem;
@@ -153,6 +154,8 @@ main {
 /**TABLET**/
 @media screen and (min-width: 768px) {
 
+
+
     /*DESTACADOS*/
     #destacados article {
         display: flex;
@@ -182,7 +185,6 @@ main {
 }
 
 @media screen and (min-width: 1080px) {
-
     /*DESTACADOS*/
     #destacados article {
         width: 20vw;
@@ -202,6 +204,7 @@ main {
     /*KITS*/
     #kits article {
         width: 20vw;
+        margin: 2rem;
         }
 
     #kits .descripcion {
