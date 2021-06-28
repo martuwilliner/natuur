@@ -7,7 +7,7 @@ main {
     width: 90vw;
     margin: auto;
 }
-#product-info{
+.product-info{
     display: flex;
     flex-flow: row wrap;
     width: 90vw;
@@ -15,19 +15,19 @@ main {
 /*     align-items: flex-start; */
 }
 
-#product-info figure{
+.product-info figure{
     display: flex;
     justify-content: center;
     width: 25vw;
     /* padding-left:10rem; */
 }
 
-#product-info img{
+.product-info img{
     width: 100%;
 /*     justify-content: flex-end; */
 }
 
-#product-unit {
+.product-unit {
     display: flex;
     flex-flow: row wrap;
     width: 30vw;
@@ -38,17 +38,17 @@ main {
 
 }
 
-#product-unit h3{
+.product-unit h3{
     font-weight: 700;
     width: 100%;
 }
 
-#product-unit p.precio {
+.product-unit p.precio {
     align-self: center;
     font-size: 0.8rem;
 }
 
-#product-unit p.precio, #product-unit form.cantidad {
+.product-unit p.precio, .product-unit form.cantidad {
     width: 50%;
     margin-top: 0.5rem;
 }
@@ -63,7 +63,7 @@ main {
     margin-left: 0.5rem;
 }
 
-#product-delete {
+.product-delete {
     width: 30vw;
     display: flex;
     flex-flow: row wrap;
@@ -72,7 +72,7 @@ main {
     padding-right: 1rem;
 }
 
-#product-delete button{
+.product-delete button{
     border: none;
     background-color: #3f3f3f;
     padding: 0.8rem;
@@ -82,7 +82,7 @@ main {
     font-size: 0.8rem;
 }
 
-#product-delete button:hover{
+.product-delete button:hover{
     background-color: #f1ba33;
 }
 
@@ -164,4 +164,8 @@ button{
         font-size: 1rem;
         max-width: 45%;
     }
+}
+
+@media screen and (min-width: 1200px){
+
 }
