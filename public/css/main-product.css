@@ -159,7 +159,7 @@ button{
         width: 4rem;
         padding: 1rem;
     }
-    #product-delete button{
+    .product-delete button{
         padding: 0.5rem;
         font-size: 1rem;
         max-width: 45%;
