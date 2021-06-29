@@ -6,7 +6,10 @@ main {
     background-color: whitesmoke;
     width: 90vw;
     margin: auto;
+    display: flex;
+    flex-flow: row wrap;
 }
+
 .product-info{
     display: flex;
     flex-flow: row wrap;
@@ -69,21 +72,18 @@ main {
     flex-flow: row wrap;
     flex: 1 0 auto;
     justify-content: center;
-    padding-right: 1rem;
+    align-items: center;
+    
 }
 
-.product-delete button{
-    border: none;
-    background-color: #3f3f3f;
-    padding: 0.8rem;
-    border-radius: 1.3rem;
-    transition: all 0.4s ease-in-out;
-    color: #ccc;
-    font-size: 0.8rem;
+.fa-trash-alt {
+    color: #3f3f3f;
+    font-size: 1rem;
 }
 
-.product-delete button:hover{
-    background-color: #f1ba33;
+
+.product-delete a:hover .fa-trash-alt {
+    color: #f1ba33;
 }
 
 .linea {
@@ -128,17 +128,18 @@ button{
     border: none;
     background-color: #3f3f3f;
     padding: 0.8rem;
-    border-radius: 1.3rem;
+    border-radius: 0.5rem; 
     transition: all 0.4s ease-in-out;
-    color: #ccc;
+    color: #fff;
     font-size: 0.8rem;
+
 }
 
 #check-out-button {
     display: flex;
     flex-flow: row wrap;
     margin-top: 2rem ;
-    
+    width: 90vw;
     justify-content: space-around;
 }
 
@@ -159,13 +160,57 @@ button{
         width: 4rem;
         padding: 1rem;
     }
-    .product-delete button{
-        padding: 0.5rem;
-        font-size: 1rem;
-        max-width: 45%;
+
+    .product-delete {
+       /*  width: 30vw;
+        display: flex;
+        flex-flow: row wrap;
+        flex: 1 0 auto;
+        justify-content: center;
+        align-items: center; */
+        
+    }
+    
+    .fa-trash-alt {
+        color: #3f3f3f;
+        font-size: 1.5rem;
     }
 }
 
 @media screen and (min-width: 1200px){
+    main {
+        margin-top: 200px;
+    }
     
+    #carrito {
+        width: 60vw;
+    }
+
+    .product-info figure{
+        width: 20vw;
+    }
+    
+    .product-info img{
+        width: 40%;
+    }
+
+    .product-unit {
+        width: 20vw;
+        margin-left: 0rem;
+    }
+
+    .product-delete {
+        width: 20vw;        
+    }
+
+    #code-box{
+        display: flex;
+        flex-flow: row wrap;
+        width: 90vw;
+        justify-content: space-around;
+    }
+
+    form .info {
+        width: 25vw;
+    }
 }

@@ -23,7 +23,7 @@
             </a>
             <nav id="user-list">
                 <a href="#"><i class="fas fa-search"></i></a>
-                <a href="/register"><i class="fas fa-user"></i></a>
+                <a href="/login"><i class="fas fa-user"></i></a>
                 <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>
             </nav>
             <nav id="head-list">
@@ -52,16 +52,16 @@
     </header>
     <main class="main-register"> 
         <form action="/" method="GET">
-            <p class="bienvenido">CREA TU CUENTA DE FORMA SANA Y SEGURA</p>
+            <p class="bienvenido">CREA TU CUENTA</p>
             <input class="formulario-register" type="text" placeholder="Nombre y apellido"name="nombre" id="nombre" required>
   
             <input class="formulario-register" type="text" placeholder="Nombre de Usuario"name="usuario" id="usuario" required>
 
-                <input class="formulario-register" type="email" placeholder="Email"name="email" id="email" required>
+            <input class="formulario-register" type="email" placeholder="Email"name="email" id="email" required>
 
-                  <input class="formulario-register" type="password" placeholder="Contraseña" name="password">
+            <input class="formulario-register" type="password" placeholder="Contraseña" name="password" required>
 
-                  <input class="formulario-register" type="password" placeholder="Repetir Contraseña" name="confirm-password">
+            <input class="formulario-register" type="password" placeholder="Repetir Contraseña" name="confirm-password" required>
 
         <section class="button-google">
             <button name="google" id="google">
@@ -69,11 +69,7 @@
             </button>
           </section>
           <section class="button-enviar">
-                <button type="submit" name="enviar" id="enviar">Enviar</button>
-          </section>
-          <p class="mensaje-register">SI YA TENES UNA CUENTA, REGISTRATE</p>
-          <section class="button-enviar-login">
-                <a href="/login"><button type="submit" name="enviar" id="enviar">Registrarse</a></button>
+                <button type="submit" name="enviar" id="enviar">Ingresar</button>
           </section>
     </main>
     <footer>

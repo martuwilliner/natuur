@@ -6,19 +6,21 @@ main.main-login{
     width: 100vw;
     margin: auto;
     margin-top: 180px;
-    margin-right: 10%;
+/*     margin-right: 10%; */
 }
 p#mensaje-bienvenida-login{
     display: flex;
-    margin: 20px;
-    width: 25vw;
+    margin: auto;
+    width: 100vw;
     background-color: rgb(243, 239, 239);
     padding: 15px;
     border-radius: 5%;
-    justify-content: center;
+ 
+     justify-content: center; 
     font-weight: 700;
-    text-align: center;
+/*     text-align: center; */
 }
+
 .formulario-login{
     display: flex;
     justify-content: center;
@@ -36,9 +38,9 @@ i.fa-google{
     display: flex;
     margin: 10px;
     width: 5vw;
-    padding: 5px;
+    padding: 0.8rem;
     border: none;
-    border-radius: 3%; 
+    border-radius: 0.5rem; 
     align-items: center;
     justify-content: center;
     text-decoration: none;
@@ -46,6 +48,11 @@ i.fa-google{
     background-color: #3f3f3f;
     color: white;
     transition: all 0.4s ease-in-out;
+}
+
+.main-login a{
+    text-decoration: none;
+    color:#fff;
 }
 
 .main-login button:hover{
@@ -59,7 +66,7 @@ i.fa-google{
     }
     p#mensaje-bienvenida-login{
         width: 70vw;
-        font-size: 13px;
+/*         font-size: 13px; */
     }
     .formulario-login{
         width: 60vw;
@@ -77,7 +84,7 @@ i.fa-google{
     }
     p#mensaje-bienvenida-login{
         width: 70vw;
-        font-size: 13px;
+/*         font-size: 13px; */
     }
     .formulario-login{
         width: 60vw;
@@ -90,12 +97,12 @@ i.fa-google{
 }@media screen and (min-width: 1200px) {
     main.main-login{
         width: 80vw;
-        height: 60vh;
         border-radius: 1%;
     }
     p#mensaje-bienvenida-login{
-        width: 45vw;
-        font-size: 13px;
+        width: 80vw;
+        display: flex;
+/*         font-size: 13px; */
     }
     .formulario-login{
         width: 40vw;
