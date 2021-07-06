@@ -35,8 +35,7 @@ main {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    background-color: #D4CFD5;
-
+    background-color: #E0DFE5;
     position: relative; 
 }
 
@@ -54,7 +53,7 @@ main {
     flex-flow: column wrap;
     /* align-items: flex-end; */
 
-    align-items: center;
+    /* align-items: center; */
     
 }
 
