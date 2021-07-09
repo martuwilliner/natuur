@@ -10,7 +10,7 @@ app.listen(app.get("port"),() => console.log("Server Start http://localhost:"+ap
 
 // EJS
 app.set('view engine', 'ejs');
-/* app.set('views', path.resolve(__dirname, "./views")); */
+app.set('views', path.resolve(__dirname, "./views")); 
 
 
 // Public Access 
@@ -19,13 +19,10 @@ app.use(express.static(publicPath));
 
 /* ACA VA UN APP SETTINGS 
 
-
-
 */
 
 
 /* ACA VA APP MIDDLEWARES 
-
 
 */
 

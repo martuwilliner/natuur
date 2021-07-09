@@ -4,10 +4,12 @@ const app = express ();
 
 const router = express.Router();
 
-const mainControllers = require('../controllers/main');
+const usersControllers = require('../controllers/users');
 
 
 // router
-router.get('/', mainControllers.index);
+router.get('/login', usersControllers.login);
+router.get('/registro', usersControllers.register);
+
 
 module.exports = router;

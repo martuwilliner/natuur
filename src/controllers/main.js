@@ -1,17 +1,14 @@
-/* aca va index, nosotros , contacto, bla bla */
+const product = require ("../models/product")
 
-const controller = {
+const mainController = {
     index: (req,res) =>{
-        return res.render('index');
+        return res.render('index', 
+        {products: 
+            product.allWithExtra().filter(product => product.oferts == true), 
+        styles: ["/css/main-index.css"],
+        }
+        );
     },
-    register: (req,res) => {
-        return res.render('users/register');
-    },
-    login: (req,res) => {
-        return res.render('users/login');
-    },
-   /*  contacto: falta 
-        nosotros*/
 }
 
-module.exports = controller;
+module.exports = mainController;

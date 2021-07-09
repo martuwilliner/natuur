@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "name": "Fideos integrales con ajo negro",
+        "descr": "Los fusillis integrales con ajo negro son 100% artesanales y agroecológicos",
+        "type": 1, 
+        "size": [1], 
+        "price": 320,
+        "category": 1, 
+        "images": [1],
+        "oferts": true
+    }
+]
+

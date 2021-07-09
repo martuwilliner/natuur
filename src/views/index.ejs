@@ -1,71 +1,25 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/fonts.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="/css/body.css">
-    <link rel="stylesheet" href="/css/header-index.css">
-    <link rel="stylesheet" href="/css/main-index.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    <title>Natuur</title>
-</head>
+<%- include ("partials/head.ejs") %> 
 <body>
-    <header>
-        <section id="main-menu">
-            <a href="/">
-                <figure>
-                    <img src="/img/logo.png" alt="logo natuur">
-                </figure>
-            </a>
-            <nav id="user-list">
-                <a href="#"><i class="fas fa-search"></i></a>
-                <a href="/login"><i class="fas fa-user"></i></a>
-                <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>
-            </nav>
-            <nav id="head-list">
-                <ul>
-                    <li>
-                        <a href="/nosotros">NOSOTROS</a>
-                    </li>
-                    <li>
-                        <a href="/almacen">ALMACEN</a>
-                    </li>
-                    <li>
-                        <a href="/gourmet">GOURMET</a>
-                    </li>
-                    <li>
-                        <a href="/cosmetica">COSMÉTICA</a>
-                    </li>
-                    <li>
-                        <a href="/contacto">CONTACTO</a>
-                    </li>
-                </ul>
-            </nav>
-            <nav id="hamburguer-menu">
-                <a href="#"><i class="fas fa-bars"></i></a> 
-             </nav>
-        </section>    
-    </header>
-    <!-- --------------------------------------------- -->
+    <%- include ("partials/header.ejs") %> 
     <main>
         <section id="destacados">
             <h1>DESTACADOS</h1>
-            <article>
-                <a href="/products/almacenProductDetail">
-                    <figure>
-                        <img src="/img/productos/almacen/almacen-natuur (107).jpg" alt="">
-                    </figure>
-                    <section class="product-info">
-                        <p class="descripcion">Fideos integrales con ajo negro</p>
-                        <p class="precio">$420</p>
-                    </section>
-                </a>
-            </article>
+            <% if (products.length > 0) { %>
+             <% products.forEach(product => { %>
+                <article>
+                    <a href="/products/almacenProductDetail">
+                        <figure>
+                            <img src="<%= product.images[0].url %> " alt="">
+                        </figure>
+                        <section class="product-info">
+                            <p class="descripcion">Fideos integrales con ajo negro</p>
+                            <p class="precio">$420</p>
+                        </section>
+                    </a>
+                </article>
+             <% }) %>
+            <% } %>
+           <!--  
             <article>
                 <a href="/products/cosmeticaProductDetail">
                     <figure>
@@ -98,7 +52,7 @@
                         <p class="precio">$530</p>
                     </section>
                 </a>
-            </article>
+            </article> -->
         </section>
         <section id="kits">
             <h1>NUESTROS KITS</h1>
@@ -134,42 +88,6 @@
             </a>
         </section>
     </main>
-    <!-- --------------------------------------------- -->
-    <footer>
-        <section id="footer-first-section">
-            <nav class="footer-item">
-                <h3>¡Escribinos!<br>
-                <a href="#">hola@natuur.com.ar</a></h3>
-                <p><a href="#">Formá parte de nuestro equipo</a></p>
-                <p><a href="#">Términos y Condiciones</a></p>
-            </nav>
-            <hr id="footer-linea">
-            <section class="footer-item">
-                <h3>Métodos de pago</h3>
-                <section class="methods-p">
-                    <i class="fab fa-cc-visa"></i>
-                    <i class="fab fa-cc-mastercard"></i>
-                    <i class="fab fa-cc-amex"></i>
-                    <i class="fab fa-cc-paypal"></i>
-                    <i class="fab fa-bitcoin"></i>
-                </section>
-            </section>
-            <section class="footer-item">
-                    <form>
-                        <input type="email" id="email" name="email" placeholder="NEWSLETTER">
-                        <button type="submit" action="/" method="POST">Enviar</button>
-                    </form>
-                    <nav class="social-media">
-                        <a href="#"><i class="fab fa-facebook-square"></i></a>
-                        <a href="#"><i class="fab fa-instagram-square"></i></a>
-                        <a href="#"><i class="fab fa-twitter-square"></i></a>
-                    </nav>
-            </section>
-        </section>
-        <section id="footer-second-section">
-            <p>Copyright © 2021 Natuur</p>
-        </section>
-        
-    </footer>
+    <%- include ("partials/footer.ejs") %> 
 </body>
 </html>
