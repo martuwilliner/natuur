@@ -17,19 +17,13 @@ app.set('views', path.resolve(__dirname, "./views"));
 const publicPath = path.resolve(__dirname, "../public");
 app.use(express.static(publicPath));
 
-/* ACA VA UN APP SETTINGS 
-
-*/
+// App Settings 
 
 
-/* ACA VA APP MIDDLEWARES 
+// Middlewares
 
-*/
 
 // Web Routes
 app.use (require("./routes/main"));
-
-
-
-
-
+app.use (require("./routes/products"));
+app.use (require("./routes/users"));

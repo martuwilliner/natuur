@@ -21,10 +21,10 @@ module.exports = {
         }).map(element => {
             element.images = element.images.map(imageId => image.one(imageId))
             return element; 
-        })/* .map(element => {
-            element.sizes = element.sizes.map(sizeId => size.one(sizeId))
+        }).map(element => {
+            element.sizes = element.size.map(sizeId => size.one(sizeId))
             return element; 
-        }) */
+        })
     },//un intermedio para agregarle algo extra. por ejemplo en este caso la categoria
     one: function(id){
         return this.all().find(element => element.id == id);

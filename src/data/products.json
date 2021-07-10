@@ -9,6 +9,40 @@
         "category": 1, 
         "images": [1],
         "oferts": true
+    },
+    {
+        "id": 2,
+        "name": "Roller duo cuarzo rosa",
+        "descr": "The secret of Asian beauty: Los asiáticos son uno de nuestros grandes mentores en una enorme variedad de temáticas y las prácticas de belleza es una de ellas. Usá este mini rol para masajear tu piel y darle un brillo natural con las maravillas que carga su piedra. El cuarzo rosa esconde en su belleza minerales que ayudan a disminuir la hinchazón, eliminar toxinas y reafirmar la piel. Si tu gran molestia son las arrugas, elegí esta opción.",
+        "type": 1, 
+        "size": [], 
+        "price": 3900,
+        "category": 3, 
+        "images": [2],
+        "oferts": true
+    },
+    {
+        "id": 3,
+        "name": "Tarta de verduras asadas",
+        "descr": "Elaborada con harina integral orgánica, aceite de oliva extra virgen y sal marina. Ingredientes: Harina integral orgánica, cebolla, tomate cherry, sal marina,huevo, Mozzarella, semillas de girasol, calabaza, zanahoria, zapallitos y berenjena.",
+        "type": 2, 
+        "size": [1], 
+        "price": 505,
+        "category": 2, 
+        "images": [3],
+        "oferts": true
+    },
+    {
+        "id": 4,
+        "name": "Shampoo sólido para cabellos secos",
+        "descr": "El shampoo y acondicionador de Terra Té acercan la posibilidad de nutrir tu cuero cabelludo genuinamente y no contaminar ni dañar el planeta en el proceso. Los ingredientes naturales que lo componen llegan con todos sus nutrientes para limpiar, hidratar y estimular el crecimiento del pelo en cada baño. Aplicar sobre pelo mojado y masajear suavemente. Luego, enjuagar con abundante agua.",
+        "type": 1, 
+        "size": [1], 
+        "price": 570,
+        "category": 3, 
+        "images": [4],
+        "oferts": true
     }
+
 ]
 

@@ -7,52 +7,18 @@
             <% if (products.length > 0) { %>
              <% products.forEach(product => { %>
                 <article>
-                    <a href="/products/almacenProductDetail">
+                    <a href="/products/almacenProductDetail"> <!-- hay que detallar el id y poner un product detail general y despues el style usar una funcion -->
                         <figure>
                             <img src="<%= product.images[0].url %> " alt="">
                         </figure>
                         <section class="product-info">
-                            <p class="descripcion">Fideos integrales con ajo negro</p>
-                            <p class="precio">$420</p>
+                            <p class="descripcion"><%= product.name %></p>
+                            <p class="precio">$<%= product.price %></p>
                         </section>
                     </a>
                 </article>
              <% }) %>
             <% } %>
-           <!--  
-            <article>
-                <a href="/products/cosmeticaProductDetail">
-                    <figure>
-                        <img src="/img/productos/cosmetica/cosmetica-natuur (11).jpg" alt="">
-                    </figure>
-                    <section class="product-info">
-                        <p class="descripcion">Roller duo cuarzo rosa</p>
-                        <p class="precio">$3.900</p>
-                    </section>
-                </a>
-            </article>
-            <article>
-                <a href="/products/gourmetProductDetail">
-                    <figure>
-                        <img src="/img/productos/gourmet/gourmet-natuur (20).jpg" alt="">
-                    </figure>
-                    <section class="product-info">
-                        <p class="descripcion">Tarta de verduras asadas</p>
-                        <p class="precio">$505</p>
-                    </section>
-                </a>
-            </article>
-            <article>
-                <a href="#">
-                    <figure>
-                        <img src="/img/productos/cosmetica/cosmetica-natuur (1).jpg" alt="">
-                    </figure>
-                    <section class="product-info">
-                        <p class="descripcion">Shampoo</p>
-                        <p class="precio">$530</p>
-                    </section>
-                </a>
-            </article> -->
         </section>
         <section id="kits">
             <h1>NUESTROS KITS</h1>

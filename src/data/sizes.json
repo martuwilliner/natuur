@@ -1,18 +1,18 @@
 [
     {
         "id": 1,
-        "category": "500gr"
+        "name": "500gr"
     },
     {
         "id": 2,
-        "category": "1kg"
+        "name": "1kg"
     },
     {
         "id": 3,
-        "category": "500ml"
+        "name": "500ml"
     },
     {
         "id": 4,
-        "category": "1 litro"
+        "name": "1 litro"
     }
 ]

@@ -2,5 +2,17 @@
     {
         "id": 1,
         "url": "/img/productos/almacen/almacen-natuur (107).jpg"
+    },
+    {
+        "id": 2,
+        "url": "/img/productos/cosmetica/cosmetica-natuur (11).jpg"
+    },
+    {
+        "id": 3,
+        "url": "/img/productos/gourmet/gourmet-natuur (20).jpg"
+    },
+    {
+        "id": 4,
+        "url": "/img/productos/cosmetica/cosmetica-natuur (1).jpg"
     }
 ]
