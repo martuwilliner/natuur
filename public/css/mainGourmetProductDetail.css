@@ -10,6 +10,10 @@ main {
     margin: auto;
 }
 
+#socialMedia {
+    margin-top: 2rem;
+}
+
 #detalleProducto nav{
     display: flex;
     flex-flow: column wrap;
@@ -32,6 +36,7 @@ main {
 #detalleProducto img{
     width: 100%;
     border: solid 0.2rem #469e9d;
+    border-radius: 2rem;
 }
 
 .infoProducto {
@@ -105,7 +110,7 @@ main {
 /*Te puede interesar*/
 #interesar {
     display: flex;
-    width: 90vw;
+    width: 80vw;
     flex-flow: row wrap;
     margin-top: 1rem;
     margin: auto;
@@ -148,9 +153,10 @@ main {
     top: 10vw;
     color: #3f3f3f; 
     font-weight: 700;
-    background-color: #f1ba33;
+    background-color: #469e9d;
     padding: 1rem;
     width: 100%;
+    text-align: center;
 }
 
 #interesar .precio {
@@ -158,8 +164,8 @@ main {
     font-size: 1.3rem;
     color: #3f3f3f; 
     position: absolute;
-    bottom: 5vw;
-    right: 5vw;
+    bottom: 2vw;
+    right: 2vw;
 }
     
 /**TABLET**/
@@ -169,8 +175,9 @@ main {
     }
 
     #detalleProducto {
-        background-color: rgba(70, 158, 157, 0.3);
+        background-color: rgba(70, 158, 157, 0.3);;
         padding: 1.2rem;
+        border-radius: 1rem;
     }
     
   #detalleProducto nav i{
@@ -193,12 +200,15 @@ main {
     
     .infoProducto h2{
         width: 100%;
+        border-bottom: #469e9d solid 0.2rem;
+        padding-bottom: 1rem;
     }
     
     .infoProducto .precio{
         justify-content: flex-start;
         width: 100%;
         margin: 1.2rem 0;
+        font-size: 1rem;
     }
     
     .infoProducto p{
@@ -225,17 +235,22 @@ main {
     /*te pueden interesar*/
     #interesar article {
         display: flex;
-        width: 20vw;
+        width: 18vw;
         flex-flow: row wrap;
+        transition: all .4s ease-in-out; 
+        }
+    
+    #interesar article:hover {
+        transform: scale(1.02);
         }
 
     #interesar .descripcion {
-        top: 5vw;
+        top: 2vw;
         }
         
     #interesar .precio {
-        bottom: 2vw;
-        right: 2vw;
+        bottom: 1vw;
+        right: 1vw;
         }
 }
 
@@ -249,7 +264,7 @@ main {
     }
 
     .infoProducto h2{
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
     
     .infoProducto .precio{

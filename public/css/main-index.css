@@ -9,27 +9,25 @@ main {
 /*DESTACADOS*/
 #destacados, #kits {
     display: flex;
-    width: 90vw;
+    width: 80vw;
     flex-flow: row wrap;
     justify-content: center;
+    margin: auto;
     margin-top: 1rem;
 }
 
 #destacados h1, #kits h1 {
-    width: 90vw;
+    width: 80vw;
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     font-weight: 700;
     color: #3f3f3f;
-    margin: 2rem 0;
+    margin: 1rem 0;
+/*     border-bottom: 0.3rem solid #f1ba33;
+    padding-bottom: 1.5rem; */
 }
 
 #destacados article {
-/*  NO HACE FALTA
-    width: 50vw;
-*/
-    /* box-shadow: 0px 0px 10px rgb(100, 100, 100); */
-    transition: all 400ms ease-in-out; 
     margin: auto;
     margin-bottom: 2rem;
     display: flex;
@@ -37,10 +35,14 @@ main {
     align-items: center;
     background-color: #E0DFE5;
     position: relative; 
+    text-transform: uppercase;
+    line-height: 1.5rem;
+    transition: all .4s ease-in-out; 
+    margin-top: 1.5rem;
 }
 
 #destacados article:hover {
-    box-shadow: 0px 0px 10px rgb(242, 186, 51);
+    transform: scale(1.02);
 }
 
 #destacados article img, #kits article img {
@@ -51,28 +53,18 @@ main {
     display: flex;
     width: 100%;
     flex-flow: column wrap;
-    /* align-items: flex-end; */
-
-    /* align-items: center; */
-    
+    text-align: center;
 }
 
 #destacados .descripcion {
-    font-size: 1.2rem;
-
+    font-size: 1rem;
     position: absolute;
-    top: 10vw;
+    top: 5vw;
     color: #3f3f3f; 
     font-weight: 700;
     background-color: #f1ba33;
     padding: 1rem;
     width: 100%;
-
-    transition: all 400ms ease-in-out;
-}
-
-#destacados article:hover .descripcion {
-    box-shadow: 0px 0px 10px rgb(242, 186, 51);
 }
 
 #destacados .precio {
@@ -90,7 +82,6 @@ main {
 }
 
 /*KITS*/
-
 #kits article {
     margin: auto;
     margin-bottom: 2rem;
@@ -99,7 +90,6 @@ main {
     align-items: center;
     background-color: #D4CFD5;
     width: 80vw;
-        
     opacity: 1.0;
     position: relative; 
     transition: all 400ms ease-in-out; 
@@ -152,18 +142,15 @@ main {
 
 /**TABLET**/
 @media screen and (min-width: 768px) {
-
-
-
     /*DESTACADOS*/
     #destacados article {
         display: flex;
-        width: 40vw;
+        width: 30vw;
         flex-flow: row wrap;
         }
 
     #destacados .descripcion {
-        top: 5vw;
+        top: 2vw;
         }
         
     #destacados .precio {
@@ -186,11 +173,12 @@ main {
 @media screen and (min-width: 1200px) {
     /*DESTACADOS*/
     #destacados article {
-        width: 20vw;
+        width: 18vw;
     }
 
     #destacados .descripcion {
         font-size: 1rem;
+        padding: 0.5rem;
         top: 2vw;
     }
     
