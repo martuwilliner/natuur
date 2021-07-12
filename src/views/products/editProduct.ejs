@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/css/body.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/mainAlmacenProductDetail.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <title>Natuur</title>
+</head>
+<body>
+    <%- include ("../partials/header.ejs") %> 
+    <main>
+        <% if (products) { %>       
+        <section id="detalleProducto">
+            <nav id="socialMedia">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </nav>
+            <figure><img src="<%= products.images[0].url %> "></figure>
+            <article class="infoProducto">
+                <h2 class="nombreProducto"><%= products.name %></h2>
+                <h3 class="precio">$<%= products.price %></h3>
+                <p><%= products.descr %></p>
+                <section id="botones">
+                    <form class="shopping" action="/comprar" method="POST">
+                        <input type="number" id="cantidad" name="cantidad">
+                        <button type="submit">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </form>
+                    <form class="favorito" action="/favoritos"  method="POST">
+                        <button type="submit">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </form>
+                </section>
+            </article>
+        </section>
+       <% } %>
+        <section id="interesar">
+            <h1>TE PUEDEN INTERESAR</h1>
+            <article>
+                <figure>
+                    <img src="/img/productos/destacados/cosmetica-natuur (1).jpg" alt="">
+                </figure>
+                <section class="product-info">
+                    <p class="descripcion">Shampoo</p>
+                    <p class="precio">$530</p>
+                </section>
+            </article>
+            <article>
+                <figure>
+                    <img src="/img/productos/destacados/cosmetica-natuur (1).jpg" alt="">
+                </figure>
+                <section class="product-info">
+                    <p class="descripcion">Shampoo</p>
+                    <p class="precio">$530</p>
+                </section>
+            </article>
+            <article>
+                <figure>
+                    <img src="/img/productos/destacados/cosmetica-natuur (1).jpg" alt="">
+                </figure>
+                <section class="product-info">
+                    <p class="descripcion">Shampoo</p>
+                    <p class="precio">$530</p>
+                </section>
+            </article>
+            <article>
+                <figure>
+                    <img src="/img/productos/destacados/cosmetica-natuur (1).jpg" alt="">
+                </figure>
+                <section class="product-info">
+                    <p class="descripcion">Shampoo</p>
+                    <p class="precio">$530</p>
+                </section>
+            </article>
+        </section>      
+    </main>
+    <%- include ("../partials/footer.ejs") %> 
+</body>
+</html>

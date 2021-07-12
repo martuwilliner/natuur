@@ -7,7 +7,7 @@
             <% if (products.length > 0) { %>
              <% products.forEach(product => { %>
                 <article>
-                    <a href="/products/almacenProductDetail"> <!-- hay que detallar el id y poner un product detail general y despues el style usar una funcion -->
+                    <a href="products/productDetail/<%= product.id %>"> <!-- NO VAN LOS :-->
                         <figure>
                             <img src="<%= product.images[0].url %> " alt="">
                         </figure>

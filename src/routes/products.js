@@ -8,10 +8,12 @@ const productsControllers = require('../controllers/products');
 
 
 // router
+router.get('/products/productDetail/:id', productsControllers.showDetail); // IMPORTANTE PONER ID
+/* router.get('/products/editProduct', productsControllers.edit);
+router.get('/products/createProduct', productsControllers.create); */
+
 router.get('/productCart', productsControllers.productCart);
-router.get('/products/almacenProductDetail', productsControllers.showAlmacenDetail);
-router.get('/products/gourmetProductDetail', productsControllers.showGourmetDetail); 
-router.get('/products/cosmeticaProductDetail', productsControllers.showCosmeticaDetail); 
+
 
 
 module.exports = router;

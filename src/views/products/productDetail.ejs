@@ -17,19 +17,18 @@
 <body>
     <%- include ("../partials/header.ejs") %> 
     <main>
+        <% if (products) { %>       
         <section id="detalleProducto">
             <nav id="socialMedia">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
             </nav>
-            <figure><img src="/img/productos/almacen/almacen-natuur (107).jpg"></figure>
+            <figure><img src="<%= products.images[0].url %> "></figure>
             <article class="infoProducto">
-                <h2 class="nombreProducto">FIDEOS INTEGRALES CON AJO NEGRO</h2>
-                <h3 class="precio">$420</h3>
-                <p>Los fusillis integrales con ajo negro son 100% artesanales y agroecológicos.</p>
-                <p>Ingredientes: Harina integral de trigo candeal, ajo negro.</p>    
-                <p>Contenido: 400 grs</p>
+                <h2 class="nombreProducto"><%= products.name %></h2>
+                <h3 class="precio">$<%= products.price %></h3>
+                <p><%= products.descr %></p>
                 <section id="botones">
                     <form class="shopping" action="/comprar" method="POST">
                         <input type="number" id="cantidad" name="cantidad">
@@ -45,6 +44,7 @@
                 </section>
             </article>
         </section>
+       <% } %>
         <section id="interesar">
             <h1>TE PUEDEN INTERESAR</h1>
             <article>

@@ -1,13 +1,23 @@
+const product = require ("../models/product")
+
 const productsController = {
-    showAlmacenDetail: (req,res) => {
-        return res.render('products/almacenProductDetail');
+    showDetail: (req,res) => {
+        return res.render('products/productDetail', 
+        {products: //ES EL NOMBRE CON EL Q SE LLAMA A LA FUNCION
+            product.oneWithExtra(req.params.id),
+        styles: ["/css/mainAlmacenProductDetail.css", "/css/mainGourmetProductDetail.css", "/css/mainCosmeticaProductDetail.css"],
+        }
+        );
     },
-    showGourmetDetail: (req,res) => {
-        return res.render('products/gourmetProductDetail');
+
+/*     create: (req,res) => {
+        return res.render('products/createProduct');
     },
-    showCosmeticaDetail: (req,res) => {
-        return res.render('products/cosmeticaProductDetail');
+
+    edit: (req,res) => {
+        return res.render('products/editProduct');
     },
+ */
     productCart: (req,res) => {
         return res.render('products/productCart');
     },
