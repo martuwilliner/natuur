@@ -1,52 +1,49 @@
 main.main-login{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    background-color: whitesmoke;
-    width: 100vw;
     margin: auto;
-    margin-top: 180px;
-/*     margin-right: 10%; */
+    margin-top: 130px;
+    background-color: whitesmoke;
+    width: 80vw;
+    border-radius: 1rem;
+    padding: 1rem 0;
 }
+
 p#mensaje-bienvenida-login{
     display: flex;
     margin: auto;
-    width: 100vw;
+    width: 70vw;
     background-color: rgb(243, 239, 239);
-    padding: 15px;
-    border-radius: 5%;
- 
-     justify-content: center; 
+    padding: 0.7rem 0;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    justify-content: center; 
     font-weight: 700;
-/*     text-align: center; */
 }
 
 .formulario-login{
     display: flex;
-    justify-content: center;
-    margin: 10px;
-    width: 30vw;
-    height: 50px;
-    padding: 5px;
     border: none;
-    border-radius: 3%;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
 }
+
 i.fa-google{
     color: white;
 }
+
 .main-login button{
     display: flex;
-    margin: 10px;
-    width: 5vw;
-    padding: 0.8rem;
+    margin: .5rem;
+    padding: 0.5rem;
     border: none;
     border-radius: 0.5rem; 
-    align-items: center;
     justify-content: center;
     text-decoration: none;
-    list-style-type: none;
     background-color: #3f3f3f;
     color: white;
+    width: 25vw;
     transition: all 0.4s ease-in-out;
 }
 
@@ -58,57 +55,29 @@ i.fa-google{
 .main-login button:hover{
     background-color: #f1ba33;
 }
-@media screen and (min-width: 320px) {
-    main.main-login{
-        width: 80vw;
-        height: 70vh;
-        border-radius: 1%;
-    }
-    p#mensaje-bienvenida-login{
-        width: 70vw;
-/*         font-size: 13px; */
-    }
-    .formulario-login{
-        width: 60vw;
-        height: 40px;
-    }
-    .main-login button{
-        width: 25vw;
-    }
-}
+
 @media screen and (min-width: 768px) {
     main.main-login{
-        width: 80vw;
-        height: 80vh;
-        border-radius: 1%;
-    }
-    p#mensaje-bienvenida-login{
-        width: 70vw;
-/*         font-size: 13px; */
-    }
-    .formulario-login{
+        margin-top: 150px;
         width: 60vw;
-        height: 40px;
-        padding: 10px;
-    }
-    .main-login button{
-        width: 13vw;
-    }
-}@media screen and (min-width: 1200px) {
-    main.main-login{
-        width: 80vw;
-        border-radius: 1%;
     }
     p#mensaje-bienvenida-login{
-        width: 80vw;
-        display: flex;
-/*         font-size: 13px; */
+        width: 60vw;
     }
     .formulario-login{
         width: 40vw;
-        height: 40px;
     }
     .main-login button{
-        width: 10vw;
+        width: 20vw;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    main.main-login{
+        margin-top: 180px;
+        width: 50vw;
+    }
+    p#mensaje-bienvenida-login{
+        width: 50vw;
     }
 }

@@ -8,6 +8,9 @@ const productsController = {
     showCosmeticaDetail: (req,res) => {
         return res.render('products/cosmeticaProductDetail');
     },
+    productCart: (req,res) => {
+        return res.render('products/productCart');
+    },
 }
 
 module.exports = productsController;
