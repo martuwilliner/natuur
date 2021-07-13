@@ -6,11 +6,10 @@ const mainController = {
         {products: 
             product.allWithExtra().filter(product => product.oferts == true), 
         styles: ["/css/main-index.css"],
-/*         styles:
-            style. */
+/*         cssAlmacen: product.cssByCategory("almacen") */
         }
         );
-    },
+    }
 }
 
 module.exports = mainController;

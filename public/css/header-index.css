@@ -2,7 +2,7 @@
 header{
     width: 100vw;
     display: flex;
-    background-image: url("/img/home/banner-3.jpg");
+    background-image: url("/img/home/banner-2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 450px;
@@ -17,7 +17,7 @@ header{
     top: 0vw;
     padding: 1rem;
     z-index: 1;
-    background-color: #fff; /*HASTA SABER HACERLO BIEN*/
+/*     background-color: #fff;  *//*HASTA SABER HACERLO BIEN*/
 }
 
 #main-menu figure{

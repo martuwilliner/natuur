@@ -9,6 +9,21 @@ const productsController = {
         }
         );
     },
+    cart: (req,res) => {
+        return res.render('products/productCart',{
+        styles: ["/css/main-product.css"],
+        });
+    },
+    create: (req,res) => {
+        return res.render('products/createProduct',{
+            styles: ["/css/main-create.css"],
+        });    
+    },
+    edit: (req,res) => {
+        return res.render('products/editProduct',{
+            styles: ["/css/main-edit.css"],
+        });    
+    },
 
 /*     create: (req,res) => {
         return res.render('products/createProduct');
@@ -18,9 +33,9 @@ const productsController = {
         return res.render('products/editProduct');
     },
  */
-    productCart: (req,res) => {
+/*     productCart: (req,res) => {
         return res.render('products/productCart');
-    },
+    }, */
 }
 
 module.exports = productsController;
