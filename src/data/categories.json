@@ -1,14 +1,17 @@
 [
     {
         "id": 1,
-        "name": "almacen"
+        "name": "almacen", 
+        "css": "/css/mainAlmacenProductDetail.css"
     },
     {
         "id": 2,
-        "name": "gourmet"
+        "name": "gourmet",
+        "css": "/css/mainGourmetProductDetail.css"
     },
     {
         "id": 3,
-        "name": "cosmetica"
+        "name": "cosmetica",
+        "css": "/css/mainCosmeticaProductDetail.css"
     }
 ]

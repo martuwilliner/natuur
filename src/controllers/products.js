@@ -3,7 +3,7 @@ const product = require ("../models/product")
 const productsController = {
     showDetail: (req,res) => {
         return res.render('products/productDetail', 
-        {products: //ES EL NOMBRE CON EL Q SE LLAMA A LA FUNCION
+        {product: //ES EL NOMBRE CON EL Q SE LLAMA A LA FUNCION
             product.oneWithExtra(req.params.id),
         styles: ["/css/mainAlmacenProductDetail.css", "/css/mainGourmetProductDetail.css", "/css/mainCosmeticaProductDetail.css"],
         }

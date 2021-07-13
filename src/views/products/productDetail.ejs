@@ -1,34 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/fonts.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="/css/body.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/mainAlmacenProductDetail.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    <title>Natuur</title>
-</head>
+    <%- include ("../partials/head.ejs") %> 
 <body>
     <%- include ("../partials/header.ejs") %> 
     <main>
-        <% if (products) { %>       
+        <% if (product) { %>       
         <section id="detalleProducto">
             <nav id="socialMedia">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
             </nav>
-            <figure><img src="<%= products.images[0].url %> "></figure>
+            <figure><img src="<%= product.images[0].url %> "></figure>
             <article class="infoProducto">
-                <h2 class="nombreProducto"><%= products.name %></h2>
-                <h3 class="precio">$<%= products.price %></h3>
-                <p><%= products.descr %></p>
+                <h2 class="nombreProducto"><%= product.name %></h2>
+                <h3 class="precio">$<%= product.price %></h3>
+                <p><%= product.descr %></p>
                 <section id="botones">
                     <form class="shopping" action="/comprar" method="POST">
                         <input type="number" id="cantidad" name="cantidad">

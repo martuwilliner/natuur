@@ -175,7 +175,7 @@ main {
     }
 
     #detalleProducto {
-        background-color: rgba(70, 158, 157, 0.1);;
+        background-color: rgba(70, 158, 157, 0.1);
         padding: 1.2rem;
         border-radius: 1rem;
     }
@@ -260,7 +260,7 @@ main {
     }
 
     #detalleProducto figure{
-        width: 30vw;
+        width: 20vw;
     }
 
     .infoProducto h2{
