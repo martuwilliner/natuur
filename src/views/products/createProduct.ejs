@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+    <title>Create Product</title>
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/fonts.css">
@@ -11,27 +11,51 @@
     <link rel="stylesheet" href="/css/body.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/main-register.css">
+    <link rel="stylesheet" href="/css/creatProduct.css">
 </head>
 <body>
-    <%- include ("../partials/header-index.ejs") %> 
-    <main class="main-register"> 
-        <form action="/" method="GET">
-            <p class="bienvenido">CREA TU CUENTA</p>
-            <input class="formulario-register" type="text" placeholder="Nombre"name="nombre" id="nombre" minlength="3" required>
-            <input class="formulario-register" type="text" placeholder="Apellido"name="apellido" id="apellido" minlength="3" required>
-            <input class="formulario-register" type="text" placeholder="Nombre de usuario"name="usuario" id="usuario" minlength="5" required>
-            <input class="formulario-register" type="email" placeholder="Email"name="email" id="email" required>
-            <input class="formulario-register" type="password" placeholder="Contraseña" name="password" required>
-            <input class="formulario-register" type="password" placeholder="Repetir contraseña" name="confirm-password" required>
-        <section class="button-google">
-            <button name="google" id="google">
-                <i class="fab fa-google"></i>
-            </button>
+    <%- include ("../partials/header.ejs") %> 
+    <main>     
+        <section id="detalleProducto">
+            <nav id="socialMedia">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </nav>
+            <figure><img src=" "></figure>
+            <article class="infoProducto">
+                <section class="infoProduct2">
+                <label id="foto-de-producto">
+                    <i class="far fa-image"></i><input type="file" id="foto-de-producto2" accept=".png, .jpg">
+                  </label>
+                    <input type="text" placeholder="Nombre del Producto" name="nombreProducto" class="detallesProducto">
+                    <input type="number" placeholder="Precio del Producto" name="precioProducto" class="detallesProducto">
+                <label class="etiquetaInfo">
+                    <textarea placeholder="Descripcion del producto" name="Info Producto" class="infoDelProducto"></textarea>
+                </label>
+            </section>
+            </article>
+            <section id="botones">
+                <label id="options-category">
+                    <select id="options-category">
+                        <option value="" selected></option>
+                        <option value="celiaco">CELIACO</option>
+                        <option value="diabetico">DIABETICO</option>
+                        <option value="vegetariano">VEGETARIANO</option>
+                        <option value="vegano">VEGANO</option>
+                    </select>
+                    <select>
+                        <option value=""></option>
+                        <option value="oferta-si">En oferta</option>
+                        <option value="oferta-no">Sin oferta</option>
+                    </select>
+                </label>
+                <section id="edit-button">
+                    <button type="button" name="edit-button">CREAR</button>
+                    </section>
+            </section>
         </section>
-        <section class="button-enviar">
-                <button type="submit" name="enviar" id="enviar">Registrarse</button>
-        </section>
+    </section>
     </main>
     <%- include ("../partials/footer.ejs") %> 
 </body>

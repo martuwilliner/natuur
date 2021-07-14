@@ -1,49 +1,129 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="es">
+    <!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/fonts.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="/css/body.css">
     <link rel="stylesheet" href="/css/header.css">
+    
+        <link rel="stylesheet" href="/css/editProduct.css ">
+     
     <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/mainAlmacenProductDetail.css">
-</head>
+    <title>Edit Product</title>
+</head> 
 <body>
-    <%- include ("../partials/header.ejs") %> 
-    <main>     
+    <header>
+    <section id="main-menu">
+        <a href="/">
+            <figure>
+                <img src="/img/logo.png" alt="logo natuur">
+            </figure>
+        </a>
+        <nav id="user-list">
+            <a href="#"><i class="fas fa-search"></i></a>
+            <a href="/login"><i class="fas fa-user"></i></a>
+            <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>
+        </nav>
+        <nav id="head-list">
+            <ul>
+                <li>
+                    <a href="/nosotros">NOSOTROS</a>
+                </li>
+                <li>
+                    <a href="/almacen">ALMACEN</a>
+                </li>
+                <li>
+                    <a href="/gourmet">GOURMET</a>
+                </li>
+                <li>
+                    <a href="/cosmetica">COSMÉTICA</a>
+                </li>
+                <li>
+                    <a href="/contacto">CONTACTO</a>
+                </li>
+            </ul>
+        </nav>
+        <nav id="hamburguer-menu">
+            <a href="#"><i class="fas fa-bars"></i></a> 
+         </nav>
+    </section>
+</header> 
+    <main>    
         <section id="detalleProducto">
             <nav id="socialMedia">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
             </nav>
-            <figure><img src=" "></figure>
+            <figure><img src="/img/productos/almacen/almacen-natuur (107).jpg "></figure>
             <article class="infoProducto">
-                <h2 class="nombreProducto">PRODUCTO</h2>
-                <h3 class="precio">$PRECIO</h3>
-                <p>DESCRIPCION</p>
+                <input type="text" placeholder="Nombre del Producto" name="nombreProducto" class="detallesProducto">
+                <input type="number" placeholder="Precio del Producto" name="precioProducto" class="detallesProducto">
+                <label class="etiquetaInfo">
+                    <textarea placeholder="Descripcion del producto" name="Info Producto" class="infoDelProducto"></textarea>
+                </label>
                 <section id="botones">
-                    <form class="shopping" action="/comprar" method="POST">
-                        <input type="number" id="cantidad" name="cantidad">
-                        <button type="submit">
-                            <i class="fas fa-shopping-cart"></i>
-                        </button>
-                    </form>
-                    <form class="favorito" action="/favoritos"  method="POST">
-                        <button type="submit">
-                            <i class="fas fa-heart"></i>
-                        </button>
-                    </form>
+                    <label id="options-category">
+                        <select id="options-category">
+                            <option value="" selected></option>
+                            <option value="celiaco">CELIACO</option>
+                            <option value="diabetico">DIABETICO</option>
+                            <option value="vegetariano">VEGETARIANO</option>
+                            <option value="vegano">VEGANO</option>
+                        </select>
+                        <select>
+                            <option value=""></option>
+                            <option value="oferta-si">En oferta</option>
+                            <option value="oferta-no">Sin oferta</option>
+                        </select>
+                    </label>
                 </section>
             </article>
-        </section>
-
+        </section>    
     </main>
-    <%- include ("../partials/footer.ejs") %> 
+    <footer>
+    <section id="footer-first-section">
+        <nav class="footer-item">
+            <h3>¡Escribinos!<br>
+            <a href="#">hola@natuur.com.ar</a></h3>
+            <p><a href="#">Formá parte de nuestro equipo</a></p>
+            <p><a href="#">Términos y Condiciones</a></p>
+        </nav>
+        <hr id="footer-linea">
+        <section class="footer-item">
+            <h3>Métodos de pago</h3>
+            <section class="methods-p">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-paypal"></i>
+                <i class="fab fa-bitcoin"></i>
+            </section>
+        </section>
+        <section class="footer-item">
+                <form>
+                    <input type="email" id="email" name="email" placeholder="NEWSLETTER">
+                    <button type="submit" action="/" method="POST">Enviar</button>
+                </form>
+                <nav class="social-media">
+                    <a href="#"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#"><i class="fab fa-instagram-square"></i></a>
+                    <a href="#"><i class="fab fa-twitter-square"></i></a>
+                </nav>
+        </section>
+    </section>
+    <section id="footer-second-section">
+        <p>Copyright © 2021 Natuur</p>
+    </section>
+    
+</footer> 
 </body>
 </html>
