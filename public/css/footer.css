@@ -57,7 +57,7 @@ footer {
 }
 
 .footer-item a:hover{
-    color: white;
+    color: #f1ba33;
 }
 
 #footer-linea {
@@ -93,7 +93,7 @@ input[type="email"] {
 }
 
 .footer-item button:hover {
-    background-color: #fff;
+    background-color: #f1ba33;
     color:#3f3f3f ;
 }
 
