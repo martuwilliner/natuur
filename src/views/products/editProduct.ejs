@@ -1,93 +1,49 @@
-
 <!DOCTYPE html>
 <html lang="es">
-    <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/fonts.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="/css/body.css">
-    <link rel="stylesheet" href="/css/header.css">
-    
-        <link rel="stylesheet" href="/css/editProduct.css ">
-     
-    <link rel="stylesheet" href="/css/footer.css">
-    <title>Edit Product</title>
-</head> 
+    <%- include ("../partials/head.ejs") %> 
 <body>
-    <header>
-    <section id="main-menu">
-        <a href="/">
-            <figure>
-                <img src="/img/logo.png" alt="logo natuur">
-            </figure>
-        </a>
-        <nav id="user-list">
-            <a href="#"><i class="fas fa-search"></i></a>
-            <a href="/login"><i class="fas fa-user"></i></a>
-            <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>
-        </nav>
-        <nav id="head-list">
-            <ul>
-                <li>
-                    <a href="/nosotros">NOSOTROS</a>
-                </li>
-                <li>
-                    <a href="/almacen">ALMACEN</a>
-                </li>
-                <li>
-                    <a href="/gourmet">GOURMET</a>
-                </li>
-                <li>
-                    <a href="/cosmetica">COSMÉTICA</a>
-                </li>
-                <li>
-                    <a href="/contacto">CONTACTO</a>
-                </li>
-            </ul>
-        </nav>
-        <nav id="hamburguer-menu">
-            <a href="#"><i class="fas fa-bars"></i></a> 
-         </nav>
-    </section>
-</header> 
+    <%- include ("../partials/header.ejs") %> 
     <main>    
-        <section id="detalleProducto">
-            <nav id="socialMedia">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-            </nav>
-            <figure><img src="/img/productos/almacen/almacen-natuur (107).jpg "></figure>
-            <article class="infoProducto">
-                <input type="text" placeholder="Nombre del Producto" name="nombreProducto" class="detallesProducto">
-                <input type="number" placeholder="Precio del Producto" name="precioProducto" class="detallesProducto">
-                <label class="etiquetaInfo">
-                    <textarea placeholder="Descripcion del producto" name="Info Producto" class="infoDelProducto"></textarea>
-                </label>
-                <section id="botones">
-                    <label id="options-category">
-                        <select id="options-category">
-                            <option value="" selected></option>
-                            <option value="celiaco">CELIACO</option>
-                            <option value="diabetico">DIABETICO</option>
-                            <option value="vegetariano">VEGETARIANO</option>
-                            <option value="vegano">VEGANO</option>
-                        </select>
-                        <select>
-                            <option value=""></option>
-                            <option value="oferta-si">En oferta</option>
-                            <option value="oferta-no">Sin oferta</option>
-                        </select>
-                    </label>
-                </section>
-            </article>
-        </section>    
+        <form id="infoProducto" method="PUT" action="/">
+            <section id="imagen">
+                <figure>
+                    <img src="/img/productos/almacen/almacen-natuur (107).jpg ">
+                </figure>
+                <input type="button" id="submit" value="Editar" class="boton-img">
+            </section>
+            <section id="detalles">
+                <label id="id" name="id">ID</label>
+                <input type="text" placeholder="Nombre del Producto" id="producto" name="producto"> <!-- en el placeholder dinamismo para que se vea --> 
+                <article id="precio">
+                    <p>$</p>
+                    <input type="number" placeholder="Precio del Producto" id="precio" name="precio">
+                </article>
+                <textarea placeholder="Descripcion del producto" id="descr" name="descr"></textarea>
+                <select id="type">
+                    <option value="" selected></option>
+                    <option value="celiaco">CELIACO</option>
+                    <option value="diabetico">DIABETICO</option>
+                    <option value="vegetariano">VEGETARIANO</option>
+                    <option value="vegano">VEGANO</option>
+                </select>
+                <select id="size">
+                    <option value="" selected></option>
+                    <option value="250gr">250gr</option>
+                    <option value="500gr">500gr</option>
+                    <option value="1kg">1kg</option>
+                    <option value="250ml">250ml</option>
+                    <option value="500ml">500ml</option>
+                    <option value="1litro">1litro</option>
+                </select>
+                <select id="oferts">
+                    <option value="" selected></option>
+                    <option value="true">En oferta</option>
+                    <option value="false">Sin oferta</option>
+                </select>
+                <input type="button" id="submit" value="Editar">
+                <input type="button" id="reset" value="Resetear campo">
+            </section>
+        </form> 
     </main>
     <footer>
     <section id="footer-first-section">

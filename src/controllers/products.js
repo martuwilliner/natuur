@@ -16,12 +16,12 @@ const productsController = {
     },
     create: (req,res) => {
         return res.render('products/createProduct',{
-            styles: ["/css/main-create.css"],
+            styles: ["/css/createProduct.css"],
         });    
     },
     edit: (req,res) => {
         return res.render('products/editProduct',{
-            styles: ["/css/main-edit.css"],
+            styles: ["/css/editProduct.css"],
         });    
     },
 

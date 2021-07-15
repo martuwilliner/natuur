@@ -2,104 +2,96 @@ main {
     margin-top: 120px;
 }
 
-#detalleProducto { 
+#infoProducto { 
     display: flex;
     flex-flow: row wrap;
     width: 90vw;
     justify-content: center;
-    margin: auto;
-    background-color: #FEF8EA;
-    border-radius: 3%;
 }
 
-#socialMedia {
-    margin-top: 2rem;
-}
-
-#detalleProducto nav{
+#infoProducto #imagen{
     display: flex;
-    flex-flow: column wrap;
-    width: 5vw;
-    align-content: flex-end;
-    /* padding-right: 1rem; */
-}
-
-#detalleProducto nav i{
-    font-size: 1rem;
-    color: #f1ba33;
-    padding-bottom: 0.8rem;
-}
-
-#detalleProducto figure{
+    flex-flow: row wrap;
+    position: relative;
     margin: 0 0.5rem;
     width: 80vw;
 }
 
-#detalleProducto img{
+.boton-img {
+    position: absolute;
+    top: 5vw;
+    right: 10vw;
+    border: none;
+    padding: 0.4rem;
+    border-radius: 0.5rem;
+    color: #fff;
+    background-color: #3f3f3f;
+    transition: all .4s ease-in-out;
+}
+
+.boton-img:hover {
+    background-color: #f1ba33;
+    color: #3f3f3f;
+}
+
+#infoProducto img{
     width: 100%;
     border: solid 0.2rem #f1ba33;
     border-radius: 2rem;
 }
 
-.infoProducto {
+#detalles {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    margin-top: 1rem;
+}
+
+#detalles input, #detalles label, #detalles select,  #detalles textarea{
+    border: none;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    background-color: #FEF8EA;
+}
+
+#precio {
     display: flex;
     flex-flow: row wrap;
-    align-items: flex-start;
-    margin: 0.8rem 1.3rem;
-    width: 70vw;
-}
-
-input.detallesProducto{
-    width: 80%;
-    border: none;
-    margin: auto;
-    margin-bottom: 0.5rem;
-    border-radius: 5%;
-    padding: 0.5rem;
-    transition-property: all;
-    transition-duration: 0.5s;
-}
-
-input.detallesProducto:hover{
-    border-color: #F1BA33;
-}
-
-label.etiquetaInfo{
-    display: flex;
-    margin: auto;
-    overflow: scroll;
-}
-
-textarea.infoDelProducto{
     width: 60vw;
-    height: 30vh;
-    margin: auto;
-    border: none;
-    padding: 0.5rem;
-    border-radius: 5%;
-    text-align: center;
-    resize: none;
-    transition-property: all;
-    transition-duration: 0.5s;
 }
 
-textarea.infoDelProducto:hover{
-    border-color: #F1BA33;
-}
-
-section#botones select{
+#precio p {
     display: flex;
-    justify-content: center;
-    width: 8rem;
-    margin: auto;
-    border: none;
-    border-radius: 10%;
-    background-color: white;
-    padding: 0.5rem;
-    margin-bottom: 0.5rem;
-    margin-top: 0.5rem;
+    flex-flow: row wrap;
+    width: 10vw;
+    justify-content: flex-end;
+    align-self: center;
+}
+#precio input {
+    display: flex;
+    flex-flow: row wrap;
+    width: 50vw;
 }
 
+#detalles textarea{
+    overflow: scroll;
+    height: 30vh;
+    border: none;
+    padding: 0.5rem;
+    resize: none;
+}
+
+#detalles input[type="button"] {
+    color: #fff;
+    background-color: #3f3f3f;
+    transition: all .4s ease-in-out;
+}
+
+#detalles input[type="button"]:hover {
+    background-color: #f1ba33;
+    color: #3f3f3f;
+}
     
 /**TABLET**/
 @media screen and (min-width: 768px) {
@@ -107,55 +99,85 @@ section#botones select{
         margin-top: 160px;
     }
 
-    #detalleProducto {
-        background-color: rgba(241, 186, 51, 0.1);
-        padding: 1.2rem;
-        border-radius: 1rem;
+    #infoProducto { 
+        justify-content: space-around;
     }
     
-  #detalleProducto nav i{
-        font-size: 1.5rem;
-
+    #infoProducto #imagen{
+        width: 30vw;
+        align-self: flex-start;
     }
     
-    #detalleProducto figure{
-        margin: 0 0.5rem;
+    .boton-img {
+        top: 2vw;
+        right: 3vw;
+    }
+    
+    #detalles {
         width: 30vw;
     }
+
     
-    .infoProducto {
+    #precio {
         display: flex;
         flex-flow: row wrap;
-        align-items: flex-start;
         width: 30vw;
-        align-content: flex-start;
     }
     
-    section#botones select{
-        margin-left: 70%;
-        margin-top: 00.5rem;
+    #precio p {
+        display: flex;
+        flex-flow: row wrap;
+        width: 5vw;
+        justify-content: flex-end;
+        align-self: center;
     }
+    #precio input {
+        display: flex;
+        flex-flow: row wrap;
+        width: 25vw;
+    }
+    
 }
-
 @media screen and (min-width: 1200px) {
-    main {
+     main {
         margin-top: 180px;
     }
 
-    #detalleProducto figure{
+    #infoProducto { 
+       margin: auto;
+       width: 60vw;
+    }
+    #infoProducto #imagen{
         width: 20vw;
-    }
-
-    .infoProducto h2{
-        font-size: 1.3rem;
+        align-self: flex-start;
     }
     
-    .infoProducto .precio{
-        font-size: 1.2rem;
+    .boton-img {
+        top: 1vw;
+        right: 1vw;
     }
     
-    .infoProducto p{
-        font-size: 0.9rem;   
+    #detalles {
+        width: 30vw;
     }
 
+    
+    #precio {
+        display: flex;
+        flex-flow: row wrap;
+        width: 28vw;
+    }
+    
+    #precio p {
+        display: flex;
+        flex-flow: row wrap;
+        width: 2vw;
+        justify-content: flex-end;
+        align-self: center;
+    }
+    #precio input {
+        display: flex;
+        flex-flow: row wrap;
+        width: 25vw;
+    }
 }
