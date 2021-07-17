@@ -26,6 +26,9 @@ module.exports = {
             return element; 
         })
     },//un intermedio para agregarle algo extra. por ejemplo en este caso la categoria
+    allByCategory: function(category) {
+        return this.allWithExtra().filter(product => product.category.name == category); //devuelve un array por eso hay q usar foreach en vista
+    },
     one: function(id){
         return this.all().find(element => element.id == id);
     },//para buscar por el id q estoy buscando

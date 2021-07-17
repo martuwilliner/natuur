@@ -12,9 +12,11 @@
     <link rel="stylesheet" href="/css/header.css">
     <% if (!locals.product) { %>
         <link rel="stylesheet" href="<%= styles[0] %> ">
-    <% } else { %>
+    <% } else if (!locals.edit) { %>
         <link rel="stylesheet" href="<%= product.category.css %> ">
-    <% }  %> 
+    <% } else { %> 
+        <link rel="stylesheet" href="<%= styles[0] %> ">
+    <% } %>  
     <link rel="stylesheet" href="/css/footer.css">
     <title>Natuur</title>
 </head>

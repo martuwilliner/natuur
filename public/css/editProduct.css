@@ -18,9 +18,9 @@ main {
 }
 
 .boton-img {
-    position: absolute;
+/*     position: absolute;
     top: 5vw;
-    right: 10vw;
+    right: 10vw; */
     border: none;
     padding: 0.4rem;
     border-radius: 0.5rem;
@@ -109,8 +109,8 @@ main {
     }
     
     .boton-img {
-        top: 2vw;
-        right: 3vw;
+/*         top: 2vw;
+        right: 3vw; */
     }
     
     #detalles {
@@ -153,8 +153,8 @@ main {
     }
     
     .boton-img {
-        top: 1vw;
-        right: 1vw;
+/*         top: 1vw;
+        right: 1vw; */
     }
     
     #detalles {

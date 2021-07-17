@@ -4,7 +4,8 @@
 <body>
     <%- include ("../partials/header.ejs") %> 
     <main>
-        <% if (product) { %>       
+        <% if (product) { %>      
+
         <section id="detalleProducto">
             <nav id="socialMedia">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -34,6 +35,24 @@
        <% } %>
         <section id="interesar">
             <h1>TE PUEDEN INTERESAR</h1>
+            <% if (products.length > 0) { %>
+                <% products.forEach(product => { %>
+                    <article id="producto">
+                        <a href="/productDetail/<%= product.id %>"> <!-- NO VAN LOS :-->
+                            <figure>
+                                <img src="<%= product.images[0].url %> " alt="">
+                            </figure>
+                            <section class="product-info">
+                                <p class="descripcion"><%= product.name %></p>
+                                <p class="precio">$<%= product.price %></p>
+                            </section>
+                        </a>
+                    </article>    
+                <% }) %>
+            <% } else {%>
+                <h1>NO HAY PRODUCTOS</h1>
+                <% } %> 
+           <!--  
             <article>
                 <figure>
                     <img src="/img/productos/destacados/cosmetica-natuur (1).jpg" alt="">
@@ -60,16 +79,7 @@
                     <p class="descripcion">Shampoo</p>
                     <p class="precio">$530</p>
                 </section>
-            </article>
-            <article>
-                <figure>
-                    <img src="/img/productos/destacados/cosmetica-natuur (1).jpg" alt="">
-                </figure>
-                <section class="product-info">
-                    <p class="descripcion">Shampoo</p>
-                    <p class="precio">$530</p>
-                </section>
-            </article>
+            </article> -->
         </section>      
     </main>
     <%- include ("../partials/footer.ejs") %> 

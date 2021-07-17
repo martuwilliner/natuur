@@ -25,5 +25,5 @@ app.use(express.static(publicPath));
 
 // Web Routes
 app.use (require("./routes/main"));
-app.use (require("./routes/products"));
-app.use (require("./routes/users"));
+app.use ("/products",require("./routes/products"));
+app.use ("/users",require("./routes/users"));

@@ -42,6 +42,50 @@
         "category": 3, 
         "images": [4],
         "oferts": true
+    },
+    {
+        "id": 5,
+        "name": "Shampoo sólido para cabellos secos",
+        "descr": "El shampoo y acondicionador de Terra Té acercan la posibilidad de nutrir tu cuero cabelludo genuinamente y no contaminar ni dañar el planeta en el proceso. Los ingredientes naturales que lo componen llegan con todos sus nutrientes para limpiar, hidratar y estimular el crecimiento del pelo en cada baño. Aplicar sobre pelo mojado y masajear suavemente. Luego, enjuagar con abundante agua.",
+        "type": 1, 
+        "size": [1], 
+        "price": 570,
+        "category": 3, 
+        "images": [4],
+        "oferts": false
+    },
+    {
+        "id": 6,
+        "name": "Shampoo sólido para cabellos secos",
+        "descr": "El shampoo y acondicionador de Terra Té acercan la posibilidad de nutrir tu cuero cabelludo genuinamente y no contaminar ni dañar el planeta en el proceso. Los ingredientes naturales que lo componen llegan con todos sus nutrientes para limpiar, hidratar y estimular el crecimiento del pelo en cada baño. Aplicar sobre pelo mojado y masajear suavemente. Luego, enjuagar con abundante agua.",
+        "type": 1, 
+        "size": [1], 
+        "price": 570,
+        "category": 3, 
+        "images": [4],
+        "oferts": false
+    },
+    {
+        "id": 7,
+        "name": "Shampoo sólido para cabellos secos",
+        "descr": "El shampoo y acondicionador de Terra Té acercan la posibilidad de nutrir tu cuero cabelludo genuinamente y no contaminar ni dañar el planeta en el proceso. Los ingredientes naturales que lo componen llegan con todos sus nutrientes para limpiar, hidratar y estimular el crecimiento del pelo en cada baño. Aplicar sobre pelo mojado y masajear suavemente. Luego, enjuagar con abundante agua.",
+        "type": 1, 
+        "size": [1], 
+        "price": 570,
+        "category": 2, 
+        "images": [4],
+        "oferts": false
+    },
+    {
+        "id": 8,
+        "name": "Shampoo sólido para cabellos secos",
+        "descr": "El shampoo y acondicionador de Terra Té acercan la posibilidad de nutrir tu cuero cabelludo genuinamente y no contaminar ni dañar el planeta en el proceso. Los ingredientes naturales que lo componen llegan con todos sus nutrientes para limpiar, hidratar y estimular el crecimiento del pelo en cada baño. Aplicar sobre pelo mojado y masajear suavemente. Luego, enjuagar con abundante agua.",
+        "type": 1, 
+        "size": [1], 
+        "price": 570,
+        "category": 1, 
+        "images": [4],
+        "oferts": false
     }
 
 ]
