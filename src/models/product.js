@@ -34,8 +34,5 @@ module.exports = {
     },//para buscar por el id q estoy buscando
     oneWithExtra: function(id) {
         return this.allWithExtra().find(element => element.id == id);
-    },
-/*     cssByCategory: function (category) {
-        return this.all().filter(product => product.category == category)
-    } */
+    }
 }

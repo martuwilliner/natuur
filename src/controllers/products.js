@@ -1,6 +1,7 @@
 const product = require ("../models/product")
 const category = require ("../models/category")
 const size = require ("../models/size")
+const type = require ("../models/type")
 
 const productsController = {
     showDetail: (req,res) => {
@@ -21,11 +22,15 @@ const productsController = {
     cart: (req,res) => {
         return res.render('products/productCart',{
         styles: ["/css/main-product.css"],
+        products: product.oneWithExtra(req.params.id)
         });
     },
     create: (req,res) => {
         return res.render('products/createProduct',{
             styles: ["/css/createProduct.css"],
+            category: category.all(),
+            size: size.all(),
+            type: type.all()
         });    
     },
     edit: (req,res) => {
@@ -34,6 +39,7 @@ const productsController = {
             product: product.oneWithExtra(req.params.id),
             category: category.all(),
             size: size.all(),
+            type: type.all(),
             edit:true
         });    
     },

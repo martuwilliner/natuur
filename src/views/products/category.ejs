@@ -6,7 +6,7 @@
 <main>
     <% products.forEach(product => { %>
         <article id="producto">
-            <a href="/productDetail/<%= product.id %>"> <!-- NO VAN LOS :-->
+            <a href="/products/detail/<%= product.category.name %>/<%= product.id %>"> <!-- NO VAN LOS :-->
                 <figure>
                     <img src="<%= product.images[0].url %> " alt="">
                 </figure>

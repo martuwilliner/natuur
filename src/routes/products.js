@@ -10,12 +10,13 @@ const productsControllers = require('../controllers/products');
 // router
 router.get('/detail/:category/:id', productsControllers.showDetail); // IMPORTANTE PONER ID
 router.get('/cart', productsControllers.cart);
-router.get('/editProduct/:id', productsControllers.edit);
+router.get('/edit/:id', productsControllers.edit);
 /* router.put('/products/editProduct', productsControllers.edit); */
-router.get('/createProduct', productsControllers.create); 
+router.get('/create', productsControllers.create); 
 /* router.post('/products/createProduct', productsControllers.create);  */
 
 router.get('/:category', productsControllers.category);
 
+router.post('/cart/:id', productsControllers.cart);
 
 module.exports = router;

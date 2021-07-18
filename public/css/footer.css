@@ -72,7 +72,7 @@ form {
     align-items: center;
 }
 
-input[type="email"] {
+input[type="email"].newsletter {
     border: none;
     border-radius: 3rem;
     padding: 1rem;

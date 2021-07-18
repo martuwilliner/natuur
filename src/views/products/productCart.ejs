@@ -7,12 +7,12 @@
         <section id="carrito">
             <article class="product-info">
                 <figure>
-                    <img src="/img/productos/almacen/almacen-natuur (78).jpg" alt="">
+                    <img src="<%= products.images[0].url %>" alt="">
                 </figure>
                 <section class="product-unit">
-                    <h3 class="product-id">PRODUCTO</h3>
-                    <p class="precio">PRECIO</p>
-                    <form class="cantidad" action="/" method="POST">
+                    <h3 class="product-id"><%= products.name %></h3>
+                    <p class="precio">Precio: $ <%= products.price %></p>
+                    <form class="cantidad" action="/" method="post">
                         <input type="number" id="cantidad" name="cantidad">
                     </form>
                     <nav class="product-delete">
@@ -21,19 +21,19 @@
                 </section>   
             </article>
             
-            <form id="code-box" method="POST" action="/">
+            <form id="code-box" method="post" action="/">
                 <input class="info" type="text" placeholder="Ingrese código de descuento">
-                <input class="info" type="text">
+                <p>MONTO DE DESCUENTO</p>
             </form>
-            <form id="code-box" method="POST" action="/">
+            <form id="code-box" method="post" action="/">
                 <input class="info" type="text" placeholder="Ingrese código postal">
-                <input class="info" type="text">
+                <p>MONTO DEL ENVIO</p>
             </form>
 
-            <form id="check-out" action="/" method="POST">
+            <form id="check-out" action="/" method="post">
                 <input type="number" id="cantidad" name="cantidad" placeholder="Total Compra">
             </form>
-            <form id="check-out-button" action="/" method="POST">
+            <form id="check-out-button" action="/" method="post">
                 <button>Seguir comprando</button>
                 <button>Check out</button>
             </form>

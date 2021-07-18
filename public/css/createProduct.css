@@ -1,255 +1,92 @@
-main {
-    margin-top: 120px;
-}
-
-#detalleProducto { 
+main.main-register{
     display: flex;
-    justify-content: center;
-    flex-flow: row wrap;
-    width: 90vw;
+    flex-direction: column;
     margin: auto;
-    background-color: #FEF8EA;
-}
-
-#socialMedia {
-    margin-top: 2rem;
-}
-
-
-#detalleProducto nav{
-    display: flex;
-    flex-flow: column wrap;
-    width: 5vw;
-    align-content: flex-end;
-    /* padding-right: 1rem; */
-}
-
-#detalleProducto nav i{
-    font-size: 1rem;
-    color: #f1ba33;
-    padding-bottom: 0.8rem;
-}
-
-#detalleProducto figure{
-    margin: 0 0.5rem;
+    margin-top: 130px;
+    background-color: whitesmoke;
     width: 80vw;
+    border-radius: 1rem;
+    padding: 1rem 0;
 }
-
-#detalleProducto img{
-    width: 100%;
-    border: solid 0.2rem #f1ba33;
-    border-radius: 2rem;
-}
-
-.infoProducto {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: flex-start;
-    width: 90vw;
-    justify-content: center;
-}
-section.infoProduct2{
-    display: flex;
-    justify-content: center;
-    flex-flow: column;
-    width: 80%;
-}
-
-input#foto-de-producto2 {
-    position: relative;
-    display: none;
-}
-label#foto-de-producto {
+p.bienvenido{
     display: flex;
     margin: auto;
-    margin-bottom: 0.5rem;
-    justify-content: center;
-    background-color: #eaeaea;
-    padding: 20px;
-    width: 20vw;
-    border-radius: 3%;
-    transition-property: all;
-    transition-duration: 0.5s;
+    width: 80vw;
+    background-color: rgb(243, 239, 239);
+    padding: 0.7rem 0;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    justify-content: center; 
+    font-weight: 700;
 }
-  label#foto-de-producto:hover {
-    background-color: #F1BA33;
-    color: #eaeaea; 
-}
-
-input.detallesProducto{
-    width: 80%;
+input.formulario-register{
+    display: flex;
     border: none;
-    margin: auto;
-    margin-bottom: 0.5rem;
-    border-radius: 5%;
+    border-radius: 0.5rem;
     padding: 0.5rem;
-    transition-property: all;
-    transition-duration: 0.5s;
+    margin-bottom: 1rem;
+    text-align: left;
+    width: 50vw;
 }
 
-input.detallesProducto:hover{
-    border-color: #F1BA33;
-}
-
-label.etiquetaInfo{
+.select {
     display: flex;
-    margin: auto;
-    overflow: scroll;
-}
-
-textarea.infoDelProducto{
-    width: 60vw;
-    height: 30vh;
-    margin: auto;
     border: none;
+    border-radius: 0.5rem;
     padding: 0.5rem;
-    border-radius: 5%;
-    text-align: center;
-    resize: none;
-    transition-property: all;
-    transition-duration: 0.5s;
+    margin-bottom: 1rem;
+    width: 50vw;
+    color: grey;
 }
 
-textarea.infoDelProducto:hover{
-    border-color: #F1BA33;
+input[type="file"]{
+    margin: 1rem 0;
 }
 
-
-section#botones select{
+main.main-register button{
     display: flex;
-    justify-content: center;
-    flex-flow: column;
-    width: 8rem;
-    margin: auto;
-    border: none;
-    border-radius: 10%;
-    background-color: white;
+    margin: .5rem;
     padding: 0.5rem;
-    margin-bottom: 0.5rem;
-    margin-top: 0.5rem;
-}
-section#edit-button button{
-    display: flex;
-    justify-content: center;
-    width: 10vw;
-    margin: auto;
     border: none;
-    margin-bottom: 0.5rem;
+    border-radius: 0.5rem; 
     justify-content: center;
-    background-color: #eaeaea;
-    padding: 1rem 3rem;
-    border-radius: 3%;
-    font-size: 1rem;
-    margin-top: 00.5rem;
-    color: #3f3f3f;
-    transition-property: all;
-    transition-duration: 0.5s;
-    
+    text-decoration: none;
+    background-color: #3f3f3f;
+    color: white;
+    width: 25vw;
+    transition: all 0.4s ease-in-out;
 }
-section#edit-button button:hover{
+
+main.main-register button:hover{
     background-color: #f1ba33;
-    color: #FEF8EA;
 }
-    
-/**TABLET**/
+
 @media screen and (min-width: 768px) {
-    main {
-        margin-top: 160px;
+    main.main-register{
+        margin-top: 150px;
+        width: 60vw;
+    }
+    p.bienvenido{
+        width: 60vw;
+    }
+    input.formulario-register{
+        width: 40vw;
     }
 
-    #detalleProducto {
-        background-color: rgba(241, 186, 51, 0.1);
-        padding: 1.2rem;
-        border-radius: 1rem;
-        justify-content: flex-start;
+    .select {
+        width: 40vw;
     }
-    
-  #detalleProducto nav i{
-        font-size: 1.5rem;
-
-    }
-    
-    #detalleProducto figure{
-        margin: 0 0.5rem;
-        width: 30vw;
-    }
-    
-    section.infoProduct2{
-        margin-left: 45%;
-    }
-    label#foto-de-producto {
-        padding: 20px;
-        width: 15vw;
-        border-radius: 3%;
-    }
-    
-    input.detallesProducto{
-        width: 80%;
-    }
-    textarea.infoDelProducto{
-        width: 30vw;
-    }
-    
-    .infoProducto #botones {
-        justify-content: flex-end;
-        margin-right: 15%;
-    } 
-    
-    .infoProducto .shopping {
-        display: flex;
-        flex-flow: row wrap;
-        width: auto;
-    }
-    
-    .infoProducto .shopping input {
-        width: 8vw;
-    }
-
-    section#edit-button button{
-        margin-left: 100%; 
-    }
-
-    /*te pueden interesar*/
-    #interesar article {
-        display: flex;
-        width: 18vw;
-        flex-flow: row wrap;
-        transition: all .4s ease-in-out; 
-        }
-    
-    #interesar article:hover {
-        transform: scale(1.02);
-        }
-
-    #interesar .descripcion {
-        top: 2vw;
-        }
-        
-    #interesar .precio {
-        bottom: 1vw;
-        right: 1vw;
-        }
-}
-
-@media screen and (min-width: 1200px) {
-    main {
-        margin-top: 180px;
-    }
-
-    #detalleProducto figure{
+    main.main-register button{
         width: 20vw;
     }
-
-    .infoProducto h2{
-        font-size: 1.3rem;
-    }
-    
-    .infoProducto .precio{
-        font-size: 1.2rem;
-    }
-    
-    .infoProducto p{
-        font-size: 0.9rem;   
-    }
-
 }
+@media screen and (min-width: 1200px) {
+    main.main-register{
+        margin-top: 180px;
+        width: 50vw;
+    }
+    p.bienvenido{
+        width: 50vw;
+    }
+}
+

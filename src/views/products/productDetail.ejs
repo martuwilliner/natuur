@@ -5,7 +5,6 @@
     <%- include ("../partials/header.ejs") %> 
     <main>
         <% if (product) { %>      
-
         <section id="detalleProducto">
             <nav id="socialMedia">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -18,13 +17,13 @@
                 <h3 class="precio">$<%= product.price %></h3>
                 <p><%= product.descr %></p>
                 <section id="botones">
-                    <form class="shopping" action="/comprar" method="POST">
+                    <form class="shopping" action="/products/cart/<%= product.id %>" method="post">
                         <input type="number" id="cantidad" name="cantidad">
                         <button type="submit">
                             <i class="fas fa-shopping-cart"></i>
                         </button>
                     </form>
-                    <form class="favorito" action="/favoritos"  method="POST">
+                    <form class="favorito" action="/userProfile/favoritos/<%= product.id %>"  method="post">
                         <button type="submit">
                             <i class="fas fa-heart"></i>
                         </button>
@@ -38,7 +37,7 @@
             <% if (products.length > 0) { %>
                 <% products.forEach(product => { %>
                     <article id="producto">
-                        <a href="/productDetail/<%= product.id %>"> <!-- NO VAN LOS :-->
+                        <a href="/products/detail/<%= product.category.name %>/<%= product.id %>"> <!-- NO VAN LOS :-->
                             <figure>
                                 <img src="<%= product.images[0].url %> " alt="">
                             </figure>
@@ -49,37 +48,7 @@
                         </a>
                     </article>    
                 <% }) %>
-            <% } else {%>
-                <h1>NO HAY PRODUCTOS</h1>
-                <% } %> 
-           <!--  
-            <article>
-                <figure>
-                    <img src="/img/productos/destacados/cosmetica-natuur (1).jpg" alt="">
-                </figure>
-                <section class="product-info">
-                    <p class="descripcion">Shampoo</p>
-                    <p class="precio">$530</p>
-                </section>
-            </article>
-            <article>
-                <figure>
-                    <img src="/img/productos/destacados/cosmetica-natuur (1).jpg" alt="">
-                </figure>
-                <section class="product-info">
-                    <p class="descripcion">Shampoo</p>
-                    <p class="precio">$530</p>
-                </section>
-            </article>
-            <article>
-                <figure>
-                    <img src="/img/productos/destacados/cosmetica-natuur (1).jpg" alt="">
-                </figure>
-                <section class="product-info">
-                    <p class="descripcion">Shampoo</p>
-                    <p class="precio">$530</p>
-                </section>
-            </article> -->
+            <% }%>
         </section>      
     </main>
     <%- include ("../partials/footer.ejs") %> 

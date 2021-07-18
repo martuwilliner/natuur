@@ -56,6 +56,19 @@ i.fa-google{
     background-color: #f1ba33;
 }
 
+a.olvide{
+    color:#3f3f3f;
+    text-align: left;
+    font-size: .8rem;
+    transition: all .4s ease-in-out;
+}
+
+a.olvide:hover{
+
+    text-decoration: underline;
+}
+
+
 @media screen and (min-width: 768px) {
     main.main-login{
         margin-top: 150px;
