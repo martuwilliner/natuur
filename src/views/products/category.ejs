@@ -4,19 +4,27 @@
 <body>
     <%- include ("../partials/header.ejs") %> 
 <main>
-    <% products.forEach(product => { %>
-        <article id="producto">
-            <a href="/products/detail/<%= product.category.name %>/<%= product.id %>"> <!-- NO VAN LOS :-->
-                <figure>
-                    <img src="<%= product.images[0].url %> " alt="">
-                </figure>
-                <section class="product-info">
-                    <p class="descripcion"><%= product.name %></p>
-                    <p class="precio">$<%= product.price %></p>
-                </section>
-            </a>
-        </article>    
-    <% }) %>
+    <% if (products.length > 0) { %>
+        <% products.forEach(product => { %>
+            <article id="producto">
+                <a href="/products/detail/<%= product.category.name %>/<%= product.id %>"> <!-- NO VAN LOS :-->
+                    <figure>
+                        <img src="<%= product.images[0].url %> " alt="">
+                    </figure>
+                    <section class="product-info">
+                        <% if (product.category.name == "gourmet") { %>
+                            <p class="descripcion gourmet"><%= product.name %></p>
+                        <% } else if (product.category.name == "cosmetica") { %>
+                             <p class="descripcion cosmetica"><%= product.name %></p>
+                        <% } else { %>
+                        <p class="descripcion"><%= product.name %></p>
+                        <% } %>
+                        <p class="precio">$<%= product.price %></p>
+                    </section>
+                </a>
+            </article>    
+        <% }) %>
+    <% } %>
 </main>
     <%- include ("../partials/footer.ejs") %> 
 </body>

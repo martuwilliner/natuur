@@ -45,6 +45,15 @@ main {
 /*     text-transform: uppercase; */
 }
 
+#producto .gourmet {
+    background-color: #469e9d;
+}
+
+#producto .cosmetica {
+    background-color: #e58976;
+}
+
+
 #producto .precio {
     font-weight: 700;
     font-size: 1.3rem;
