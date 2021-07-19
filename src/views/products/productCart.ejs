@@ -5,6 +5,7 @@
     <%- include ("../partials/header.ejs") %> 
     <main>
         <section id="carrito">
+            <% if (products) { %>
             <article class="product-info">
                 <figure>
                     <img src="<%= products.images[0].url %>" alt="">
@@ -20,7 +21,9 @@
                     </nav>
                 </section>   
             </article>
-            
+            <% } else { %>
+            <h2>Tu carrito no tiene productos</h2>
+            <% }  %>
             <form id="code-box" method="post" action="/">
                 <input class="info" type="text" placeholder="Ingrese código de descuento">
                 <p>MONTO DE DESCUENTO</p>
@@ -31,7 +34,7 @@
             </form>
 
             <form id="check-out" action="/" method="post">
-                <input type="number" id="cantidad" name="cantidad" placeholder="Total Compra">
+                <p>TOTAL COMPRA</p>
             </form>
             <form id="check-out-button" action="/" method="post">
                 <button>Seguir comprando</button>
