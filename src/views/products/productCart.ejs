@@ -21,9 +21,7 @@
                     </nav>
                 </section>   
             </article>
-            <% } else { %>
-            <h2>Tu carrito no tiene productos</h2>
-            <% }  %>
+            
             <form id="code-box" method="post" action="/">
                 <input class="info" type="text" placeholder="Ingrese código de descuento">
                 <p>MONTO DE DESCUENTO</p>
@@ -40,7 +38,9 @@
                 <button>Seguir comprando</button>
                 <button>Check out</button>
             </form>
-            
+            <% } else { %>
+                <h2 id="sinProductos">No tenes productos en el carrito de compras</h2>
+            <% }  %>
         </section>
         
     </main>

@@ -152,6 +152,12 @@ form input.info {
     background-color: #f1ba33;
 }
 
+#sinProductos {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
 @media screen and (min-width: 768px){
     main{
         margin-top: 140px;

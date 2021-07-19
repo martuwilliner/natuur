@@ -18,9 +18,6 @@ main {
 }
 
 .boton-img {
-/*     position: absolute;
-    top: 5vw;
-    right: 10vw; */
     border: none;
     padding: 0.4rem;
     border-radius: 0.5rem;
@@ -47,7 +44,7 @@ main {
     margin-top: 1rem;
 }
 
-#detalles input, #detalles label, #detalles select,  #detalles textarea{
+.detalle{
     border: none;
     margin-bottom: 0.5rem;
     border-radius: 0.5rem;
@@ -92,6 +89,10 @@ main {
     background-color: #f1ba33;
     color: #3f3f3f;
 }
+
+.size {
+    margin-left: 0.8rem;
+}
     
 /**TABLET**/
 @media screen and (min-width: 768px) {
@@ -106,11 +107,6 @@ main {
     #infoProducto #imagen{
         width: 30vw;
         align-self: flex-start;
-    }
-    
-    .boton-img {
-/*         top: 2vw;
-        right: 3vw; */
     }
     
     #detalles {
@@ -152,15 +148,9 @@ main {
         align-self: flex-start;
     }
     
-    .boton-img {
-/*         top: 1vw;
-        right: 1vw; */
-    }
-    
     #detalles {
         width: 30vw;
     }
-
     
     #precio {
         display: flex;

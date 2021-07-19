@@ -22,12 +22,11 @@
                     <% }) %>
             </select>
             <fieldset class="select">
-                <label class="checkbox" for="size">
+                <label class="checkbox" for="size">Tamaño:</label>
                     <% size.forEach(size => { %>
-                    <input type="checkbox" name="size" id="size" value="<%= size.id %>">
+                    <input  class="size" type="checkbox" name="size" id="size" value="<%= size.id %>">
                     <%= size.name %>
                     <% }) %>
-                </label>
             </fieldset>
             <select id="oferts" class="select">
                 <option value="" selected>Oferta</option>

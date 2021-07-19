@@ -3,19 +3,21 @@ main.main-register{
     flex-direction: column;
     margin: auto;
     margin-top: 130px;
-    background-color: whitesmoke;
     width: 80vw;
     border-radius: 1rem;
     padding: 1rem 0;
+    background-image: url("/img/home/banner-2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 10px rgba(95, 95, 95,0.5);
 }
 p.bienvenido{
     display: flex;
     margin: auto;
     width: 80vw;
-    background-color: rgb(243, 239, 239);
+    background-color: #f1ba33;
     padding: 0.7rem 0;
     margin-bottom: 1rem;
-    border-radius: 0.5rem;
     justify-content: center; 
     font-weight: 700;
 }

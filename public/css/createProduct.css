@@ -12,10 +12,9 @@ p.bienvenido{
     display: flex;
     margin: auto;
     width: 80vw;
-    background-color: rgb(243, 239, 239);
+    background-color: #f1ba33;
     padding: 0.7rem 0;
     margin-bottom: 1rem;
-    border-radius: 0.5rem;
     justify-content: center; 
     font-weight: 700;
 }
@@ -59,6 +58,10 @@ main.main-register button{
 
 main.main-register button:hover{
     background-color: #f1ba33;
+}
+
+.size {
+    margin-left: 0.8rem;
 }
 
 @media screen and (min-width: 768px) {

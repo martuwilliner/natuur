@@ -13,32 +13,34 @@
                 <input type="file" id="submit" value="Editar" class="boton-img">
             </section>
             <section id="detalles">
-                <label id="id" name="id">N° de Producto: <%= product.id %></label>
-                <input type="text" id="producto" name="producto" placeholder="<%= product.name %>">
-                <article id="precio">
-                    <p>$</p>
-                    <input type="number" placeholder="<%= product.price %>" id="precio" name="precio">
-                </article>
-                <textarea placeholder="<%= product.descr%>" id="descr" name="descr"></textarea>
-                <select id="type">
+                <label class="detalle" name="id">N° de Producto: <%= product.id %></label>
+                <input class="detalle" type="text" id="producto" name="producto" placeholder="<%= product.name %>">
+                <fieldset class="detalle">
+                    <label id="precio">$ 
+                        <input type="number" placeholder="<%= product.price %>" id="precio" name="precio">
+                    </label>
+                </fieldset>
+                <textarea class="detalle" placeholder="<%= product.descr%>" id="descr" name="descr"></textarea>
+                <select id="type" class="detalle">
                     <option value="" selected>Editar categoría</option>
                     <% category.forEach(category => { %>
                             <option value="<%= category.id %>"><%= category.name %></option>
                     <% }) %>
                 </select>
-                <select id="size">
-                    <option value="" selected>Editar tamaño</option>
-                    <% size.forEach(size => { %>
-                        <option value="<%= size.id %>"><%= size.name %></option>
-                    <% }) %>
-                </select>
-                <select id="oferts">
+                <fieldset class="select detalle">
+                    <label class="checkbox" for="size">Tamaño:</label><br><br>
+                        <% size.forEach(size => { %>
+                        <input  class="size" type="checkbox" name="size" id="size" value="<%= size.id %>">
+                        <%= size.name %>
+                        <% }) %>
+                </fieldset>
+                <select id="oferts" class="detalle">
                     <option value="" selected>Editar oferta</option>
                     <option value="true">En oferta</option>
                     <option value="false">Sin oferta</option>
                 </select>
-                <input type="button" id="submit" value="Editar">
-                <input type="button" id="reset" value="Resetear campo">
+                <input type="button" id="submit" value="Editar"  class="detalle">
+                <input type="button" id="reset" value="Resetear campo"  class="detalle">
             </section>
         </form> 
         <% } %>
