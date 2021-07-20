@@ -87,7 +87,7 @@ main {
 .infoProducto .shopping input {
     border: none;
     border-radius: 1rem;
-    background-color: white;
+    background-color: #ccc;
     padding: 0.8rem ;
     width: 25vw;
 }
@@ -106,7 +106,9 @@ main {
 .infoProducto .favorito {
     width: auto;
 }
-
+.edit {
+    margin-left: 1rem;
+}
 /*Te puede interesar*/
 #interesar {
     display: flex;

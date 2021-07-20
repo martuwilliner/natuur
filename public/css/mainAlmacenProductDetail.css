@@ -107,6 +107,9 @@ main {
     width: auto;
 }
 
+.edit {
+    margin-left: 1rem;
+}
 /*Te puede interesar*/
 #interesar {
     display: flex;
@@ -235,6 +238,7 @@ main {
     
     .infoProducto .shopping input {
         width: 8vw;
+        background-color: #ccc;
     }
     
     /*te pueden interesar*/
