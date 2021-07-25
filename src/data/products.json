@@ -1,92 +1,157 @@
 [
-    {
-        "id": 1,
-        "name": "Fideos integrales con ajo negro",
-        "descr": "Los fusillis integrales con ajo negro son 100% artesanales y agroecológicos",
-        "type": 1, 
-        "size": [1], 
-        "price": 320,
-        "category": 1, 
-        "images": [1],
-        "oferts": true
-    },
-    {
-        "id": 2,
-        "name": "Roller duo cuarzo rosa",
-        "descr": "The secret of Asian beauty: Los asiáticos son uno de nuestros grandes mentores en una enorme variedad de temáticas y las prácticas de belleza es una de ellas. Usá este mini rol para masajear tu piel y darle un brillo natural con las maravillas que carga su piedra. El cuarzo rosa esconde en su belleza minerales que ayudan a disminuir la hinchazón, eliminar toxinas y reafirmar la piel. Si tu gran molestia son las arrugas, elegí esta opción.",
-        "type": 1, 
-        "size": [], 
-        "price": 3900,
-        "category": 3, 
-        "images": [2],
-        "oferts": true
-    },
-    {
-        "id": 3,
-        "name": "Tarta de verduras asadas",
-        "descr": "Elaborada con harina integral orgánica, aceite de oliva extra virgen y sal marina. Ingredientes: Harina integral orgánica, cebolla, tomate cherry, sal marina,huevo, Mozzarella, semillas de girasol, calabaza, zanahoria, zapallitos y berenjena.",
-        "type": 2, 
-        "size": [1], 
-        "price": 505,
-        "category": 2, 
-        "images": [3],
-        "oferts": true
-    },
-    {
-        "id": 4,
-        "name": "Shampoo sólido para cabellos secos",
-        "descr": "El shampoo y acondicionador de Terra Té acercan la posibilidad de nutrir tu cuero cabelludo genuinamente y no contaminar ni dañar el planeta en el proceso. Los ingredientes naturales que lo componen llegan con todos sus nutrientes para limpiar, hidratar y estimular el crecimiento del pelo en cada baño. Aplicar sobre pelo mojado y masajear suavemente. Luego, enjuagar con abundante agua.",
-        "type": 1, 
-        "size": [1], 
-        "price": 570,
-        "category": 3, 
-        "images": [4],
-        "oferts": true
-    },
-    {
-        "id": 5,
-        "name": "Granola Coconut Bites",
-        "descr": "Granola artesanal, sin químicos, sin conservantes, ni azúcar. Ideal para un snack saludable. Ingredientes: Castañas, almendras, coco, semillas de girasol, semillas de zapallo, miel y aceite de girasol.",
-        "type": 2, 
-        "size": [4], 
-        "price": 440,
-        "category": 1, 
-        "images": [5],
-        "oferts": false
-    },
-    {
-        "id": 6,
-        "name": "Vino Blanco",
-        "descr": "Rocamadre es el proyecto más personal de JuanFa Suárez (Finca Suarez y Traslapiedra) ubicado en Paraje Altamira, a partir de uva de los viñedos de la bodega familiar. La búsqueda en este caso son vinos de mínima intervención, de partidas chicas y que reflejen el carácter del lugar.",
-        "type": 3, 
-        "size": [6], 
-        "price": 1750,
-        "category": 2, 
-        "images": [6],
-        "oferts": false
-    },
-    {
-        "id": 7,
-        "name": "Babaganush",
-        "descr": "Dip a base de berenjena ahumada y mayonesa. Ingredientes: berenjena, aceite de girasol, huevo, vinagre de alcohol, azúcar, sal, ajo fresco. RGCBA-E 000192 - RGCBA-P 001216",
-        "type": 2, 
-        "size": [1], 
-        "price": 310,
-        "category": 2, 
-        "images": [7],
-        "oferts": false
-    },
-    {
-        "id": 8,
-        "name": "Aceite de Rosa Mosqueta roll on",
-        "descr": "Aceite anti-age: el aceite de rosa mosqueta tiene un inmenso poder regenerador de nuestros tejidos y crecimiento celular. De esta manera logra combatir el envejecimiento prematuro, la aparición de arrugas y la reducción de marcas y cicatrices. Su formato de roll on permite llevarlo a todos lados. Ideal para combatir la resequedad de los labios y mantenerlos hidratados.",
-        "type": 1, 
-        "size": [4], 
-        "price": 1150,
-        "category": 3, 
-        "images": [8],
-        "oferts": false
-    }
-
+  {
+    "id": 1,
+    "name": "Leche de coco y almendras",
+    "descr": "Leche de coco y almendras extra cremosa elegida por baristas. Un extraordinario sabor sin endulzantes o esencias.\r\n\r\n23 grs de almendras + 40 grs de coco + 2,7 grs de net. Carbs.\r\n\r\nIngredientes: agua, coco, pasta de almendras, carbonato de calcio, cloruro de sodio, emulsionante: lecitina de girasol, regulador de la acidez: citrato de sodio. Est: goma gellan. Esp: goma de algarrobo.",
+    "category": 1,
+    "size": [
+      6
+    ],
+    "type": 1,
+    "price": 260,
+    "images": [
+      1
+    ],
+    "oferts": false
+  },
+  {
+    "id": 2,
+    "name": "Pura Fruta jugo de naranja",
+    "descr": "",
+    "category": 1,
+    "size": [
+      4,
+      6
+    ],
+    "type": 3,
+    "price": 95,
+    "images": [
+      2,
+      3
+    ],
+    "oferts": false
+  },
+  {
+    "id": 3,
+    "name": "Masseube mermelada de cereza negra",
+    "descr": "Este fruto originario de la antigua Grecia cautiva a los ojos con su color intenso y brillante. Es dulce y delicioso y su consistencia carnosa lo convierte en un delicado manjar que se utiliza en muchas elaboraciones culinarias.\r\n\r\nIngredientes: 56% cereza negra, 44% azúcar.",
+    "category": 1,
+    "size": [
+      1
+    ],
+    "type": 3,
+    "price": 495,
+    "images": [
+      4
+    ],
+    "oferts": true
+  },
+  {
+    "id": 4,
+    "name": "Paisandoo super granola",
+    "descr": "Granola Raw. Elaborada utilizando técnicas de Alimentación Viva. Activada y deshidratada lentamente a baja temperatura, lo cual permite optimizar la absorción de nutrientes y facilitar la digestión.\r\n\r\nIngredientes: almendras orgánicas, nueces orgánicas, brotes de sarraceno orgánico, castañas de cajú, maca peruana orgánica, algarroba blanca orgánica, azúcar de coco orgánica, extracto de vainilla, sal rosa.",
+    "category": 1,
+    "size": [
+      1
+    ],
+    "type": 1,
+    "price": 1300,
+    "images": [
+      5
+    ],
+    "oferts": true
+  },
+  {
+    "id": 5,
+    "name": "Sueño verde coleslaw",
+    "descr": "Ensalada Coleslaw (repollo blanco, rojo y zanahoria rallada)",
+    "category": 2,
+    "size": [
+      1
+    ],
+    "type": 2,
+    "price": 220,
+    "images": [
+      6
+    ],
+    "oferts": false
+  },
+  {
+    "id": 6,
+    "name": "Yamani ravioles veganos de verdura",
+    "descr": "Ravioles veganos de harina integral orgánica rellenos de verdura.\r\n\r\n100% Natural. Elaboración artesanal.\r\n\r\nIngredientes: harina integral de trigo candeal orgánico Campo Claro, acelga, salsa blanca (aceite de girasol, leche de caju y harina integral), sal marina, pimienta de cayena y nuez moscada.",
+    "category": 2,
+    "size": [
+      1
+    ],
+    "type": 1,
+    "price": 510,
+    "images": [
+      7,
+      8
+    ],
+    "oferts": true
+  },
+  {
+    "id": 7,
+    "name": "Casa vegana toques de lentejas",
+    "descr": "Sin conservantes, ni saborizantes. 100% naturales. Refritos, calentarlos sin aceite.\r\n\r\nIngredientes: Lentejón canadiense, garbanzos, cebolla, harina de trigo, cilantro, ajo, polvo de hornear, sal marina y pimienta.",
+    "category": 2,
+    "size": [
+      2
+    ],
+    "type": 1,
+    "price": 350,
+    "images": [
+      9
+    ],
+    "oferts": false
+  },
+  {
+    "id": 8,
+    "name": "Linda jabón de carbón activado",
+    "descr": "Un jabón amable en todo sentido. Está hecho con el amor de la metodología artesanal, usando ingredientes nobles y completamente libre de parabenos, conservantes sintéticos y cualquier tipo de perfume artificial.\r\n\r\nEl carbón activado es súper absorbente y un excelente eliminador de toxinas y suciedad, por eso es un jabón ideal para personas con pieles grasas y en tratamiento de acné.",
+    "category": 3,
+    "size": [
+      1
+    ],
+    "type": 1,
+    "price": 700,
+    "images": [
+      10,
+      11
+    ],
+    "oferts": true
+  },
+  {
+    "id": 9,
+    "name": "Linda jabón de olvida, jojoba y arcilla",
+    "descr": "Un jabón amable en todo sentido. Está hecho con el amor de la metodología artesanal, usando ingredientes nobles y completamente libre de parabenos, conservantes sintéticos y cualquier tipo de perfume artificial.\r\n\r\nEste jabón contiene arcilla verde que toma el rol de exfoliante suave, eliminando células muertas y abriendo el paso al aceite de oliva y la jojoba a explotar su potencial regenerador e hidratante.",
+    "category": 3,
+    "size": [
+      1
+    ],
+    "type": 1,
+    "price": 700,
+    "images": [
+      12,
+      13
+    ],
+    "oferts": false
+  },
+  {
+    "id": 10,
+    "name": "Roller duo cuarzo rosa",
+    "descr": "The secret of Asian beauty: Los asiáticos son uno de nuestros grandes mentores en una enorme variedad de temáticas y las prácticas de belleza es una de ellas. Usá este mini rol para masajear tu piel y darle un brillo natural con las maravillas que carga su piedra.\r\n\r\nEl cuarzo rosa esconde en su belleza minerales que ayudan a disminuir la hinchazón, eliminar toxinas y reafirmar la piel. Si tu gran molestia son las arrugas, elegí esta opción.",
+    "category": 3,
+    "size": [
+      1
+    ],
+    "type": 1,
+    "price": 4200,
+    "images": [
+      14
+    ],
+    "oferts": false
+  }
 ]
-

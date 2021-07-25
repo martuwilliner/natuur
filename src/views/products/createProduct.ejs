@@ -4,18 +4,17 @@
 <body>
     <%- include ("../partials/header.ejs") %> 
     <main class="main-register"> 
-        <form action="/create" method="post" enctype="multipart/form-data">
+        <form action="/products/create" method="post" enctype="multipart/form-data">
             <p class="bienvenido">NUEVO PRODUCTO</p>
-            <input class="formulario-register" type="hidden" placeholder="id" name="id" id="id" required>
             <input class="formulario-register" type="text" placeholder="Producto" name="name" id="name" required>            
             <input class="formulario-register" type="number" placeholder="Precio" name="price" id="price"  required>
-            <select id="type" class="select">
+            <select id="type" name="type" class="select">
                 <option value="" selected>Apto para</option>
                     <% type.forEach(type => { %>
                             <option value="<%= type.id %>"><%= type.name %></option>
                     <% }) %>
             </select>
-            <select id="category" class="select">
+            <select id="category" name="category" class="select">
                 <option value="" selected>Elegir categoría</option>
                     <% category.forEach(category => { %>
                             <option value="<%= category.id %>"><%= category.name %></option>
@@ -24,20 +23,21 @@
             <fieldset class="select">
                 <label class="checkbox" for="size">Tamaño:</label>
                     <% size.forEach(size => { %>
-                    <input  class="size" type="checkbox" name="size" id="size" value="<%= size.id %>">
+                    <input  class="size" type="checkbox" name="sizes" id="size" value="<%= size.id %>">
                     <%= size.name %>
                     <% }) %>
             </fieldset>
-            <select id="oferts" class="select">
+            <select id="oferts" name="oferts" class="select">
                 <option value="" selected>Oferta</option>
                 <option value="true">En oferta</option>
                 <option value="false">Sin oferta</option>
             </select>
             <textarea class="select" placeholder="Descripción" name="descr" id="descr" ></textarea>
-            <input type="file" id="submit" value="image">
+            <input type="file" id="image" name="image" multiple>
             <section class="button-enviar">
-                <button type="submit" name="enviar" id="enviar">Crear</button>
+                <button type="submit" id="enviar">Crear</button>
             </section>
+        </form>
     </main>
     <%- include ("../partials/footer.ejs") %> 
 </body>

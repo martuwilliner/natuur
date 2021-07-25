@@ -30,8 +30,17 @@ const productsController = {
             styles: ["/css/createProduct.css"],
             category: category.all(),
             size: size.all(),
-            type: type.all()
+            type: type.all(),
         });    
+    },
+    save: (req,res) => {
+/*          return res.send({
+            data: req.body, 
+            oferts: req.body.oferts == "true" ? true : false,
+            files: req.files //porq esta ANY, si es SINGLE es file
+        })  */
+        let result = product.new(req.body,req.files) //porq esta ANY, si es SINGLE es file
+        return result == true ? res.redirect("/") : res.send("Error al cargar la informacion") 
     },
     edit: (req,res) => {
         return res.render('products/editProduct',{

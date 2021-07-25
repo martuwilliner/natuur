@@ -18,7 +18,7 @@ const publicPath = path.resolve(__dirname, "../public");
 app.use(express.static(publicPath));
 
 // App Settings 
-
+app.use(express.urlencoded({extended:true}));
 
 // Middlewares
 
