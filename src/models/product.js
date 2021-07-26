@@ -53,5 +53,61 @@ module.exports = {
         productos.push(nuevo)
         fs.writeFileSync(directory,JSON.stringify(productos,null,2));
         return true;  
+    },
+    edit: function (data,files,id) {
+        const directory = path.resolve(__dirname, "../data", "products.json")
+        let productos = this.all();
+        let updated = this.one(id);
+        // eliminamos la imagen de la carpeta upload
+        if(updated.images != undefined && updated.images.length > 0 && files != undefined && files.length > 0){
+            updated.images.forEach(imageId => {
+                let imageSelect = image.one(imageId);
+                let pathImage = path.resolve(__dirname,"../../public",imageSelect.url)
+                let imageExist = fs.existsSync(pathImage) //exists es para saber si existe
+                if(imageExist){
+                    fs.unlinkSync(pathImage) //unlink borra file
+                }
+            })
+        }
+        
+        productos.map(producto => {
+            if(producto.id == id ){
+                producto.name = data.name,
+                producto.descr = data.descr,
+                producto.category = parseInt(data.category),
+                producto.size = Array.from(data.sizes).length > 1 ? data.sizes.map(size => parseInt(size)) : Array.from(data.sizes).map(size => parseInt(size)),
+                producto.type = parseInt(data.type),
+                producto.price = parseInt(data.price), 
+                producto.images = files != undefined && files.length > 0 ? files.map(file => image.new(file).id) : updated.images,
+                producto.oferts = data.oferts == "true" ? true : false
+            }
+            return producto
+        })
+        fs.writeFileSync(directory,JSON.stringify(productos,null,2));
+        return true;
+    },
+    delete: function (id)  {
+        const directory = path.resolve(__dirname, "../data", "products.json")
+        let productos = this.all();
+        let deleted = this.one(id);
+        // eliminamos la imagen de la carpeta upload
+        /* fs.unlinkSync(path.resolve(__dirname,"../../public",deleted.image)) */
+        if(deleted.images != undefined && deleted.images.length > 0){
+            deleted.images.forEach(imageId => {
+                let imageSelect = image.one(imageId);
+                let pathImage = path.resolve(__dirname,"../../public",imageSelect.url) // la coma antes de imagenSelect actua de barra
+                let imageExist = fs.existsSync(pathImage) //exists es para saber si existe
+                console.log("imagen",pathImage);
+                console.log("imagen Existe ?",imageExist);
+                if(imageExist){
+                    fs.unlinkSync(pathImage) //unlink borra file
+                }
+            })
+        }
+        // filtarmos el producto que deaseamos eliminar
+        productos = productos.filter(producto => producto.id != deleted.id )
+        fs.writeFileSync(directory,JSON.stringify(productos,null,2));
+        return true;
     }
+
 }

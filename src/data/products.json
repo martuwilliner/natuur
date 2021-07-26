@@ -15,23 +15,6 @@
     "oferts": false
   },
   {
-    "id": 2,
-    "name": "Pura Fruta jugo de naranja",
-    "descr": "",
-    "category": 1,
-    "size": [
-      4,
-      6
-    ],
-    "type": 3,
-    "price": 95,
-    "images": [
-      2,
-      3
-    ],
-    "oferts": false
-  },
-  {
     "id": 3,
     "name": "Masseube mermelada de cereza negra",
     "descr": "Este fruto originario de la antigua Grecia cautiva a los ojos con su color intenso y brillante. Es dulce y delicioso y su consistencia carnosa lo convierte en un delicado manjar que se utiliza en muchas elaboraciones culinarias.\r\n\r\nIngredientes: 56% cereza negra, 44% azúcar.",
@@ -124,22 +107,6 @@
     "oferts": true
   },
   {
-    "id": 9,
-    "name": "Linda jabón de olvida, jojoba y arcilla",
-    "descr": "Un jabón amable en todo sentido. Está hecho con el amor de la metodología artesanal, usando ingredientes nobles y completamente libre de parabenos, conservantes sintéticos y cualquier tipo de perfume artificial.\r\n\r\nEste jabón contiene arcilla verde que toma el rol de exfoliante suave, eliminando células muertas y abriendo el paso al aceite de oliva y la jojoba a explotar su potencial regenerador e hidratante.",
-    "category": 3,
-    "size": [
-      1
-    ],
-    "type": 1,
-    "price": 700,
-    "images": [
-      12,
-      13
-    ],
-    "oferts": false
-  },
-  {
     "id": 10,
     "name": "Roller duo cuarzo rosa",
     "descr": "The secret of Asian beauty: Los asiáticos son uno de nuestros grandes mentores en una enorme variedad de temáticas y las prácticas de belleza es una de ellas. Usá este mini rol para masajear tu piel y darle un brillo natural con las maravillas que carga su piedra.\r\n\r\nEl cuarzo rosa esconde en su belleza minerales que ayudan a disminuir la hinchazón, eliminar toxinas y reafirmar la piel. Si tu gran molestia son las arrugas, elegí esta opción.",
@@ -151,6 +118,38 @@
     "price": 4200,
     "images": [
       14
+    ],
+    "oferts": false
+  },
+  {
+    "id": 11,
+    "name": "Interface serum hidratante activo",
+    "descr": "Ácido Hialurónico Vegetal 0,5% + Ácido Poligultámico (PGA) 0,1% + Kombucha\r\n\r\nHidrata profundamente desde el interior de la piel. El PGA 100% natural forma una película externa sobre la piel manteniéndola hidratada todo el día. Aporta una dosis potente de péptidos naturales y mejora las condiciones de el microbioma de la piel.\r\n\r\nTextura de gel liviano pensado para todo tipo de piel. ",
+    "category": 3,
+    "size": [
+      4
+    ],
+    "type": 1,
+    "price": 3700,
+    "images": [
+      15
+    ],
+    "oferts": false
+  },
+  {
+    "id": 12,
+    "name": "Pura Frutta Jugo de naranja",
+    "descr": "Jugo de naranjas 100% exprimido. Sin conservantes.Sin jugo concentrado, ni saborizantes. Sin colorantes. Pasteurizado.\r\n\r\nIngredientes: 100% jugo de naranjas del Paraná.",
+    "category": 1,
+    "size": [
+      4,
+      6
+    ],
+    "type": 3,
+    "price": 100,
+    "images": [
+      20,
+      21
     ],
     "oferts": false
   }

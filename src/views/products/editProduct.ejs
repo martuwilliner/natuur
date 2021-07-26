@@ -5,48 +5,60 @@
     <%- include ("../partials/header.ejs") %> 
     <main>    
         <% if (product) { %>   
-        <form method="post" action="/update/<%= product.id %>?_method=PUT" enctype="multipart/form-data" id="infoProducto">
+        <form action="/products/update/<%= product.id %>?_method=PUT" method="post" id="infoProducto" enctype="multipart/form-data" >
             <section id="imagen">
                 <figure>
-                    <img src="<%= product.images[0].url %>">
+                    <img src="/<%= product.images[0].url %>">
                 </figure>
-                <input type="file" id="submit" value="Editar" class="boton-img">
+                <input type="file"  id="image" name="image" class="boton-img" multiple>
             </section>
             <section id="detalles">
                 <label class="detalle" name="id">N° de Producto: <%= product.id %></label>
-                <input class="detalle" type="text" id="producto" name="producto" value="<%= product.name %>">
+                <input class="detalle" type="text" id="name" name="name" value="<%= product.name %>">
                 <fieldset class="detalle">
                     <label id="precio">$ 
-                        <input type="number" value="<%= product.price %>" id="precio" name="precio">
+                        <input type="number" value="<%= product.price %>" id="price" name="price">
                     </label>
                 </fieldset>
-                <select id="type" class="detalle">
-                    <option value="" selected>Apto para</option>
-                        <% type.forEach(type => { %>
-                                <option value="<%= type.id %>"><%= type.name %></option>
+                <select id="type" class="detalle" name="type">
+                    <option value="" >Apto para</option>
+                        <% types.forEach(type => { %>
+                            <% if (type.id == product.type.id) { %>
+                                <option selected value="<%= type.id %>"><%= type.name %></option>
+                            <% } else { %>
+                                <option  value="<%= type.id %>"><%= type.name %></option>
+                            <% } %>
                         <% }) %>
                 </select>
                 <textarea class="detalle" id="descr" name="descr"><%= product.descr%></textarea>
-                <select id="type" class="detalle">
-                    <option value="" selected>Editar categoría</option>
+                <select id="category" name="category" class="detalle">
+                    <option value="" >Editar categoría</option>
                     <% category.forEach(category => { %> <!-- preseleccionar categoria -->
-                            <option value="<%= category.id %>"><%= category.name %></option>
+                        <% if (category.id == product.category.id) { %>
+                            <option selected value="<%= category.id %>"><%= category.name %></option>
+                        <% } else { %>
+                            <option  value="<%= category.id %>"><%= category.name %></option>
+                        <% } %>
                     <% }) %>
                 </select>
                 <fieldset class="select detalle">
                     <label class="checkbox" for="size">Tamaño:</label><br><br>
                         <% size.forEach(size => { %><!-- preseleccionar categoria -->
-                        <input  class="size" type="checkbox" name="size" id="size" value="<%= size.id %>">
-                        <%= size.name %>
+                            <% if (product.size.includes(size.id)) { %>
+                                <input  checked class="size" type="checkbox" name="sizes" id="size" value="<%= size.id %>">
+                            <% } else { %>
+                                <input  class="size" type="checkbox" name="sizes" id="size" value="<%= size.id %>">
+                            <% } %>
+                            <%= size.name %>
                         <% }) %>
                 </fieldset>
-                <select id="oferts" class="detalle">
-                    <option value="" selected>Editar oferta</option><!-- preseleccionar categoria -->
-                    <option value="true">En oferta</option>
-                    <option value="false">Sin oferta</option>
+                <select id="oferts" name="oferts" class="detalle">
+                    <option value="" disabled>Editar oferta</option><!-- preseleccionar categoria -->
+                    <option value="true" <%= product.oferts ? "selected" : null %> >En oferta</option>
+                    <option value="false" <%= !product.oferts ? "selected" : null %>>Sin oferta</option>
                 </select>
-                <input type="button" id="submit" value="Editar"  class="detalle">
-                <input type="button" id="reset" value="Resetear campo"  class="detalle">
+                <input type="submit" id="submit" value="Editar"  class="detalle">
+                <input type="reset" id="reset" value="Resetear campo"  class="detalle">
             </section>
         </form> 
         <% } %>

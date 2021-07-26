@@ -22,6 +22,12 @@ const productsController = {
     cart: (req,res) => {
         return res.render('products/productCart',{
         styles: ["/css/main-product.css"],
+        products: null
+        });
+    },
+    addCart: (req,res) => {
+        return res.render('products/productCart',{
+        styles: ["/css/main-product.css"],
         products: product.oneWithExtra(req.params.id)
         });
     },
@@ -43,27 +49,35 @@ const productsController = {
         return result == true ? res.redirect("/") : res.send("Error al cargar la informacion") 
     },
     edit: (req,res) => {
+        /*return res.send({
+            product: product.oneWithExtra(req.params.id),
+            category: category.all(),
+            size: size.all(),
+            types: type.all(),
+            edit:true
+        })*/  
         return res.render('products/editProduct',{
             styles: ["/css/editProduct.css"],
             product: product.oneWithExtra(req.params.id),
             category: category.all(),
             size: size.all(),
-            type: type.all(),
+            types: type.all(),
             edit:true
-        });    
+        });
     },
-
-/*     create: (req,res) => {
-        return res.render('products/createProduct');
+    update: (req,res) => {
+       /*return res.send({
+            data: req.body, 
+            oferts: req.body.oferts == "true" ? true : false,
+            files: req.files //porq esta ANY, si es SINGLE es file
+        }) */  
+        let result = product.edit(req.body,req.files,req.params.id) //porq esta ANY, si es SINGLE es file
+        return result == true ? res.redirect("/") : res.send("Error al cargar la informacion") 
     },
-
-    edit: (req,res) => {
-        return res.render('products/editProduct');
-    },
- */
-/*     productCart: (req,res) => {
-        return res.render('products/productCart');
-    }, */
+    delete: (req,res) => {
+        let result = product.delete(req.params.id);
+        return result == true ? res.redirect("/") : res.send("Error al cargar la informacion") 
+    }
 }
 
 module.exports = productsController;

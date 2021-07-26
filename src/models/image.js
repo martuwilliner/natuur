@@ -14,7 +14,7 @@ module.exports = {
         let imagenes = this.all();
         let nuevo = {
             id: imagenes.length > 0 ? imagenes[imagenes.length -1].id + 1: 1,
-            url: "/img/products/" + data.filename, //filename es lo q viene del MULTER
+            url: "img/products/" + data.filename, //filename es lo q viene del MULTER
         }
         imagenes.push(nuevo)
         fs.writeFileSync(this.directory,JSON.stringify(imagenes,null,2));

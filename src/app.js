@@ -1,5 +1,6 @@
 const express = require ('express');
 const path = require('path');
+const methodOverride = require('method-override');
 
 const app = express ();
 
@@ -19,6 +20,7 @@ app.use(express.static(publicPath));
 
 // App Settings 
 app.use(express.urlencoded({extended:true}));
+app.use(methodOverride("_method"));
 
 // Middlewares
 
