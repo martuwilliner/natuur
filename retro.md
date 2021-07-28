@@ -7,13 +7,12 @@ Retrospectiva:
 5. Dejar de hacer.
 
 
-1: De ahora en más, nuestra idea es poder comenzar a implementar con más fluidez todo lo relacionado al CRUD así como tornar a un hábito rutinario el uso del dinamismo en las páginas/archivos. 
+1: Aplicar de manera adecuada el tema sobre cookies como sessions, ya que aún es algo nuevo dentro del temario de Express.
 
-2: Reveer constantemente diseños y variantes para que el proyecto sea adecuado al UX y aprovechar los espacios vacios respecto al responsive.
-Capaz, podríamos intentar de a poco evitar usar tantas clases o ids dentro de los HTML/ejs. Además , hacer mas legible (claro, ordenado y prolijo) lo referido a las rutas y los controladores.
+2: Reveer constantemente los códigos dentro de las rutas y los modelos.
 
-3: Reuniones de meet para mejor feedback en equipo.
+3: Podríamos continuar afianzando lo sabido referido al CRUD para evitar errores tontos en los códigos en js o etiquetas incompletas en los ejs.
 
 4: Consideramos que estamos bien y por ahora no hay nada a variar. 
 
-5: No dejar alguna que otra cosa para último momento. 
+5: Evitar caer en la desorganización de los puntos a tratar dentro de cada sprint.
