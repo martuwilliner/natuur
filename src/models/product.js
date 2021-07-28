@@ -101,6 +101,7 @@ module.exports = {
                 console.log("imagen Existe ?",imageExist);
                 if(imageExist){
                     fs.unlinkSync(pathImage) //unlink borra file
+                    image.delete(imageSelect.id)
                 }
             })
         }

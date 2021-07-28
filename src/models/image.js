@@ -19,7 +19,20 @@ module.exports = {
         imagenes.push(nuevo)
         fs.writeFileSync(this.directory,JSON.stringify(imagenes,null,2));
         return nuevo;  
+    },
+    delete: function(id){
+        const directory = path.resolve(__dirname, '../data', 'images.json')
+        let imagenes = this.all();
+        let deleted = this.one(id);
+
+        imagenes = imagenes.filter(imagen => imagen.id != deleted.id )
+        fs.writeFileSync(directory,JSON.stringify(imagenes,null,2));
+
+        return true;
     }
 }
+
+
+
 
 //VER PARA QUE DEVUELVA EN CASO DE SER NECESARIO MAS DE UNA IMAGEN (ARRAY)

@@ -1,9 +1,5 @@
 [
   {
-    "id": 1,
-    "url": "img/products/image1627167615866.jpg"
-  },
-  {
     "id": 2,
     "url": "img/products/image1627167791538.jpg"
   },
@@ -74,13 +70,5 @@
   {
     "id": 19,
     "url": "img/products/image1627257361756.jpg"
-  },
-  {
-    "id": 20,
-    "url": "img/products/image1627260567034.jpg"
-  },
-  {
-    "id": 21,
-    "url": "img/products/image1627260567039.jpg"
   }
 ]

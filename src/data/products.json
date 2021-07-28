@@ -1,20 +1,5 @@
 [
   {
-    "id": 1,
-    "name": "Leche de coco y almendras",
-    "descr": "Leche de coco y almendras extra cremosa elegida por baristas. Un extraordinario sabor sin endulzantes o esencias.\r\n\r\n23 grs de almendras + 40 grs de coco + 2,7 grs de net. Carbs.\r\n\r\nIngredientes: agua, coco, pasta de almendras, carbonato de calcio, cloruro de sodio, emulsionante: lecitina de girasol, regulador de la acidez: citrato de sodio. Est: goma gellan. Esp: goma de algarrobo.",
-    "category": 1,
-    "size": [
-      6
-    ],
-    "type": 1,
-    "price": 260,
-    "images": [
-      1
-    ],
-    "oferts": false
-  },
-  {
     "id": 3,
     "name": "Masseube mermelada de cereza negra",
     "descr": "Este fruto originario de la antigua Grecia cautiva a los ojos con su color intenso y brillante. Es dulce y delicioso y su consistencia carnosa lo convierte en un delicado manjar que se utiliza en muchas elaboraciones culinarias.\r\n\r\nIngredientes: 56% cereza negra, 44% azúcar.",
@@ -133,23 +118,6 @@
     "price": 3700,
     "images": [
       15
-    ],
-    "oferts": false
-  },
-  {
-    "id": 12,
-    "name": "Pura Frutta Jugo de naranja",
-    "descr": "Jugo de naranjas 100% exprimido. Sin conservantes.Sin jugo concentrado, ni saborizantes. Sin colorantes. Pasteurizado.\r\n\r\nIngredientes: 100% jugo de naranjas del Paraná.",
-    "category": 1,
-    "size": [
-      4,
-      6
-    ],
-    "type": 3,
-    "price": 100,
-    "images": [
-      20,
-      21
     ],
     "oferts": false
   }

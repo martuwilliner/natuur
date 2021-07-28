@@ -19,7 +19,7 @@ const productsController = {
 		res.render("products/category", {
 			products: product.allByCategory(req.params.category),
             styles: ["/css/main-category.css"],
-            title: product.one(req.params.id).category
+            title: req.params.category
 		})
 	},
     cart: (req,res) => {
