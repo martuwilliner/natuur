@@ -10,6 +10,8 @@ const productsController = {
             product.oneWithExtra(req.params.id),
         styles: ["/css/mainAlmacenProductDetail.css", "/css/mainGourmetProductDetail.css", "/css/mainCosmeticaProductDetail.css"],
         products: product.allByCategory(req.params.category),
+        title: product.one(req.params.id).name
+          
     }
         );
     },
@@ -17,12 +19,14 @@ const productsController = {
 		res.render("products/category", {
 			products: product.allByCategory(req.params.category),
             styles: ["/css/main-category.css"],
+            title: product.one(req.params.id).category
 		})
 	},
     cart: (req,res) => {
         return res.render('products/productCart',{
         styles: ["/css/main-product.css"],
-        products: null
+        products: null,
+        title: "Tu Carrito de Compras"
         });
     },
     addCart: (req,res) => {
@@ -37,6 +41,7 @@ const productsController = {
             category: category.all(),
             size: size.all(),
             type: type.all(),
+            title: "Crear nuevo producto"
         });    
     },
     save: (req,res) => {
@@ -62,7 +67,8 @@ const productsController = {
             category: category.all(),
             size: size.all(),
             types: type.all(),
-            edit:true
+            edit:true,
+            title: "Editar producto"
         });
     },
     update: (req,res) => {

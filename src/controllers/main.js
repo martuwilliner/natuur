@@ -6,6 +6,7 @@ const mainController = {
         {products: 
             product.allWithExtra().filter(product => product.oferts == true), 
         styles: ["/css/main-index.css"],
+        title: "Natuur | Bienvenidos"
         }
         );
     }
