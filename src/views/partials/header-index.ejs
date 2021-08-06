@@ -7,8 +7,17 @@
         </a>
         <nav id="user-list">
             <a href="#"><i class="fas fa-search"></i></a>
-            <a href="/users/login"><i class="fas fa-user"></i></a>
-            <a href="/products/cart"><i class="fas fa-shopping-cart"></i></a>
+            <% if (!user) { %>
+                <a href="/users/login"><i class="fas fa-user"></i></a>
+            <% } else { %>
+                <% if (user.roll === 1 ) { %>
+                    <a href="/products/cart"><i class="fas fa-shopping-cart"></i></a>
+                    <a href="/users/perfil"><i class="fas fa-user"></i></a>
+                <% } else { %>
+                    <a href="/products/create"><i class="fas fa-plus"></i></a>
+                <% } %> 
+                <a href="/users/logout"><i class="fas fa-times"></i></a>
+            <% } %>
         </nav>
         <nav id="head-list">
             <ul>

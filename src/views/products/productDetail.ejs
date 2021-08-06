@@ -16,9 +16,10 @@
                 <h2 class="nombreProducto"><%= product.name %></h2>
                 <h3 class="precio">$<%= product.price %></h3>
                 <p><%= product.descr %></p>
-                <section id="botones">
+                <section id="botones"></section>
+                <% if (user && user.roll === 1) { %>
                     <form class="shopping" action="/products/cart/<%= product.id %>" method="post">
-                        <input type="number" id="cantidad" name="cantidad">
+                        <input type="number" id="cantidad" name="cantidad" min="1">
                         <button type="submit">
                             <i class="fas fa-shopping-cart"></i>
                         </button>
@@ -28,6 +29,7 @@
                             <i class="fas fa-heart"></i>
                         </button>
                     </form>
+                <% } else if (user && user.roll !== 1)  { %>
                     <form  action="/products/edit/<%= product.id %>"  method="get" class="edit">
                         <button type="">
                             <i class="fas fa-edit"></i>
@@ -38,6 +40,7 @@
                             <i class="fas fa-trash-alt"></i>
                         </button>
                     </form>
+                <% } %>
                 </section>
             </article>
         </section>

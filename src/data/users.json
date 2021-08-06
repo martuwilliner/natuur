@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "roll": 2,
+    "nombre": "Delfina",
+    "apellido": "Casarino",
+    "usuario": "delficasarino",
+    "email": "delficasarino@gmail.com",
+    "password": "$2b$10$nvK7VXbZsmHko2G/awaOFuAiUmnY.6iWqcVlqW16d4.qGvbeRQfbC",
+    "confirmPassword": "34553696"
+  },
+  {
+    "id": 2,
+    "roll": 1,
+    "nombre": "nombrecliente1",
+    "apellido": "apellidocliente1",
+    "usuario": "cliente1",
+    "email": "cliente1@gmail.com",
+    "password": "$2b$10$B3Q20C4K7brwRnX51Br14OBUJtlud46o.Yhm/5B7ajN.8.cBS0H3O",
+    "confirmPassword": "123456789"
+  }
+]

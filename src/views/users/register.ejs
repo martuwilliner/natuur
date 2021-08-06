@@ -4,22 +4,53 @@
 <body>
     <%- include ("../partials/header-index.ejs") %> 
     <main class="main-register"> 
-        <form action="/" method="post">
+        <form action="/users/save" method="post">
             <p class="bienvenido">CREA TU CUENTA</p>
-            <input class="formulario-register" type="text" placeholder="Nombre" name="nombre" id="nombre" minlength="3" required>
-            <input class="formulario-register" type="text" placeholder="Apellido" name="apellido" id="apellido" minlength="3" required>
-            <input class="formulario-register" type="text" placeholder="Nombre de usuario" name="usuario" id="usuario" minlength="5" required>
-            <input class="formulario-register" type="email" placeholder="Email" name="email" id="email" required>
-            <input class="formulario-register" type="password" placeholder="Contraseña" name="password" required>
-            <input class="formulario-register" type="password" placeholder="Repetir contraseña" name="confirm-password" required>
-        <section class="button-google">
-            <button name="google" id="google">
-                <i class="fab fa-google"></i>
-            </button>
-        </section>
-        <section class="button-enviar">
-                <button type="submit" name="enviar" id="enviar">Registrarse</button>
-        </section>
+            <input class="formulario-register" type="text" placeholder="Nombre" name="nombre" id="nombre" value="<%= locals.old && !locals.errores.nombre ? locals.old.nombre : null %>" >
+            <% if (locals.errores && locals.errores.nombre) { %>
+            <p class="feedback">
+                <%= locals.errores.nombre.msg  %> 
+            </p>
+            <% } %>
+            <input class="formulario-register" type="text" placeholder="Apellido" name="apellido" id="apellido" value="<%= locals.old && !locals.errores.apellido ? locals.old.apellido : null %>">
+            <% if (locals.errores && locals.errores.apellido) { %>
+                <p class="feedback">
+                    <%= locals.errores.apellido.msg  %> 
+                </p>
+            <% } %>
+            <input class="formulario-register" type="text" placeholder="Nombre de usuario" name="usuario" id="usuario" value="<%= locals.old && !locals.errores.usuario ? locals.old.usuario : null %>">
+            <% if (locals.errores && locals.errores.usuario) { %>
+                <p class="feedback">
+                    <%= locals.errores.usuario.msg  %> 
+                </p>
+            <% } %>
+            <input class="formulario-register" type="email" placeholder="Email" name="email" id="email" value="<%= locals.old && !locals.errores.email ? locals.old.email : null %>">
+            <% if (locals.errores && locals.errores.email) { %>
+                <p class="feedback">
+                    <%= locals.errores.email.msg  %> 
+                </p>
+            <% } %>
+            <input class="formulario-register" type="password" placeholder="Contraseña" name="password">
+            <% if (locals.errores && locals.errores.password) { %>
+                <p class="feedback">
+                    <%= locals.errores.password.msg  %> 
+                </p>
+            <% } %>
+            <input class="formulario-register" type="password" placeholder="Repetir contraseña" name="confirmPassword">
+            <% if (locals.errores && locals.errores.confirmPassword) { %>
+                <p class="feedback">
+                    <%= locals.errores.confirmPassword.msg  %> <!-- msj viene solo por express-validator -->
+                </p>
+            <% } %>
+            <section class="button-google">
+                <button name="google" id="google">
+                    <i class="fab fa-google"></i>
+                </button>
+            </section>
+            <section class="button-enviar">
+                    <button type="submit">Registrarse</button>
+            </section>
+        </form>
     </main>
     <%- include ("../partials/footer.ejs") %> 
 </body>
