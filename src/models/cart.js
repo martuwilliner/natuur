@@ -1,5 +1,6 @@
 const path = require("path");
 const fs = require("fs");
+const model = require("./product")
 
 module.exports = {
     directory: path.resolve(__dirname, "../data", "carts.json"),
@@ -38,6 +39,26 @@ module.exports = {
         return newCart;        
     },
     update: function(id,data){
+        let allCarts = this.all()
+        let select = this.one(id);
+        
+        allCarts = allCarts.map(cart => { // no es push porque acá modificamos 
+            if(cart.id == select.id){
+                cart.items.map((item,index,items) => {
+                    if(item.id == data.id){ // data es la info del producto q esta en nuestra web
+                        item.quantity = data.quantity;
+                    }else{
+                        let product = model.oneWithExtra(data.id)
+                        items.push({...product, quantity: data.quantity})
+                    }
+                    return item
+                })
+            }
+            return cart
+        })
+        
+        this.write(allCarts);
+        return select; 
         
     }
 }

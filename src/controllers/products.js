@@ -41,7 +41,7 @@ const productsController = {
         if(!cart){
             const newCart = cartModel.create({user:req.session.user.id,items:[{...producto,quantity: req.body.quantity}]})
         }else{
-            const updateCart = cartModel.update(cart.id,producto);
+            const updateCart = cartModel.update(cart.id,{id:producto.id,quantity: req.body.quantity});
         } // en un punto pasamos información TODAIVA NO SABEMOS DONDE
         return res.redirect("product/cart");
     },

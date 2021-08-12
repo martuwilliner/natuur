@@ -34,6 +34,38 @@
           }
         ],
         "quantity": "3"
+      },
+      {
+        "id": 7,
+        "name": "Casa vegana toques de lentejas",
+        "descr": "Sin conservantes, ni saborizantes. 100% naturales. Refritos, calentarlos sin aceite.\r\n\r\nIngredientes: Lentejón canadiense, garbanzos, cebolla, harina de trigo, cilantro, ajo, polvo de hornear, sal marina y pimienta.",
+        "category": {
+          "id": 2,
+          "name": "gourmet",
+          "css": "/css/mainGourmetProductDetail.css"
+        },
+        "size": [
+          2
+        ],
+        "type": {
+          "id": 1,
+          "name": "vegano"
+        },
+        "price": 350,
+        "images": [
+          {
+            "id": 9,
+            "url": "img/products/image1627168637249.jpg"
+          }
+        ],
+        "oferts": false,
+        "sizes": [
+          {
+            "id": 2,
+            "name": "500gr"
+          }
+        ],
+        "quantity": "4"
       }
     ],
     "date": 1628795199378,
