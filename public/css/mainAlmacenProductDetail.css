@@ -105,6 +105,7 @@ main {
 
 .infoProducto .favorito {
     width: auto;
+    margin-top: .5rem;
 }
 
 .edit {

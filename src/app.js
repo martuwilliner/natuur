@@ -4,7 +4,7 @@ const methodOverride = require('method-override');
 const cookie = require('cookie-parser');
 const session = require('express-session');
 const user = require('./middlewares/user');
-
+const cart = require('./middlewares/cart');
 const app = express ();
 
 // App Server
@@ -25,6 +25,7 @@ app.use(methodOverride("_method"));
 app.use(session({secret: "natuur", resave:false, saveUninitialized: true}));
 app.use(cookie());
 app.use(user);
+app.use(cart);
 
 // Web Routes
 app.use (require("./routes/main"));

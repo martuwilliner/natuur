@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "user": 2,
+    "items": [
+      {
+        "id": 4,
+        "name": "Paisandoo super granola",
+        "descr": "Granola Raw. Elaborada utilizando técnicas de Alimentación Viva. Activada y deshidratada lentamente a baja temperatura, lo cual permite optimizar la absorción de nutrientes y facilitar la digestión.\r\n\r\nIngredientes: almendras orgánicas, nueces orgánicas, brotes de sarraceno orgánico, castañas de cajú, maca peruana orgánica, algarroba blanca orgánica, azúcar de coco orgánica, extracto de vainilla, sal rosa.",
+        "category": {
+          "id": 1,
+          "name": "almacen",
+          "css": "/css/mainAlmacenProductDetail.css"
+        },
+        "size": [
+          1
+        ],
+        "type": {
+          "id": 1,
+          "name": "vegano"
+        },
+        "price": 1300,
+        "images": [
+          {
+            "id": 5,
+            "url": "img/products/image1627168330861.jpg"
+          }
+        ],
+        "oferts": true,
+        "sizes": [
+          {
+            "id": 1,
+            "name": "250gr"
+          }
+        ],
+        "quantity": "3"
+      }
+    ],
+    "date": 1628795199378,
+    "active": true
+  }
+]

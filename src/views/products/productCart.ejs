@@ -5,22 +5,25 @@
     <%- include ("../partials/header.ejs") %> 
     <main>
         <section id="carrito">
-            <% if (products) { %>
-            <article class="product-info">
-                <figure>
-                    <img src="/<%= products.images[0].url %>" alt="">
-                </figure>
-                <section class="product-unit">
-                    <h3 class="product-id"><%= products.name %></h3>
-                    <p class="precio">Precio: $ <%= products.price %></p>
-                    <form class="cantidad" action="/" method="post">
-                        <input type="number" id="cantidad" name="cantidad">
-                    </form>
-                    <nav class="product-delete">
-                        <a href="/"><i class="fas fa-trash-alt"></i></a>
-                    </nav>
-                </section>   
-            </article>
+            <% if (cart.items.length > 0) { %>
+            <% cart.items.forEach(products => { %>
+             
+                <article class="product-info">
+                    <figure>
+                        <img src="/<%= products.images[0].url %>" alt="">
+                    </figure>
+                    <section class="product-unit">
+                        <h3 class="product-id"><%= products.name %></h3>
+                        <p class="precio">Precio: $ <%= products.price %></p>
+                        <form class="cantidad" action="/" method="post">
+                            <input type="number" id="quantity" name="quantity" value="<%= products.quantity %>">
+                        </form>
+                        <nav class="product-delete">
+                            <a href="/"><i class="fas fa-trash-alt"></i></a>
+                        </nav>
+                    </section>   
+                </article>
+                <% }) %>
             
             <form id="code-box" method="post" action="/">
                 <input class="info" type="text" placeholder="Ingrese código de descuento">

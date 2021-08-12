@@ -19,7 +19,7 @@
                 <section id="botones"></section>
                 <% if (user && user.roll === 1) { %>
                     <form class="shopping" action="/products/cart/<%= product.id %>" method="post">
-                        <input type="number" id="cantidad" name="cantidad" min="1">
+                        <input type="number" id="quantity" name="quantity" min="1">
                         <button type="submit">
                             <i class="fas fa-shopping-cart"></i>
                         </button>
