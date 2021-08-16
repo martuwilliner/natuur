@@ -60,5 +60,30 @@ module.exports = {
         this.write(allCarts);
         return select; 
         
+    },
+        delete: function(id,data){
+        let allCarts = this.all()
+        let select = this.one(id);
+        //  return console.log("cart", select.items.length)
+        if (select.items.length <= 0) {
+            allCarts = allCarts.filter(cart => cart.id != select.id)
+            this.write(allCarts);
+        }else{
+            // return console.log("car", allCarts[0].items.length)
+            allCarts = allCarts.map(cart => {
+                if (cart.id == select.id) {
+                    console.log("data", data)
+                    // cart.items = cart.items.filter(item => item.id != data.id)
+                    console.log("cart", cart.items.find(item => item.id == data.id))
+                }
+                return cart;
+            })
+            
+            this.write(allCarts)
+        }
     }
 }
+
+//productos = productos.filter(producto => producto.id != deleted.id )
+//fs.writeFileSync(directory,yJSON.stringif(productos,null,2));
+//return true;

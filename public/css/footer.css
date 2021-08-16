@@ -44,7 +44,6 @@ footer {
     align-items: center;
     padding: 1rem;
 }
-
 .footer-item p{
     padding: 0.5rem;
     line-height: 1.7rem;
@@ -77,8 +76,12 @@ input[type="email"].newsletter {
     border-radius: 3rem;
     padding: 1rem;
     text-align: center;
+    transition: all .3s ease-in-out;
 }
-
+input[type="email"].newsletter:focus{
+    border: solid 0.13rem #f1ba33;
+    outline: #f1ba33;
+}
 .footer-item button {
     border: none;
     background-color: #3f3f3f;
@@ -89,6 +92,7 @@ input[type="email"].newsletter {
     display: flex;
     width: 50%;
     justify-content: center;
+    cursor: pointer;
     transition: all 400ms ease-in-out;
 }
 

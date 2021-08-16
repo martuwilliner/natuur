@@ -29,8 +29,12 @@ p#mensaje-bienvenida-login{
     border-radius: 0.5rem;
     padding: 0.5rem;
     margin-bottom: 1rem;
+    transition: all .3s ease-in-out;
 }
-
+.formulario-login:focus{
+    border: solid 0.13rem #f1ba33;
+    outline: #f1ba33;
+}
 i.fa-google{
     color: white;
 }
@@ -46,6 +50,7 @@ i.fa-google{
     background-color: #3f3f3f;
     color: white;
     width: 25vw;
+    cursor: pointer;
     transition: all 0.4s ease-in-out;
 }
 

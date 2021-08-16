@@ -43,7 +43,19 @@ const productsController = {
         }else{
             const updateCart = cartModel.update(cart.id,{id:producto.id,quantity: req.body.quantity});
         } // en un punto pasamos información TODAIVA NO SABEMOS DONDE
-        return res.redirect("product/cart");
+        return res.redirect("/products/cart");
+    },
+    removeCart: (req, res) => {
+        const producto = product.one(req.params.id) // asi buscamos producto con el one
+        let cart = null
+        cart = cartModel.filter('user',req.session.user.id)
+        cart = cart.length > 0 ? cartModel.search('active',true) : null
+        if (!cart) {
+           return res.redirect("/")
+        }else{
+            const deleteCart = cartModel.delete(cart.id, producto.id);
+            return res.redirect("/products/cart");
+        }
     },
     create: (req,res) => {
         return res.render('products/createProduct',{
