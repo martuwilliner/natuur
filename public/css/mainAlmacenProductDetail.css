@@ -90,8 +90,8 @@ main {
     background-color: white;
     padding: 0.8rem ;
     width: 25vw;
+    outline: none;
 }
-
 .infoProducto .shopping button{
     margin: 0 1rem;
 }

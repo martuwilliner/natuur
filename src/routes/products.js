@@ -24,6 +24,7 @@ router.post('/cart/:id', productsControllers.addCart);
 
 router.put('/update/:id', [upload.any()], productsControllers.update);
 router.delete('/delete/:id', productsControllers.delete);
+router.get('/cart/delete/:id', productsControllers.removeCart);
 
 
 module.exports = router;
