@@ -1,6 +1,6 @@
 const path = require("path");
 const fs = require("fs");
-const model = require("./product")
+const productModel = require("./product")
 
 module.exports = {
     directory: path.resolve(__dirname, "../data", "carts.json"),
@@ -41,24 +41,54 @@ module.exports = {
     update: function(id,data){
         let allCarts = this.all()
         let select = this.one(id);
-        
+        let listItems = select.items;
+        let items = listItems.map(item => item.id);
+        let check = items.includes(data.id);
+       
         allCarts = allCarts.map(cart => { // no es push porque acá modificamos 
             if(cart.id == select.id){
-                cart.items.map((item,index,items) => {
-                    if(item.id == data.id){ // data es la info del producto q esta en nuestra web
-                        item.quantity = data.quantity;
-                    }else{
-                        let product = model.oneWithExtra(data.id)
-                        items.push({...product, quantity: data.quantity})
-                    }
-                    return item
-                })
+                if(check){
+                    cart.items = cart.items.map(item => {
+                        if(item.id == data.id){
+                            item.quantity = data.quantity
+                            return item
+                        }
+                        return item
+                    }) 
+                }else{
+                    let product = productModel.oneWithExtra(data.id)
+                    cart.items.push({...product,quantity:data.quantity})
+                }
             }
             return cart
         })
-        
         this.write(allCarts);
-        return select; 
+        return allCarts; 
         
+    },
+    remove:function (id,item) {
+        let allCarts = this.all()
+        let select = this.one(id);
+        let listItems = select.items;
+        let items = listItems.map(item => item.id);
+        let check = items.includes(item);
+        
+        allCarts = allCarts.map(cart => { 
+            if(cart.id == select.id){
+                if(check){
+                    cart.items = cart.items.filter(product => product.id != item)
+                }
+            }
+            return cart
+        })
+        this.write(allCarts);
+        return select;
+    },
+    resume: function(id) {
+        let select = this.one(id);
+        let listItems = select.items;
+        let items = listItems.map(item => item.price * item.quantity);
+        return items.reduce((acumulator,price) => acumulator + price ,0)
     }
+
 }

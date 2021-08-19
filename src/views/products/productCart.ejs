@@ -6,24 +6,26 @@
     <main>
         <section id="carrito">
             <% if (cart.items.length > 0) { %>
-            <% cart.items.forEach(products => { %>
+            <% cart.items.forEach(product => { %>
              
                 <article class="product-info">
                     <figure>
-                        <img src="/<%= products.images[0].url %>" alt="">
+                        <img src="/<%= product.images[0].url %>" alt="">
                     </figure>
                     <section class="product-unit">
-                        <h3 class="product-id"><%= products.name %></h3>
-                        <p class="precio">Precio: $ <%= products.price %></p>
-                        <form class="cantidad" action="/" method="post">
-                            <input type="number" id="quantity" name="quantity" value="<%= products.quantity %>">
+                        <h3 class="product-id"><%= product.name %></h3>
+                        <p class="precio">Precio: $ <%= product.price %></p>
+                        <form class="cantidad" action="/products/cart/<%= product.id %> " method="post">
+                            <input type="number" id="quantity" name="quantity" min="1" value="<%= product.quantity %>">
+                            <button type="submit"><i class="fas fa-sync-alt"></i></button>
                         </form>
-                        <nav class="product-delete">
-                            <a href="/"><i class="fas fa-trash-alt"></i></a>
-                        </nav>
+                        <form class="product-delete" action="/products/cart?_method=DELETE" method="post">
+                            <input type="hidden" name="id" value="<%= product.id %>">
+                            <button type="submit"><i class="fas fa-trash-alt"></i></button>
+                        </form>
                     </section>   
                 </article>
-                <% }) %>
+            <% }) %>
             
             <form id="code-box" method="post" action="/">
                 <input class="info" type="text" placeholder="Ingrese código de descuento">
@@ -35,7 +37,7 @@
             </form>
 
             <form id="check-out" action="/" method="post">
-                <p>TOTAL COMPRA</p>
+                <p>TOTAL COMPRA $<%= total %> </p>
             </form>
             <form id="check-out-button" action="/" method="post">
                 <button>Seguir comprando</button>
