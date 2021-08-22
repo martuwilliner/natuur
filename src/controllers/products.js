@@ -17,11 +17,20 @@ const productsController = {
         );
     },
     category:(req, res) =>{
-		res.render("products/category", {
-			products: product.allByCategory(req.params.category),
-            styles: ["/css/main-category.css"],
-            title: req.params.category
-		})
+        if(req.query.query != undefined){
+            return res.render("products/category", {
+                products: product.searchByName(req.query.query),
+                styles: ["/css/main-category.css"],
+                title: req.query.query
+            })
+        }else{
+
+            return res.render("products/category", {
+                products: product.allByCategory(req.params.category),
+                styles: ["/css/main-category.css"],
+                title: req.params.category
+            })
+        }
 	},
     cart: (req,res) => {
         let cart = null

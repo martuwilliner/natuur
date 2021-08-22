@@ -109,6 +109,11 @@ module.exports = {
         productos = productos.filter(producto => producto.id != deleted.id )
         fs.writeFileSync(directory,JSON.stringify(productos,null,2));
         return true;
+    },
+    searchByName: function (name){
+        let productos = this.allWithExtra();
+        let filtrados = productos.filter(producto => String(producto.name).toLowerCase().includes(name));
+        return filtrados;
     }
 
 }

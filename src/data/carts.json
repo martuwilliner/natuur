@@ -2,7 +2,44 @@
   {
     "id": 1,
     "user": 2,
-    "items": [],
+    "items": [
+      {
+        "id": 6,
+        "name": "Yamani ravioles veganos de verdura",
+        "descr": "Ravioles veganos de harina integral orgánica rellenos de verdura.\r\n\r\n100% Natural. Elaboración artesanal.\r\n\r\nIngredientes: harina integral de trigo candeal orgánico Campo Claro, acelga, salsa blanca (aceite de girasol, leche de caju y harina integral), sal marina, pimienta de cayena y nuez moscada.",
+        "category": {
+          "id": 2,
+          "name": "gourmet",
+          "css": "/css/mainGourmetProductDetail.css"
+        },
+        "size": [
+          1
+        ],
+        "type": {
+          "id": 1,
+          "name": "vegano"
+        },
+        "price": 510,
+        "images": [
+          {
+            "id": 7,
+            "url": "img/products/image1627168568145.jpg"
+          },
+          {
+            "id": 8,
+            "url": "img/products/image1627168568147.jpg"
+          }
+        ],
+        "oferts": true,
+        "sizes": [
+          {
+            "id": 1,
+            "name": "250gr"
+          }
+        ],
+        "quantity": "1"
+      }
+    ],
     "date": 1628795199378,
     "active": true
   }

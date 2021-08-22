@@ -4,13 +4,13 @@ const usersController = {
     register: (req,res) => {
         return res.render('users/register',{
         styles: ["/css/main-register.css"],
-        title: "Natuur | Registrate"
+        title: "Natuur | Registrate",
         });
     },
     login: (req,res) => {
         return res.render('users/login',{
         styles: ["/css/main-login.css"],
-        title: "Natuur | Iniciar sesión"
+        title: "Natuur | Iniciar sesión",
         });
     },
     save: (req,res) => {
