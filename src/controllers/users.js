@@ -13,6 +13,12 @@ const usersController = {
         title: "Natuur | Iniciar sesión",
         });
     },
+    profile: (req,res) => {
+        return res.render('users/userProfile',{
+            styles: ["/css/main-profile.css"],
+            title: "Profile"
+        });        
+    },
     save: (req,res) => {
         const errors = validationResult(req);
         const errores = !errors.isEmpty() ? errors.mapped() : null;

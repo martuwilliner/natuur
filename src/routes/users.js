@@ -12,6 +12,7 @@ const router = express.Router();
 router.get('/login', usersControllers.login);
 router.get('/registro', usersControllers.register);
 router.get('/logout', usersControllers.logout);
+router.get('/perfil', usersControllers.profile);
 
 router.post('/access', [login,remember] , usersControllers.access);
 router.post('/save', [register,hash] , usersControllers.save);

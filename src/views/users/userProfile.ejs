@@ -1,0 +1,68 @@
+<%- include ("../partials/head.ejs") %> 
+<body>
+    <%- include ("../partials/header.ejs") %> 
+    <main class="main-profile">
+
+        <section class="profile-info">
+            <h2><%= user.nombre  %> <%= user.apellido  %></h2>
+            <h2>Roll: <%= user.roll == 1 ? 'Usuario' : 'Administrador' %></h2>  %></h2>
+            <h2>Mail: <%= user.email  %></h2>
+            <h2>Username: <%= user.usuario  %></h2>
+        </section>
+
+        <section class="profile-section">
+            <figure class="profile-image">
+                <% if (user.foto != undefined) { %>
+                    <img src="<%= user.foto  %>" alt="<%= user.nombre  %> <%= user.apellido  %>">
+                <% } else { %>
+                    <img src="/img/user.png" alt="<%= user.nombre  %> <%= user.apellido  %>">
+                <% } %>
+            </figure>
+            <form action="/profile/avatar" method="post" enctype="multipart/form-data">
+                <label for="avatar"> Subir Imagen </label>
+                <input type="file" name="avatar" id="avatar" class="input-file" required>
+                <button type="submit">
+                    <i class="fas fa-upload"></i>
+                </button>
+            </form>
+        </section>
+
+        <section class="profile-edit">
+            <h2>Editar Perfil</h2>
+            <form action="/profile/edit/<%= user.id  %>?_method=PUT" method="POST">
+                <fieldset>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" value="<%= user.nombre  %>">
+                </fieldset>
+                <fieldset>
+                    <label for="apellido">Apellido</label>
+                    <input type="text" name="apellido" id="apellido" value="<%= user.apellido  %>">
+                </fieldset>
+                <fieldset>
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email" value="<%= user.email  %>">
+                </fieldset>
+                <fieldset>
+                    <label for="usuario">Usuario</label>
+                    <input type="text" name="usuario" id="usuario" value="<%= user.usuario  %>">
+                </fieldset>
+                <fieldset>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password">
+                </fieldset>
+                <fieldset>
+                    <label for="passwordConfirmation">Confirmation</label>
+                    <input type="password" name="passwordConfirmation" id="passwordConfirmation">
+                </fieldset>
+                <fieldset>
+                    <button type="submit">
+                        <i class="fas fa-sync"></i>
+                    </button>
+                </fieldset>
+            </form>
+        </section>
+
+    </main>
+    <%- include ("../partials/footer.ejs") %>
+</body>
+</html>

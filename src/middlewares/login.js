@@ -9,6 +9,6 @@ module.exports = [
     }),
     body("password").notEmpty().isLength({min:8}).custom((value,{req}) => {
         const user = userModel.search("usuario",req.body.usuario);
-        return user ? bcrypt.compareSync(value,user.password) ? true : Promise.reject("La contraseña") : Promise.reject("El usuario no es correcto")
+        return user ? bcrypt.compareSync(value,user.password) ? true : Promise.reject("La contraseña no es correcta") : Promise.reject("El usuario no es correcto")
     })
 ]
