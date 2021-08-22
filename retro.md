@@ -7,11 +7,11 @@ Retrospectiva:
 5. Dejar de hacer.
 
 
-1: Aplicar de manera adecuada el tema sobre cookies como sessions, ya que aún es algo nuevo dentro del temario de Express.
+1: Bases de datos para entender una nueva forma de almacenar información y que no sean JSON.
 
 2: Reveer constantemente los códigos dentro de las rutas y los modelos.
 
-3: Podríamos continuar afianzando lo sabido referido al CRUD para evitar errores tontos en los códigos en js o etiquetas incompletas en los ejs.
+3: Podríamos continuar afianzando lo sabido referido al CRUD para evitar errores tontos en los códigos en js.
 
 4: Consideramos que estamos bien y por ahora no hay nada a variar. 
 
