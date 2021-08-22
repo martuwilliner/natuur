@@ -14,10 +14,10 @@
                 <% } else { %>
                     <% if (user.roll === 1 ) { %>
                         <a href="/products/cart"><i class="fas fa-shopping-cart"></i></a>
-                        <a href="/users/perfil"><i class="fas fa-user"></i></a>
                     <% } else { %>
                         <a href="/products/create"><i class="fas fa-plus"></i></a>
                     <% } %> 
+                    <a href="/users/perfil"><i class="fas fa-user"></i></a>
                     <a href="/users/logout"><i class="fas fa-sign-out-alt"></i></a>
                 <% } %>
             </nav>
@@ -48,10 +48,10 @@
             <% } else { %>
                 <% if (user.roll === 1 ) { %>
                     <a href="/products/cart"><i class="fas fa-shopping-cart"></i></a>
-                    <a href="/users/perfil"><i class="fas fa-user"></i></a>
-                <% } else { %>
-                    <a href="/products/create"><i class="fas fa-plus"></i></a>
-                <% } %> 
+                    <% } else { %>
+                        <a href="/products/create"><i class="fas fa-plus"></i></a>
+                    <% } %> 
+                <a href="/users/perfil"><i class="fas fa-user"></i></a>
                 <a href="/users/logout"><i class="fas fa-sign-out-alt"></i></a>
             <% } %>
         </nav>
