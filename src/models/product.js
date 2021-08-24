@@ -112,7 +112,7 @@ module.exports = {
     },
     searchByName: function (name){
         let productos = this.allWithExtra();
-        let filtrados = productos.filter(producto => String(producto.name).includes(name) || String(producto.name).toLowerCase().includes(name));
+        let filtrados = productos.filter(producto => String(producto.name).toLowerCase().includes(name) || String(producto.name).toLowerCase().includes(name));
         return filtrados;
     }
 
