@@ -1,15 +1,15 @@
 module.exports = (Sequelize,DataTypes) => {
-    const Type = Sequelize.define('type', { 
+    const Image = Sequelize.define('image', { 
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
     },
-    typeName: {
+    url: {
         type: DataTypes.STRING,
         allowNull: false,
     }
-    })
+    });
 
-    return Type
+    return Image
 }
