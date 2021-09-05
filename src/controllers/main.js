@@ -1,15 +1,21 @@
-const product = require ("../models/product")
+const {Product} = require ("../database/models")
 
 const mainController = {
-    index: (req,res) => {
-        return res.render('index', 
-        {products: 
-            product.allWithExtra().filter(product => product.oferts == true).slice(-4), 
-        styles: ["/css/main-index.css"],
-        title: "Natuur | Bienvenidos",
-        expanded: true,
+    index: async (req,res) => {
+        try {
+            const list =   await Product.findAll({include:["type","category","sizes","images"],where:{oferts:true},limit: 4}); 
+            
+            return res.render('index', 
+            {products: list,
+            styles: ["/css/main-index.css"],
+            title: "Natuur | Bienvenidos",
+            expanded: true,
+            }
+            );
+            
+        } catch (error) {
+            res.send(error)
         }
-        );
     }
 }
 

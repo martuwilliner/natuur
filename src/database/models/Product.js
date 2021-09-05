@@ -37,27 +37,32 @@ module.exports = (Sequelize,DataTypes) => {
     Product.associate = ({Type,Category,Item,Size,Image}) => {
         Product.belongsTo(Type, 
             {as: "type", 
-            foreignKey: "typeId"
+            foreignKey: "typeId",
+            timestamps: false
         }),
         Product.belongsTo(Category, {
             as: "category", 
-            foreignKey: "categoryId"
+            foreignKey: "categoryId",
+            timestamps: false
         }),
         Product.hasMany(Item, {
             as: "items", 
-            foreignKey: "productId"
+            foreignKey: "productId",
+            timestamps: false
         })
         Product.belongsToMany(Size, {
             as: "sizes",
             through:"productSizes",
             foreignKey: "productId", 
-            otherKey: "sizeId"
+            otherKey: "sizeId",
+            timestamps: false
         }) //belongsToMany es para tablas intermedias
         Product.belongsToMany(Image, {
             as: "images", 
             through:"productImages", 
             foreignKey: "productId", 
-            otherKey: "imageId"
+            otherKey: "imageId",
+            timestamps: false
         }) // la tabla intermedia se mantiene en los dos modelos
     }
 

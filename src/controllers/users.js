@@ -1,5 +1,6 @@
 const {validationResult} = require("express-validator")
-const userModel = require("../models/user");
+const {User} = require("../database/models");
+
 const usersController = {
     register: (req,res) => {
         return res.render('users/register',{
@@ -19,7 +20,7 @@ const usersController = {
             title: "Profile"
         });        
     },
-    save: (req,res) => {
+    save: async (req,res) => {
         const errors = validationResult(req);
         const errores = !errors.isEmpty() ? errors.mapped() : null;
         //return res.send({data:req.body,errors:errores}) // vemos los datos que se envian del formulario
@@ -31,11 +32,22 @@ const usersController = {
                 errores: errores
                 }); 
         }else{
-            const newUser = userModel.create(req.body);
-            return newUser ? res.redirect("/users/login") : res.redirect("/")
+            try {
+                const newUser = await User.create({
+                    firstName: req.body.nombre,
+                    lastName: req.body.apellid,
+                    username: req.body.usuario,
+                    email: req.body.email,
+                    password: req.body.password
+                });
+                return newUser ? res.redirect("/users/login") : res.redirect("/")
+            } catch (error) {
+                return res.send(error)
+            }
+            
         }
     },
-    access: (req,res) => {
+    access: async (req,res) => {
         const errors = validationResult(req);
         const errores = !errors.isEmpty() ? errors.mapped() : null;
         //return res.send({data:req.body,errors:errores}) // vemos los datos que se envian del formulario
@@ -47,9 +59,13 @@ const usersController = {
                 errores: errores
             });
         }else{
-            const user = userModel.search("usuario",req.body.usuario);
-            req.session.user = user;
-            return res.redirect("/")
+            try {
+                const user = await User.findOne({where: {username: req.body.usuario}});
+                req.session.user = user;
+                return res.redirect("/")
+            } catch (error) {
+                return res.send(error)
+            }
             
         }
     },

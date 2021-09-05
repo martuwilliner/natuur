@@ -1,20 +1,20 @@
-const product = require ("../models/product")
-const category = require ("../models/category")
-const size = require ("../models/size")
-const type = require ("../models/type")
-const cartModel = require ("../models/cart")
+const {Product,Category,Size,Type,Cart} = require ("../database/models")
 
 const productsController = {
-    showDetail: (req,res) => {
-        return res.render('products/productDetail', 
-        {product: //ES EL NOMBRE CON EL Q SE LLAMA A LA FUNCION
-            product.oneWithExtra(req.params.id),
-        styles: ["/css/mainAlmacenProductDetail.css", "/css/mainGourmetProductDetail.css", "/css/mainCosmeticaProductDetail.css"],
-        products: product.allByCategory(req.params.category),
-        title: product.one(req.params.id).name
-          
-    }
-        );
+    showDetail: async (req,res) => {
+        try {
+            return res.render('products/productDetail', 
+            {product: //es el nombre con el que se llama a la funcion
+                await Product.findByPk(req.params.id),
+            styles: ["/css/mainAlmacenProductDetail.css", "/css/mainGourmetProductDetail.css", "/css/mainCosmeticaProductDetail.css"],
+            products: await Product.findAll({where: {category: req.params.category}}),
+            title: await Product.findOne({where: {title: req.params.id}}).name              
+        }
+            );
+        } catch (error) {
+            return res.send(error)
+        }
+
     },
     category:(req, res) =>{
         if(req.query.query != undefined){
