@@ -16,11 +16,13 @@ module.exports = (Sequelize,DataTypes) => {
     userId: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        reference: {
-        model:"users",
-        id:"id"
-        }
     }
     });
+
+    Cart.associate(models => { //models siempre representa a los modelos de db
+        Cart.belongsTo(models.User,{as: "user", foreignKey: "userId"}) // as es como llamamos al modelo que buscamos y foreing key es el nombre de la columna que vamos a relacionar
+        Cart.hasMany(models.Item, {as: "items", foreignKey: "cartId"})
+    })
+
     return Cart
 }

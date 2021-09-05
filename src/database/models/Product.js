@@ -25,20 +25,18 @@ module.exports = (Sequelize,DataTypes) => {
     typeId: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        reference: {
-        model:"types",
-        id:"id"
-        }
     },
     categoryId: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        reference: {
-        model:"categories",
-        id:"id"
-        }
     }
     });
+
+    Product.associate(models => {
+        Product.belongsTo(models.Type, {as: "type", foreignKey: "typeId"}),
+        Product.belongsTo(models.Category, {as: "category", foreignKey: "categoryId"}),
+        Product.hasMany(models.Item, {as: "item", foreignKey: "productId"})
+    })
 
     return Product
 }

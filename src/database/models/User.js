@@ -34,5 +34,9 @@ module.exports = (Sequelize,DataTypes) => {
     }
     });
 
+    User.associate(models => {
+        User.hasMany(models.Cart, {as: "carts", foreignKey: "userId"}) // el alias en plural porque es MANY en foreignKey el nombre que se lleva a la otra tabla
+    })
+
     return User
 }

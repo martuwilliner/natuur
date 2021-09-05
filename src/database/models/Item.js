@@ -16,19 +16,17 @@ module.exports = (Sequelize,DataTypes) => {
     productId: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        reference: {
-        model:"products",
-        id:"id"
-        }
     },
     cartId: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        reference: {
-        model:"carts",
-        id:"id"
-        }
     }
     });
+
+    Item.associate(models => {
+        Item.belongsTo(models.Product, {as: "product", foreignKey: "productId"}),
+        Item.belongsTo(models.Cart, {as: "cart", foreignKey: "cartId"})
+    })
+
     return Item
 }
