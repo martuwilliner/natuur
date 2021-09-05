@@ -50,7 +50,9 @@ const usersController = {
     access: async (req,res) => {
         const errors = validationResult(req);
         const errores = !errors.isEmpty() ? errors.mapped() : null;
+        
         //return res.send({data:req.body,errors:errores}) // vemos los datos que se envian del formulario
+        
         if(errores){
             return res.render('users/login',{
                 styles: ["/css/main-login.css"],

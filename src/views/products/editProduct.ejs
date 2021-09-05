@@ -24,32 +24,32 @@
                     <option value="" >Apto para</option>
                         <% types.forEach(type => { %>
                             <% if (type.id == product.type.id) { %>
-                                <option selected value="<%= type.id %>"><%= type.name %></option>
+                                <option selected value="<%= type.id %>"><%= type.typeName %></option>
                             <% } else { %>
-                                <option  value="<%= type.id %>"><%= type.name %></option>
+                                <option  value="<%= type.id %>"><%= type.typeName %></option>
                             <% } %>
                         <% }) %>
                 </select>
-                <textarea class="detalle" id="descr" name="descr"><%= product.descr%></textarea>
+                <textarea class="detalle" id="descr" name="descr"><%= product.description%></textarea>
                 <select id="category" name="category" class="detalle">
                     <option value="" >Editar categoría</option>
                     <% category.forEach(category => { %> <!-- preseleccionar categoria -->
                         <% if (category.id == product.category.id) { %>
-                            <option selected value="<%= category.id %>"><%= category.name %></option>
+                            <option selected value="<%= category.id %>"><%= category.categoryName %></option>
                         <% } else { %>
-                            <option  value="<%= category.id %>"><%= category.name %></option>
+                            <option  value="<%= category.id %>"><%= category.categoryName %></option>
                         <% } %>
                     <% }) %>
                 </select>
                 <fieldset class="select detalle">
                     <label class="checkbox" for="size">Tamaño:</label><br><br>
                         <% size.forEach(size => { %><!-- preseleccionar categoria -->
-                            <% if (product.size.includes(size.id)) { %>
+                            <% if (product.sizes.map(size => size.id).includes(size.id)) { %>
                                 <input  checked class="size" type="checkbox" name="sizes" id="size" value="<%= size.id %>">
                             <% } else { %>
                                 <input  class="size" type="checkbox" name="sizes" id="size" value="<%= size.id %>">
                             <% } %>
-                            <%= size.name %>
+                            <%= size.sizeName %>
                         <% }) %>
                 </fieldset>
                 <select id="oferts" name="oferts" class="detalle">

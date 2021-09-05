@@ -1,90 +1,158 @@
-const {Product,Category,Size,Type,Cart} = require ("../database/models")
+const {Product,Category,Size,Type,Cart,Image} = require ("../database/models");
+const {Op} = require ("sequelize");
+const {like} = Op;
+
+const fs = require("fs");
+const path = require("path")
 
 const productsController = {
     showDetail: async (req,res) => {
         try {
-            return res.render('products/productDetail', 
-            {product: //es el nombre con el que se llama a la funcion
-                await Product.findByPk(req.params.id),
-            styles: ["/css/mainAlmacenProductDetail.css", "/css/mainGourmetProductDetail.css", "/css/mainCosmeticaProductDetail.css"],
-            products: await Product.findAll({where: {category: req.params.category}}),
-            title: await Product.findOne({where: {title: req.params.id}}).name              
-        }
-            );
+            const category = await Category.findOne({
+                where: {categoryName: {
+                    [like] : req.params.category}
+                }
+            })
+            const related = await Product.findAll({
+                include:["type","category","sizes","images"], 
+                where:{ categoryId: category.id }
+            });
+
+            const show = await Product.findByPk(req.params.id,{
+                include:["type","category","sizes","images"]
+            })
+
+            return res.render('products/productDetail', {
+                product: show,
+                styles: ["/css/mainAlmacenProductDetail.css", "/css/mainGourmetProductDetail.css", "/css/mainCosmeticaProductDetail.css"],
+                products: related,
+                title: show.name              
+            });
         } catch (error) {
             return res.send(error)
         }
 
     },
-    category:(req, res) =>{
+    category: async (req, res) =>{
         if(req.query.query != undefined){
-            return res.render("products/category", {
-                products: product.searchByName(req.query.query),
-                styles: ["/css/main-category.css"],
-                title: req.query.query
-            })
+            try {
+                const results = await Product.findAll({include:["type","category","sizes","images"], where: {name: {[like] : `%${req.query.query}%`}}})
+                return res.render("products/category", {
+                    products: results,
+                    styles: ["/css/main-category.css"],
+                    title: req.query.query
+                })
+            } catch (error) {
+                return res.send(error)
+            }
         }else{
-
-            return res.render("products/category", {
-                products: product.allByCategory(req.params.category),
-                styles: ["/css/main-category.css"],
-                title: req.params.category
-            })
+            try {
+                const category = await Category.findOne({where: {categoryName: {[like] : req.params.category}}})
+                const productByCategory = await Product.findAll({include:["type","category","sizes","images"], where:{ categoryId: category.id }});
+                //return res.send(productByCategory)
+                return res.render("products/category", {
+                    products: productByCategory,
+                    styles: ["/css/main-category.css"],
+                    title: req.params.category
+                })
+            } catch (error) {
+                return res.send(error)
+            }
         }
 	},
-    cart: (req,res) => {
-        let cart = null
-        cart = cartModel.filter('user',req.session.user.id)
-        cart = cart.length > 0 ? cartModel.search('active',true) : null
-        return res.render('products/productCart',{
-        styles: ["/css/main-product.css"],
-        cart: cart,
-        title: "Tu Carrito de Compras",
-        total: cartModel.resume(cart.id)
-        });
+    cart: async (req,res) => {
+        try {
+            let cart = null
+            cart = await Cart.findOne({where: {username: req.session.user.id}})
+            cart = cart.length > 0 ? await Cart.findOne({include:["items", "user"], where: {active: true}}) : null
+            return res.render('products/productCart',{
+            styles: ["/css/main-product.css"],
+            cart: cart,
+            title: "Tu Carrito de Compras",
+            total: cartModel.resume(cart.id) //HACER
+            });
+        } catch (error) {
+            return res.send(error)
+        }
+
     },
-    addCart: (req,res) => {
-        const producto = product.oneWithExtra(req.params.id) // asi buscamos producto con el one
-        let cart = null
-        cart = cartModel.filter('user',req.session.user.id)
-        cart = cart.length > 0 ? cartModel.search('active',true) : null
-        if(!cart){
-            const newCart = cartModel.create({user:req.session.user.id,items:[{...producto,quantity: req.body.quantity}]})
-        }else{
-            const updateCart = cartModel.update(cart.id,{id:producto.id,quantity: req.body.quantity});
-        } // en un punto pasamos información TODAIVA NO SABEMOS DONDE
-        return res.redirect("/products/cart");
+    addCart: async (req,res) => {
+        try {
+            const producto = await Product.findByPk(req.params.id) // asi buscamos producto con el one
+            let cart = null
+            cart = await Cart.findAll({where: {username: req.session.user.id}})
+            cart = cart.length > 0 ? await Cart.findOne({where: {active: true}}) : null
+            if(!cart){
+                const newCart = Cart.create({
+                    user:req.session.user.id,
+                    items:[{...producto,quantity: req.body.quantity}]
+                })
+            }else{
+                const updateCart = await Cart.update({cartId: cart.id},{where: {id: producto.id, quantity: req.body.quantity}});
+            } // en un punto pasamos información TODAIVA NO SABEMOS DONDE
+            return res.redirect("/products/cart");
+        } catch (error) {
+            return res.send(error);
+        }
+
     },
-    removeCart:(req,res) =>{
-        const producto = product.one(req.body.id) // asi buscamos producto con el one
+    removeCart: async (req,res) =>{
+        const producto = await Product.findOne(req.body.id) // asi buscamos producto con el one
         let cart = null
-        cart = cartModel.filter('user',req.session.user.id)
-        cart = cart.length > 0 ? cartModel.search('active',true) : null
+        cart = await Cart.findAll({where: {username: req.session.user.id}})
+        cart = cart.length > 0 ? await Cart.findOne({where: {active: true}}) : null
         if(cart){
-           const remove = cartModel.remove(cart.id,producto.id)
+           const remove = await Cart.remove(cart.id,producto.id)
            // return res.send(remove)
         }
         return res.redirect("/products/cart");
     },
-    create: (req,res) => {
-        return res.render('products/createProduct',{
-            styles: ["/css/createProduct.css"],
-            category: category.all(),
-            size: size.all(),
-            type: type.all(),
-            title: "Crear nuevo producto"
-        });    
+    create: async (req,res) => {
+        try {
+            return res.render('products/createProduct',{
+                styles: ["/css/createProduct.css"],
+                category: await Category.findAll(),
+                size: await Size.findAll(),
+                type: await Type.findAll(),
+                title: "Crear nuevo producto"
+            });    
+        } catch (error) {
+            return res.send(error)
+        }
     },
-    save: (req,res) => {
+    save: async (req,res) => {
 /*          return res.send({
             data: req.body, 
             oferts: req.body.oferts == "true" ? true : false,
             files: req.files //porq esta ANY, si es SINGLE es file
         })  */
-        let result = product.new(req.body,req.files) //porq esta ANY, si es SINGLE es file
-        return result == true ? res.redirect("/") : res.send("Error al cargar la informacion") 
+        try {
+            let result = await Product.create({
+                name: req.body.name,
+                description: req.body.descr,
+                price: req.body.price,
+                oferts: req.body.oferts,
+                typeId: req.body.type,
+                categoryId: req.body.category,
+            }) 
+
+            await result.setSizes(Array.from(req.body.sizes))
+
+            const images = await Promise.all(
+                req.files.map(async (file) => {
+                    return await Image.create({url:"img/products/"+file.filename})
+                })
+            )
+
+            await result.setImages(images)
+
+            return res.redirect("/")
+        } catch (error) {
+            return res.send(error)
+        }
+
     },
-    edit: (req,res) => {
+    edit: async (req,res) => {
         /*return res.send({
             product: product.oneWithExtra(req.params.id),
             category: category.all(),
@@ -92,28 +160,82 @@ const productsController = {
             types: type.all(),
             edit:true
         })*/  
-        return res.render('products/editProduct',{
-            styles: ["/css/editProduct.css"],
-            product: product.oneWithExtra(req.params.id),
-            category: category.all(),
-            size: size.all(),
-            types: type.all(),
-            edit:true,
-            title: "Editar producto"
-        });
+        try {
+
+            const show = await Product.findByPk(req.params.id,{
+                include:["type","category","sizes","images"]
+            })
+
+            return res.render('products/editProduct',{
+                styles: ["/css/editProduct.css"],
+                product: show,
+                category: await Category.findAll(),
+                size: await Size.findAll(),
+                types: await Type.findAll(),
+                edit: true,
+                title: "Editar producto"
+            });
+        } catch (error) {
+            return res.send(error)
+        }
+
     },
-    update: (req,res) => {
+    update: async (req,res) => {
        /*return res.send({
             data: req.body, 
             oferts: req.body.oferts == "true" ? true : false,
             files: req.files //porq esta ANY, si es SINGLE es file
         }) */  
-        let result = product.edit(req.body,req.files,req.params.id) //porq esta ANY, si es SINGLE es file
-        return result == true ? res.redirect("/") : res.send("Error al cargar la informacion") 
+        try {
+
+            const edited = await Product.findByPk(req.params.id,{
+                include:["type","category","sizes","images"]
+            })
+            
+            let result = await Product.update({
+                name: req.body.name,
+                description: req.body.descr,
+                price: req.body.price,
+                oferts: req.body.oferts,
+                typeId: req.body.type,
+                categoryId: req.body.category,
+            },{where: {id: req.params.id}})
+            
+            await edited.setSizes(Array.from(req.body.sizes))
+
+            /* edited.getImages().forEach((img) => {
+                fs.unlinkSync(path.resolve(__dirname,"../../public",img.url))
+            })
+
+            const oldImages = await Promise.all(
+                edited.getImages().map(async (img) => {
+                    return await Image.destroy({where: {id : img.id}})
+                })
+            ) */
+
+            const images = await Promise.all(
+                req.files.map(async (file) => {
+                    return await Image.create({url:"img/products/"+file.filename})
+                })
+            )
+
+            await edited.setImages(images);
+
+            return res.redirect("/");
+            
+        } catch (error) {
+            return res.send(error)
+        }
+
     },
-    delete: (req,res) => {
-        let result = product.delete(req.params.id);
-        return result == true ? res.redirect("/") : res.send("Error al cargar la informacion") 
+    delete: async (req,res) => {
+        try {
+            let result = await Product.destroy({where: {id : req.params.id}});
+            return res.redirect("/");
+        } catch (error) {
+            return res.send(error)
+        }
+        
     }
 }
 

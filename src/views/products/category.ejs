@@ -7,7 +7,7 @@
     <% if (products.length > 0) { %>
         <% products.forEach(product => { %>
             <article id="producto">
-                <a href="/products/detail/<%= product.category.name %>/<%= product.id %>"> <!-- NO VAN LOS :-->
+                <a href="/products/detail/<%= product.category.categoryName %>/<%= product.id %>"> <!-- NO VAN LOS :-->
                     <figure>
                         <img src="/<%= product.images[0].url %> " alt="">
                     </figure>

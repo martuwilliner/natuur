@@ -15,7 +15,7 @@
             <article class="infoProducto">
                 <h2 class="nombreProducto"><%= product.name %></h2>
                 <h3 class="precio">$<%= product.price %></h3>
-                <p><%= product.descr %></p>
+                <p><%= product.description %></p>
                 <section id="botones"></section>
                 <% if (user && user.roll === 1) { %>
                     <form class="shopping" action="/products/cart/<%= product.id %>" method="post">
@@ -50,7 +50,7 @@
             <% if (products.length > 0) { %>
                 <% products.forEach(product => { %>
                     <article id="producto">
-                        <a href="/products/detail/<%= product.category.name %>/<%= product.id %>"> <!-- NO VAN LOS :-->
+                        <a href="/products/detail/<%= product.category.categoryName %>/<%= product.id %>"> <!-- NO VAN LOS :-->
                             <figure>
                                 <img src="/<%= product.images[0].url %> " alt="">
                             </figure>

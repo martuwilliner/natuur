@@ -11,20 +11,20 @@
             <select id="type" name="type" class="select">
                 <option value="" selected>Apto para</option>
                     <% type.forEach(type => { %>
-                            <option value="<%= type.id %>"><%= type.name %></option>
+                            <option value="<%= type.id %>"><%= type.typeName %></option>
                     <% }) %>
             </select>
             <select id="category" name="category" class="select">
                 <option value="" selected>Elegir categoría</option>
                     <% category.forEach(category => { %>
-                            <option value="<%= category.id %>"><%= category.name %></option>
+                            <option value="<%= category.id %>"><%= category.categoryName %></option>
                     <% }) %>
             </select>
             <fieldset class="select">
                 <label class="checkbox" for="size">Tamaño:</label>
                     <% size.forEach(size => { %>
                     <input  class="size" type="checkbox" name="sizes" id="size" value="<%= size.id %>">
-                    <%= size.name %>
+                    <%= size.sizeName %>
                     <% }) %>
             </fieldset>
             <select id="oferts" name="oferts" class="select">

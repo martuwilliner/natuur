@@ -13,7 +13,7 @@
     <% if (!locals.product) { %>
         <link rel="stylesheet" href="<%= styles[0] %> ">
     <% } else if (!locals.edit) { %>
-        <link rel="stylesheet" href="<%= product.category.css %> ">
+        <link rel="stylesheet" href="<%= product.category.categoryStyle %> ">
     <% } else { %> 
         <link rel="stylesheet" href="<%= styles[0] %> ">
     <% } %>  
