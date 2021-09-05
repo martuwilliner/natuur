@@ -11,5 +11,9 @@ module.exports = (Sequelize,DataTypes) => {
     }
     });
 
+    Image.associate(models => {
+        Product.belongsToMany(models.Product, {as: "products", throught:"productImages", foreignKey: "imageId", otherKey: "productId"})
+    })
+
     return Image
 }
