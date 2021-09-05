@@ -1,5 +1,5 @@
 module.exports = (Sequelize,DataTypes) => {
-    const Type = Sequelize.define('type', { 
+    const Type = Sequelize.define('Type', { 
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -9,11 +9,16 @@ module.exports = (Sequelize,DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false,
     }
-    })
+    },{
+        timestamps: false  // poner fecha sobre cada modificacion q se hace.. 
+    });
 
-    Type.associate(models => {
-        Type.hasMany(models.Product, {as: "products", foreignKey: "typeId"})
-    })
+    Type.associate = ({Product}) => {
+        Type.hasMany(Product, {
+            as: "products", 
+            foreignKey: "typeId"
+        })
+    }
     
     return Type
 }

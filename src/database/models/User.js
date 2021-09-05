@@ -1,42 +1,47 @@
-module.exports = (Sequelize,DataTypes) => {
-    const User = Sequelize.define('user', { 
+module.exports = (sequelize,dataTypes) => {
+    const User = sequelize.define('User', { 
     id: {
-        type: DataTypes.INTEGER,
+        type: dataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
     },
     roll: {
-        type: DataTypes.INTEGER,
+        type: dataTypes.INTEGER,
         allowNull: false,
         defaultValue: 1
     },
     firstName: {
-        type: DataTypes.STRING,
+        type: dataTypes.STRING,
         allowNull: false,
     },
     lastName: {
-        type: DataTypes.STRING,
+        type: dataTypes.STRING,
         allowNull: false,
     },
     username: {
-        type: DataTypes.STRING,
+        type: dataTypes.STRING,
         allowNull: false,
         unique: true,
     },
     email: {
-        type: DataTypes.STRING,
+        type: dataTypes.STRING,
         allowNull: false,
         unique: true,
     },
     password: {
-        type: DataTypes.TEXT,
+        type: dataTypes.TEXT,
         allowNull: false,
     }
+    },{
+        timestamps: false  // poner fecha sobre cada modificacion q se hace.. 
     });
 
-    User.associate(models => {
-        User.hasMany(models.Cart, {as: "carts", foreignKey: "userId"}) // el alias en plural porque es MANY en foreignKey el nombre que se lleva a la otra tabla
-    })
+    User.associate = ({Cart}) => {
+        User.hasMany(Cart, {
+            as: "carts", 
+            foreignKey: "userId"
+        }) // el alias en plural porque es MANY en foreignKey el nombre que se lleva a la otra tabla
+    }
 
     return User
 }

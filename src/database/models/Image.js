@@ -1,5 +1,5 @@
 module.exports = (Sequelize,DataTypes) => {
-    const Image = Sequelize.define('image', { 
+    const Image = Sequelize.define('Image', { 
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -9,11 +9,18 @@ module.exports = (Sequelize,DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false,
     }
+    },{
+        timestamps: false  // poner fecha sobre cada modificacion q se hace.. 
     });
 
-    Image.associate(models => {
-        Product.belongsToMany(models.Product, {as: "products", throught:"productImages", foreignKey: "imageId", otherKey: "productId"})
-    })
+    Image.associate = ({Product}) => {
+        Image.belongsToMany(Product, {
+            as: "products", 
+            through:"productImages", 
+            foreignKey: "imageId",
+            otherKey: "productId"
+        })
+    }
 
     return Image
 }

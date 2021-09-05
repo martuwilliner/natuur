@@ -1,14 +1,19 @@
-const cartModel = require("../models/cart");
-module.exports = (req,res,next) =>{
+const {Cart} = require("../database/models");
 
-    let cart = null
+module.exports = async (req,res,next) =>{
+    try {
+        let cart = null
 
-    if(req.session.user != undefined) {
+        if(req.session.user != undefined) {
+            cart = await Cart.findAll({where: {userId: req.session.user.id}})
+            cart = cart.length > 0 ? await Cart.findOne({where: {active: true}}) : null
+        }
+    
+        res.locals.cart = cart;
 
-        cart = cartModel.filter('user',req.session.user.id)
-        cart = cart.length > 0 ? cartModel.search('active',true) : null
+    } catch (error) {
+        res.send(error)
     }
 
-    res.locals.cart = cart;
     next();
 }

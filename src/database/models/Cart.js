@@ -1,9 +1,9 @@
-module.exports = (Sequelize,DataTypes) => {
-    const Cart = Sequelize.define('cart', { 
+module.exports = (sequelize,DataTypes) => {
+    const Cart = sequelize.define('Cart', { 
     id: {
-    type: DataTypes.INTEGER,
-    primaryKey: true,
-    autoIncrement: true
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true
     },
     date: {
         type: DataTypes.DATE,
@@ -17,12 +17,20 @@ module.exports = (Sequelize,DataTypes) => {
         type: DataTypes.INTEGER,
         allowNull: false,
     }
+    },{
+        timestamps: false  // poner fecha sobre cada modificacion q se hace.. 
     });
 
-    Cart.associate(models => { //models siempre representa a los modelos de db
-        Cart.belongsTo(models.User,{as: "user", foreignKey: "userId"}) // as es como llamamos al modelo que buscamos y foreing key es el nombre de la columna que vamos a relacionar
-        Cart.hasMany(models.Item, {as: "items", foreignKey: "cartId"})
-    })
+    Cart.associate = ({User,Item}) => { //models siempre representa a los modelos de db
+        Cart.belongsTo(User,{
+            as: "user", 
+            foreignKey: "userId"
+        }) // as es como llamamos al modelo que buscamos y foreing key es el nombre de la columna que vamos a relacionar
+        Cart.hasMany(Item, {
+            as: "items", 
+            foreignKey: "cartId"
+        })
+    }
 
     return Cart
 }

@@ -1,5 +1,5 @@
 module.exports = (Sequelize,DataTypes) => {
-    const Item = Sequelize.define('item', { 
+    const Item = Sequelize.define('Item', { 
     id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -21,12 +21,20 @@ module.exports = (Sequelize,DataTypes) => {
         type: DataTypes.INTEGER,
         allowNull: false,
     }
+    },{
+        timestamps: false  // poner fecha sobre cada modificacion q se hace.. 
     });
 
-    Item.associate(models => {
-        Item.belongsTo(models.Product, {as: "product", foreignKey: "productId"}),
-        Item.belongsTo(models.Cart, {as: "cart", foreignKey: "cartId"})
-    })
+    Item.associate= ({Product,Cart}) => {
+        Item.belongsTo(Product, {
+            as: "product", 
+            foreignKey: "productId"
+        }),
+        Item.belongsTo(Cart, {
+            as: "cart", 
+            foreignKey: "cartId"
+        })
+    }
 
     return Item
 }

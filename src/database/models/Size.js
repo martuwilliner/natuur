@@ -1,5 +1,5 @@
 module.exports = (Sequelize,DataTypes) => {
-    const Size = Sequelize.define('size', { 
+    const Size = Sequelize.define('Size', { 
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -9,11 +9,18 @@ module.exports = (Sequelize,DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false,
         }
+    },{
+        timestamps: false  // poner fecha sobre cada modificacion q se hace.. 
     });
 
-    Size.associate(models => {
-        Size.belongsToMany(models.Product, {as: "products",throught:"productSizes",foreignKey: "sizeId", otherKey: "productId"})
-    })
+    Size.associate= ({Product}) => {
+        Size.belongsToMany(Product, {
+            as: "products",
+            through:"productSizes",
+            foreignKey: "sizeId", 
+            otherKey: "productId"
+        })
+    }
 
     return Size
 }
