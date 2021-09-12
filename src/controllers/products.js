@@ -199,28 +199,32 @@ const productsController = {
                 oferts: req.body.oferts,
                 typeId: req.body.type,
                 categoryId: req.body.category,
-            },{where: {id: req.params.id}})
+            },{where: {id: edited.id}})
             
-            await edited.setSizes(Array.from(req.body.sizes))
+            await edited.setSizes(Array.from(req.body.sizes)) // set cambia tablas intermedias
 
-            /* edited.getImages().forEach((img) => {
-                fs.unlinkSync(path.resolve(__dirname,"../../public",img.url))
-            })
+            // Eliminar las imagenes Anteriores de la Carpeta Public/Products
 
-            const oldImages = await Promise.all(
-                edited.getImages().map(async (img) => {
-                    return await Image.destroy({where: {id : img.id}})
-                })
-            ) */
+            const images = await edited.getImages(); // get busco en tablas intermedias
 
-            const images = await Promise.all(
-                req.files.map(async (file) => {
-                    return await Image.create({url:"img/products/"+file.filename})
-                })
-            )
+            const imagesUrls = images.map(img => path.resolve(__dirname,"../../public",img.url))
 
-            await edited.setImages(images);
+            imagesUrls.forEach(url => fs.unlinkSync(url))
 
+            // Eliminar las imagenes Anteriores de la base de datos
+            
+            const imagesIds = images.map(img => img.id)
+            
+            await Promise.all( imagesIds.map(async idImage => await Image.destroy({where: {id: idImage}})));
+            
+            // Agregar las imagenes nuevas a la base de datos
+            
+            const imagesCreate = await Promise.all( req.files.map(async file => await Image.create({url: "img/products/"+file.filename})));
+            
+            // Agregar al producto actualizado los ids de las imagenes creadas
+
+            await edited.setImages(imagesCreate)
+            
             return res.redirect("/");
             
         } catch (error) {
