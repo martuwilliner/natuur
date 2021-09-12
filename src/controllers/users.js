@@ -1,5 +1,5 @@
 const {validationResult} = require("express-validator")
-const {User} = require("../database/models");
+const {User,Cart} = require("../database/models");
 
 const usersController = {
     register: (req,res) => {
@@ -62,9 +62,35 @@ const usersController = {
             });
         }else{
             try {
-                const user = await User.findOne({where: {username: req.body.usuario}});
+                const user = await User.findOne({
+                    includes:["carts"],
+                    where: {username: req.body.usuario}
+                });
+                
+                const carts = await user.getCarts();
+               
+                const actives = carts.filter(cart => cart.active == true)
+
+                const isValid = carts.length == 0 && actives.length == 0
+
+                /* return res.send({
+                    isValid: condition,
+                    carts: carts.length, 
+                    actives: actives.length
+                }); */
+
+                if( isValid ){
+                    await Cart.create({
+                        userId: user.id,
+                        date: new Date(),
+                        active: true
+                    })
+                }
+
+
                 req.session.user = user;
-                return res.redirect("/")
+
+                return res.redirect("/");
             } catch (error) {
                 return res.send(error)
             }

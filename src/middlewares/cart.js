@@ -5,7 +5,7 @@ module.exports = async (req,res,next) =>{
         let cart = null
 
         if(req.session.user != undefined) {
-            cart = await Cart.findAll({where: {userId: req.session.user.id}})
+            cart = await Cart.findAll({includes:["user","items"],where: {userId: req.session.user.id}})
             cart = cart.length > 0 ? await Cart.findOne({where: {active: true}}) : null
         }
     

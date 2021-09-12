@@ -6,21 +6,20 @@
     <main>
         <section id="carrito">
             <% if (cart.items.length > 0) { %>
-            <% cart.items.forEach(product => { %>
-             
+            <% items.forEach(item => { %>
                 <article class="product-info">
                     <figure>
-                        <img src="/<%= product.images[0].url %>" alt="">
+                        <img src="/<%= item.product.images[0].url %>" alt="">
                     </figure>
                     <section class="product-unit">
-                        <h3 class="product-id"><%= product.name %></h3>
-                        <p class="precio">Precio: $ <%= product.price %></p>
-                        <form class="cantidad" action="/products/cart/<%= product.id %> " method="post">
-                            <input type="number" id="quantity" name="quantity" min="1" value="<%= product.quantity %>">
+                        <h3 class="product-id"><%= item.product.name %></h3>
+                        <p class="precio">Precio: $ <%= item.productPrice %></p>
+                        <form class="cantidad" action="/products/cart/<%= item.product.id %> " method="post">
+                            <input type="number" id="quantity" name="quantity" min="1" value="<%= item.productQuantity %>">
                             <button type="submit"><i class="fas fa-sync-alt"></i></button>
                         </form>
                         <form class="product-delete" action="/products/cart?_method=DELETE" method="post">
-                            <input type="hidden" name="id" value="<%= product.id %>">
+                            <input type="hidden" name="id" value="<%= item.product.id %>">
                             <button type="submit"><i class="fas fa-trash-alt"></i></button>
                         </form>
                     </section>   

@@ -1,4 +1,4 @@
-const {Product,Category,Size,Type,Cart,Image} = require ("../database/models");
+const {Product,Category,Size,Type,Cart,Image,Item} = require ("../database/models");
 const {Op} = require ("sequelize");
 const {like} = Op;
 
@@ -62,14 +62,42 @@ const productsController = {
 	},
     cart: async (req,res) => {
         try {
-            let cart = null
-            cart = await Cart.findOne({where: {username: req.session.user.id}})
-            cart = cart.length > 0 ? await Cart.findOne({include:["items", "user"], where: {active: true}}) : null
+            
+            let cart = await Cart.findOne({
+                include:["items", "user"],
+                where: {
+                    active: true,
+                    userId: req.session.user.id
+                }
+            })
+
+            let items = await cart.getItems();
+
+            items = await Promise.all(
+                items.map(async item => {
+                    return {
+                        ...item,
+                        productPrice:parseInt(item.productPrice),
+                        productQuantity: parseInt(item.productQuantity),
+                        product: await Product.findByPk(item.productId,{
+                            include:["type","category","sizes","images"]
+                        })
+                    }
+                })
+            )
+
+            let itemsPrecies = items.map(item => item.productPrice * item.productQuantity );
+
+            let total = itemsPrecies.reduce((acumulator,price) => acumulator + price ,0)
+            
+            
+
             return res.render('products/productCart',{
-            styles: ["/css/main-product.css"],
-            cart: cart,
-            title: "Tu Carrito de Compras",
-            total: cartModel.resume(cart.id) //HACER
+                styles: ["/css/main-product.css"],
+                cart: cart,
+                items: items,
+                title: "Tu Carrito de Compras",
+                total: total
             });
         } catch (error) {
             return res.send(error)
@@ -78,33 +106,62 @@ const productsController = {
     },
     addCart: async (req,res) => {
         try {
-            const producto = await Product.findByPk(req.params.id) // asi buscamos producto con el one
-            let cart = null
-            cart = await Cart.findAll({where: {username: req.session.user.id}})
-            cart = cart.length > 0 ? await Cart.findOne({where: {active: true}}) : null
-            if(!cart){
-                const newCart = Cart.create({
-                    user:req.session.user.id,
-                    items:[{...producto,quantity: req.body.quantity}]
-                })
+            let producto = await Product.findByPk(req.params.id) // asi buscamos producto con el one
+            let cart = await Cart.findOne({
+                include:["items", "user"],
+                where: {
+                    active: true,
+                    userId: req.session.user.id
+                }
+            })
+
+            let items = await cart.getItems();
+
+            let productsIds = items.map(item => item.productId)
+
+            let productExist = productsIds.includes(producto.id);
+
+            if(productExist == true){
+                await Item.update({
+                    productQuantity: req.body.quantity,
+                    productPrice: producto.price,        
+                },{where:{
+                    cartId: cart.id,
+                    productId: producto.id
+                }})
+                
             }else{
-                const updateCart = await Cart.update({cartId: cart.id},{where: {id: producto.id, quantity: req.body.quantity}});
-            } // en un punto pasamos información TODAIVA NO SABEMOS DONDE
+                await Item.create({
+                    productId: producto.id ,
+                    productPrice: producto.price ,
+                    productQuantity: req.body.quantity ,
+                    cartId: cart.id
+                })
+            }
+
             return res.redirect("/products/cart");
+
         } catch (error) {
             return res.send(error);
         }
 
     },
     removeCart: async (req,res) =>{
-        const producto = await Product.findOne(req.body.id) // asi buscamos producto con el one
-        let cart = null
-        cart = await Cart.findAll({where: {username: req.session.user.id}})
-        cart = cart.length > 0 ? await Cart.findOne({where: {active: true}}) : null
-        if(cart){
-           const remove = await Cart.remove(cart.id,producto.id)
-           // return res.send(remove)
-        }
+        let producto = await Product.findByPk(req.body.id) // asi buscamos producto con el one
+        let cart = await Cart.findOne({
+            include:["items", "user"],
+            where: {
+                active: true,
+                userId: req.session.user.id
+            }
+        })
+
+        let result = await Item.destroy({
+            where: {
+                productId:producto.id,
+                cartId:cart.id
+            }
+        });
         return res.redirect("/products/cart");
     },
     create: async (req,res) => {
