@@ -35,7 +35,7 @@ const usersController = {
             try {
                 const newUser = await User.create({
                     firstName: req.body.nombre,
-                    lastName: req.body.apellid,
+                    lastName: req.body.apellido,
                     username: req.body.usuario,
                     email: req.body.email,
                     password: req.body.password
