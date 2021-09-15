@@ -15,4 +15,4 @@ Retrospectiva:
 
 4: Consideramos que estamos bien y por ahora no hay nada a variar. 
 
-5: Evitar caer en la desorganización de los puntos a tratar dentro de cada sprint.
+5: Evitar caer en la desorganización de los puntos a tratar dentro de cada sprint..
