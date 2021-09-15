@@ -7,9 +7,9 @@ Retrospectiva:
 5. Dejar de hacer.
 
 
-1: Bases de datos para entender una nueva forma de almacenar información y que no sean JSON.
+1: Validar con JS y aplicar React, estamos casi al final. No hay mucho más. 
 
-2: Reveer constantemente los códigos dentro de las rutas y los modelos.
+2: Reveer constantemente los códigos mas ahora que vamos a validar.
 
 3: Podríamos continuar afianzando lo sabido referido al CRUD para evitar errores tontos en los códigos en js.
 
