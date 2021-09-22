@@ -2,8 +2,8 @@ const {body} = require('express-validator');
 const {User} = require("../database/models");
 
 module.exports = [
-    body("nombre").notEmpty(),
-    body("apellido").notEmpty(),
+    body("nombre").notEmpty().inLength({min:2}),
+    body("apellido").notEmpty().inLength({min:2}),
     body("usuario").notEmpty().custom(async (value) => {
         // Verficamos que el mail no este registrado antes
         const user = await User.findOne({where: {username: value}}); 
