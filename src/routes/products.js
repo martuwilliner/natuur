@@ -2,7 +2,9 @@ const express = require ('express');
 const path = require('path');
 const multer = require("multer");
 const storage = require("../middlewares/multer");
-const auth = require("../middlewares/auth")
+const auth = require("../middlewares/auth");
+const create = require("../middlewares/create");
+const update = require("../middlewares/update");
 
 
 const router = express.Router();
@@ -19,10 +21,10 @@ router.get('/:category', productsControllers.category);
 router.get('/edit/:id',[auth(2)], productsControllers.edit);
 router.get('/detail/:category/:id', productsControllers.showDetail); // IMPORTANTE PONER ID
 
-router.post('/create', [upload.any()], productsControllers.save); 
+router.post('/create', [upload.any(), create], productsControllers.save); 
 router.post('/cart/:id', productsControllers.addCart);
 
-router.put('/update/:id', [upload.any()], productsControllers.update);
+router.put('/update/:id', [upload.any(), update], productsControllers.update);
 router.delete('/delete/:id', productsControllers.delete);
 router.get('/cart/delete/:id', productsControllers.removeCart);
 

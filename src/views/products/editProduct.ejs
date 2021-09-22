@@ -15,6 +15,11 @@
             <section id="detalles">
                 <label class="detalle" name="id">N° de Producto: <%= product.id %></label>
                 <input class="detalle" type="text" id="name" name="name" value="<%= product.name %>">
+                <% if (locals.errores && locals.errores.descr) { %>
+                    <p class="feedback">
+                        <%= locals.errores.descr.msg  %> 
+                    </p>
+                <% } %> 
                 <fieldset class="detalle">
                     <label id="precio">$ 
                         <input type="number" value="<%= product.price %>" id="price" name="price">
@@ -31,6 +36,11 @@
                         <% }) %>
                 </select>
                 <textarea class="detalle" id="descr" name="descr"><%= product.description%></textarea>
+                <% if (locals.errores && locals.errores.descr) { %>
+                    <p class="feedback">
+                        <%= locals.errores.descr.msg  %> 
+                    </p>
+                <% } %> 
                 <select id="category" name="category" class="detalle">
                     <option value="" >Editar categoría</option>
                     <% category.forEach(category => { %> <!-- preseleccionar categoria -->

@@ -6,7 +6,12 @@
     <main class="main-register"> 
         <form action="/products/create" method="post" enctype="multipart/form-data">
             <p class="bienvenido">NUEVO PRODUCTO</p>
-            <input class="formulario-register" type="text" placeholder="Producto" name="name" id="name" required>            
+            <input class="formulario-register" type="text" placeholder="Producto" name="name" id="name" required>           
+            <% if (locals.errores && locals.errores.name) { %>
+                <p class="feedback">
+                    <%= locals.errores.name.msg  %> 
+                </p>
+            <% } %> 
             <input class="formulario-register" type="number" placeholder="Precio" name="price" id="price"  required>
             <select id="type" name="type" class="select">
                 <option value="" selected>Apto para</option>
@@ -33,6 +38,11 @@
                 <option value="false">Sin oferta</option>
             </select>
             <textarea class="select" placeholder="Descripción" name="descr" id="descr" ></textarea>
+            <% if (locals.errores && locals.errores.descr) { %>
+                <p class="feedback">
+                    <%= locals.errores.descr.msg  %> 
+                </p>
+            <% } %> 
             <input type="file" id="image" name="image" multiple>
             <section class="button-enviar">
                 <button type="submit" id="enviar">Crear</button>

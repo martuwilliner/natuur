@@ -30,7 +30,7 @@
                     <%= locals.errores.email.msg  %> 
                 </p>
             <% } %>
-            <input class="formulario-register" type="password" placeholder="Contraseña" name="password">
+            <input class="formulario-register" id="password" type="password" placeholder="Contraseña" name="password">
             <% if (locals.errores && locals.errores.password) { %>
                 <p class="feedback">
                     <%= locals.errores.password.msg  %> 
@@ -51,7 +51,11 @@
                     <button type="submit">Registrarse</button>
             </section>
         </form>
+        <section id="errores-form">
+
+        </section>
     </main>
     <%- include ("../partials/footer.ejs") %> 
+    <script src="/js/register.js"></script>
 </body>
 </html>
