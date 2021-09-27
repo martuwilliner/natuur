@@ -67,9 +67,10 @@
                     <option value="true" <%= product.oferts ? "selected" : null %> >En oferta</option>
                     <option value="false" <%= !product.oferts ? "selected" : null %>>Sin oferta</option>
                 </select>
+                <section id="errores-form"></section>
                 <input type="submit" id="submit" value="Editar"  class="detalle">
                 <input type="reset" id="reset" value="Resetear campo"  class="detalle">
-                <section id="errores-form"></section>
+                
             </section>
         </form> 
         <% } %>
