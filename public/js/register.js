@@ -1,4 +1,4 @@
-const form = document.querySelector("form");
+const form = document.querySelector("#userRegister");
 
 form.addEventListener("submit", e => {
     e.preventDefault();
@@ -17,16 +17,16 @@ form.addEventListener("submit", e => {
         errors.push("El apellido deberia ser mas largo");
     }
     if (!regexEmail.test(email.value)) {
-        errors.push("Tenes que agregar mas caracteres");
+        errors.push("Tiene que ser un email");
     }
-    if (!regexPassword.test(password.value) && password.value.length >= 8) {
-        errors.push("Tenes que agregar mas caracteres");
+    if (!regexPassword.test(password.value)) {
+        errors.push("Tu contraseña no es segura");
     }
     if (errors.length > 0) {
        errors.forEach(error => {
-        errorForm.innerHTML = error;
-       }); //"mmm dice Edu :D" //"22/9/2021 Roman la esta rompinedo con js"  
+        errorForm.innerHTML += error;
+       }); 
+    } else {
+        e.target.submit();
     }
 });
-
-// el crud de usuario esta puesto para que se guarde el create de usuario, onda se guarda el repetir contraseña. :D 

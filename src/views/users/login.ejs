@@ -5,19 +5,20 @@
     <%- include ("../partials/header.ejs") %> 
     <main class="main-login">
         <p id="mensaje-bienvenida-login">INGRESA A TU CUENTA</p>
-        <form action="/users/access" method="POST">
-            <input class="formulario-login" type="text" placeholder="Nombre de usuario"name="usuario" id="usuario" required>
+        <form action="/users/access" method="POST" id="userLogin">
+            <input class="formulario-login" type="text" placeholder="Nombre de usuario"name="usuario" id="usuario">
             <% if (locals.errores && locals.errores.usuario) { %>
                 <p class="feedback">
                     <%= locals.errores.usuario.msg  %> 
                 </p>
             <% } %>
-            <input class="formulario-login" type="password" placeholder="Contraseña" name="password">
+            <input class="formulario-login" type="password" placeholder="Contraseña" name="password" id="password">
             <% if (locals.errores && locals.errores.password) { %>
                 <p class="feedback">
                     <%= locals.errores.password.msg  %> 
                 </p>
             <% } %>
+            <section id="errores-form"></section>
             <fieldset>
                 <input type="checkbox" name="rememberMe">
                 <label>Recordarme</label>
@@ -25,7 +26,7 @@
             <a href="/" class=" formulario-login olvide">Olvidé mi contraseña</a>
             <section class="button-login">
                 <a href="#">
-                    <button type="submit" name="google">
+                    <button type="button" name="google">
                         <i class="fab fa-google"></i>
                     </button>
                 </a>
@@ -37,9 +38,6 @@
                 <a href="/users/registro"><button type="submit" name="enviar" id="enviar">Si no tenes cuenta, registrate</a></button>
             </section>
         </form>
-        <section id="errores-form">
-
-        </section>
     </main>
     <%- include ("../partials/footer.ejs") %> 
     <script src="/js/login.js"></script>

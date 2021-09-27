@@ -4,7 +4,7 @@
 <body>
     <%- include ("../partials/header.ejs") %> 
     <main class="main-register"> 
-        <form action="/users/save" method="post">
+        <form action="/users/save" method="post" id="userRegister">
             <p class="bienvenido">CREA TU CUENTA</p>
             <input class="formulario-register" type="text" placeholder="Nombre" name="nombre" id="nombre" value="<%= locals.old && !locals.errores.nombre ? locals.old.nombre : null %>" >
             <% if (locals.errores && locals.errores.nombre) { %>
@@ -24,7 +24,7 @@
                     <%= locals.errores.usuario.msg  %> 
                 </p>
             <% } %>
-            <input class="formulario-register" type="email" placeholder="Email" name="email" id="email" value="<%= locals.old && !locals.errores.email ? locals.old.email : null %>">
+            <input class="formulario-register" type="text" placeholder="Email" name="email" id="email" value="<%= locals.old && !locals.errores.email ? locals.old.email : null %>">
             <% if (locals.errores && locals.errores.email) { %>
                 <p class="feedback">
                     <%= locals.errores.email.msg  %> 

@@ -4,15 +4,15 @@
 <body>
     <%- include ("../partials/header.ejs") %> 
     <main class="main-register"> 
-        <form action="/products/create" method="post" enctype="multipart/form-data">
+        <form action="/products/create" method="post" enctype="multipart/form-data" id="infoProducto">
             <p class="bienvenido">NUEVO PRODUCTO</p>
-            <input class="formulario-register" type="text" placeholder="Producto" name="name" id="name" required>           
+            <input class="formulario-register" type="text" placeholder="Producto" name="name" id="name" >           
             <% if (locals.errores && locals.errores.name) { %>
                 <p class="feedback">
                     <%= locals.errores.name.msg  %> 
                 </p>
             <% } %> 
-            <input class="formulario-register" type="number" placeholder="Precio" name="price" id="price"  required>
+            <input class="formulario-register" type="number" placeholder="Precio" name="price" id="price"  >
             <select id="type" name="type" class="select">
                 <option value="" selected>Apto para</option>
                     <% type.forEach(type => { %>
@@ -44,11 +44,13 @@
                 </p>
             <% } %> 
             <input type="file" id="image" name="image" multiple>
+            <section id="errores-form"></section>
             <section class="button-enviar">
                 <button type="submit" id="enviar">Crear</button>
             </section>
         </form>
     </main>
     <%- include ("../partials/footer.ejs") %> 
+    <script src="/js/createProduct.js"></script>
 </body>
 </html>
