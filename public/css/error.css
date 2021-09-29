@@ -1,0 +1,31 @@
+main#error{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    padding-top: 15vh;
+}
+main#error figure{
+    width: 100%;
+    height: 50vh;
+    text-align: center;
+}
+main#error figure img{
+    width: 50%;
+    height: 100%;
+}
+main#error h1, h2{
+    font-size: 1.5rem;
+    margin: 2rem 0;
+}
+main#error a{
+    color: #f1ba33;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+}
+main#error h2 a:hover,
+main#error h2 a:hover a::after{
+    content: "";
+    border-bottom: 1px solid #f1ba33;
+}
