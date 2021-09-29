@@ -7,12 +7,12 @@ Retrospectiva:
 5. Dejar de hacer.
 
 
-1: Bases de datos para entender una nueva forma de almacenar información y que no sean JSON.
+1: Aplicar React, estamos casi al final. No hay mucho más.
 
-2: Reveer constantemente los códigos dentro de las rutas y los modelos.
+2: Reveer constantemente los códigos para evitar errores tontos y siempre usar buenas prácticas.
 
-3: Podríamos continuar afianzando lo sabido referido al CRUD para evitar errores tontos en los códigos en js.
+3: Podríamos continuar afianzando lo sabido de js para front.
 
-4: Consideramos que estamos bien y por ahora no hay nada a variar. 
+4: Consideramos que estamos bien y por ahora no hay nada a variar.
 
-5: Evitar caer en la desorganización de los puntos a tratar dentro de cada sprint..
+5: Evitar caer en la desorganización de los puntos a tratar dentro de cada sprint.
