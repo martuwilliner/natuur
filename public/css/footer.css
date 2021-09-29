@@ -76,6 +76,7 @@ input[type="email"].newsletter {
     border-radius: 3rem;
     padding: 1rem;
     text-align: center;
+    border: solid 0.13rem #fff;
     transition: all .3s ease-in-out;
 }
 input[type="email"].newsletter:focus{

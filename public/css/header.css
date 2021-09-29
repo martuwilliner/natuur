@@ -10,7 +10,6 @@ header.expanded{
     background-repeat: no-repeat;
     height: 450px;
 }
-
 /*MAIN MENU*/
 #main-menu{
     display: flex;
@@ -20,9 +19,14 @@ header.expanded{
     top: 0vw;
     padding: 1rem;
     z-index: 1;
-    background-color: #fff; /*HASTA SABER HACERLO BIEN*/
+    transition: all .3s ease-in-out;
+    /* background-color: #fff; HASTA SABER HACERLO BIEN */
 }
-
+.headerTransparent{
+    transition: all .3s ease-in-out;
+    background-color: #fff;
+    box-shadow: 0 .3rem .5rem rgba(0, 0, 0, .2);
+}
 #main-menu figure{
     display: flex;
     width: 45vw;

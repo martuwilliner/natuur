@@ -28,11 +28,13 @@ input.formulario-register{
     padding: 0.5rem;
     margin-bottom: 1rem;
     text-align: left;
+    border: solid 0.13rem #fff;
+    box-shadow: 0 .2rem .2rem rgba(95, 95, 95,0.2);
     transition: all .3s ease-in-out;
 }
 input.formulario-register:focus{
     border: solid 0.13rem #f1ba33;
-    outline: #f1ba33;
+    outline: none;
 }
 i.fa-google{
     color: white;
