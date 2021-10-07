@@ -29,7 +29,7 @@ module.exports = {
         let newUser = {
             id : this.id(),
             roll:1,
-            ...data // destructuramiento
+            ...data // destructuramiento 1 a 1
         };
         users.push(newUser);
         this.write(users);

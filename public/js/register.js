@@ -23,8 +23,9 @@ form.addEventListener("submit", e => {
         errors.push("Tu contraseña no es segura");
     }
     if (errors.length > 0) {
-       errors.forEach(error => {
-        errorForm.innerHTML += error;
+        errorForm.innerHTML = null;
+        errors.forEach(error => {
+        errorForm.innerHTML += `<p>${error}</p>`;
        }); 
     } else {
         e.target.submit();

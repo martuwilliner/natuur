@@ -22,8 +22,9 @@ form.addEventListener("submit", e => {
 
     if (errors.length > 0) {
         e.preventDefault();
+        errorForm.innerHTML = null;
         errors.forEach(error => {
-            errorForm.innerHTML += error;
+        errorForm.innerHTML += `<p>${error}</p>`;
         }); 
     }
 });
