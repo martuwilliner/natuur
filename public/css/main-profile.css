@@ -1,165 +1,143 @@
-.main-profile {
-    margin-top: 0vh;
+main#main-profile{
+    width: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    background-color: #f1ba33;
-    padding-top: 12vh;
+    padding-top: 10vh;
 }
-
-.profile-info {
+section#card{
+    width: 90%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-flow: row wrap;
+    padding: 1rem;
+    box-shadow: 0 .3rem .5rem rgba( 0, 0, 0, .3);
+    overflow: hidden;
+}
+section#card h1{
+    width: 100%;
+    text-align: center;
+}
+section#card form#photo-user, section#card form#edit-user, form#edit-user section#buttons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    margin: .5rem 0;
+}
+section#card form#photo-user figure{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    /* box-shadow: 0 .2rem .3rem rgba( 0, 0, 0, .2); */
+}
+section#card form#photo-user figure img{
     width: 100%;
 }
-
-.profile-info h2{
-    margin-bottom: 1rem;
-    font-weight: bold;
+section#card form#photo-user figure img::selection{
+    background-color: transparent;
 }
-
-.profile-section{
+section#card form#photo-user label{
+    width: 50%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;  
-    width: 100%;  
-    margin-top: 1rem;
-}
-.profile-image {
-    width: 20%;
-}
-.profile-image img{
-    max-width: 100%;
-}
-
-.profile-section form{
-    width: calc(90% - 1rem);
-    display: flex;
-    flex-flow: row wrap;
-    align-items: stretch;
-    height: 3rem;
-}
-.profile-section form label{
-    flex: 1 0 50%;
-    padding: 0.5rem;
-    display: flex;
-    align-items: center;
-    background-color: snow;
-    color: #3f3f3f;
-   
-}
-.profile-section form input{
-    display: none;
-}
-.profile-section form button{
-    background-color: #3f3f3f;
-    color: #f1ba33;
-    width: 3rem;
-    border: none;
-    outline: none;
-    border-radius: 0.5rem;
-}
-
-
-.profile-edit{
-    display: flex;
-    flex-flow: row wrap;
-    width: 80vw;
-    margin-top: 1rem;
-}
-
-.profile-edit h2{
-    flex: 0 0 100%;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    font-weight: bold;
+    position: relative;
     margin: 1rem 0;
-    text-transform: uppercase;
+    border: 1px solid #f1ba33;
+    background-color: #f1ba33;
+    color: #3f3f3f;
+    border-radius: .5rem;
+    transition: all .5s ease;
 }
-
-.profile-edit form{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
+section#card form#photo-user label:hover{
+    background-color: transparent;
+    color: #f1ba33;
 }
-.profile-edit form fieldset{
-    display: flex;
-    align-items: center;
-    flex-flow: row wrap;
-    justify-content: center;
+section#card form#photo-user label input{
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
 }
-.profile-edit form fieldset label{
-    flex: 1 0 100%;
+section#card form#photo-user label i{
+    position: absolute;
     text-align: center;
 }
-.profile-edit form fieldset input{
-    border: none;
-    border-radius: 0.5rem;
-    padding: 0.5rem;
-    margin-bottom: .2rem;
+section#card form#edit-user label{
+    width: 100%;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .5rem 0;
+    border: 1px solid #3f3f3f;
+    border-radius: .2rem;
 }
-.profile-edit form fieldset button{
-    background-color: #3f3f3f;
-    color: #f1ba33;
-    width: 3rem;
-    height: 3rem;
+section#card form#edit-user input{
+    width: 90%;
+    height: 90%;
+    margin: 0 .2rem;
     border: none;
     outline: none;
-    border-radius: 0.5rem;
 }
+section#card form#edit-user label button#btn-eye, span{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: #3f3f3f;
+    border: none;
+    outline: none;
+}
+section#card form#edit-user label i{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section#card form#edit-user section#buttons button{
+    background-color: #f1ba33;
+    color: #3f3f3f;
+    padding: .3rem .8rem;
+    margin: 0 .5rem;
+    border: 1px solid #f1ba33;
+    border-radius: .3rem;
+    outline: none;
+    transition: all .5s ease;
+}
+section#card form#edit-user section#buttons button:hover{
+    background-color: transparent;
+    color: #f1ba33;
 
+}
+section#card form#edit-user section#buttons button#reset i.fa-sync-alt{
+    transition: all .5s ease;
+}
+section#card form#edit-user section#buttons button#reset:hover i.fa-sync-alt{
+    transform: rotate(180deg);
+}
 @media screen and (min-width: 768px) {
-    .main-profile {
-        padding-top: 15vh;
+    main#main-profile{
+        padding-top: 20vh;
+    }
+    section#card{
+        justify-content: space-between;
+    }
+    section#card form#photo-user, section#card form#edit-user{
+        width: 50%;
     }
 }
-
 @media screen and (min-width: 1200px) {
-    .main-profile {
-        padding-top: 28vh;
-        justify-content: center;
+    section#card form#photo-user figure{
+        width: 60%;
     }
-
-    .profile-info {
-        width: 45%;
-    }
-    .profile-section{ 
-        width: 45%;  
-        margin-top: 0;
-    }
-    .profile-section form{
-        height: 2rem;
-        width: calc(50% - 1rem);
-    }
-    .profile-section form button{
-        width: 2rem;
-        border-radius: 1rem;
-    }
-    .profile-edit{
-        width: 100%;
-        margin-top: 1.5rem;
-    }
-    .profile-edit form{
-        justify-content:center;
-    }
-    .profile-edit form fieldset{
-        flex: 1 0 25%;
-    }
-    .profile-edit form fieldset:last-child{
-        flex: 1 0 100%;
-    }
-    .profile-edit form fieldset label{
-        margin-bottom: .3rem;
-    }
-    .profile-edit form fieldset button{
-        width: 2rem;
-        height: 2rem;
-        border-radius: 1rem;
+    section#card form#photo-user label{
+        height: 2.5rem;
     }
 }

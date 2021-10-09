@@ -37,6 +37,20 @@ p#mensaje-bienvenida-login{
     border: solid 0.13rem #f1ba33;
     outline: none;
 }
+section#errores-form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 1rem 0;
+}
+section#errores-form p, p.feedback{
+    font-weight: 700;
+    color: red;
+    font-size: 1.2rem;
+    text-shadow: 0 .3rem .5rem rgba(95, 95, 95, .3);
+}
 i.fa-google{
     color: white;
 }

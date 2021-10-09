@@ -21,7 +21,28 @@ botones de input de cantidad:
 
 body{
     font-family: 'Noto Sans', sans-serif;
- overflow-x: hidden; 
+    overflow-x: hidden; 
     width: 100vw;
     color: #3f3f3f;
+}
+html{
+    scroll-behavior: smooth;
+}
+button{
+    cursor: pointer;
+}
+h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, p::selection, a::selection, input::selection, button::selection{
+    background-color: #f1ba33;
+    color: #fff;
+}
+img::selection{
+    background-color: transparent;
+}
+body::-webkit-scrollbar{
+    width: .6rem;
+    background-color: transparent;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #FFEFCB;
+    border-radius: .2rem;
 }

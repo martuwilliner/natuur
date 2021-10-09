@@ -1,109 +1,148 @@
-#carrito {
+main{
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    margin: auto;
-    margin-top: 130px;
-    background-color: whitesmoke;
-    width: 90vw;
-    border-radius: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    padding-top: 10vh;
+}
+
+#carrito {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    /* background-color: whitesmoke; */
+    border-radius: .5rem;
     padding: 1rem 0;
+    box-shadow: 0 .3rem .5rem rgba(0, 0, 0, .3);
 }
 
 .product-info{
+    width: 90%;
     display: flex;
+    justify-content: space-between;
     flex-flow: row wrap;
-    width: 80vw;
-    justify-content: center;
-    margin: auto;
     padding-bottom: 1rem;
-    border-bottom: #3f3f3f 0.1rem solid;
 }
 
 .product-info figure{
+    width: 100%;
     display: flex;
     justify-content: center;
-    width: 20vw;
 }
 
 .product-info img{
     width: 100%;
-    border-radius: 0.5rem;
+    border-radius: .5rem;
+    box-shadow: 0 .2rem .3rem rgba(0, 0, 0, .2);
 }
 
 .product-unit {
+    width: 100%;
     display: flex;
+    justify-content: space-between;
     flex-flow: row wrap;
-    width: 60vw;
-    align-content: center;
-    justify-content: center;
     padding: 1rem;
+    margin: .5rem 0;
 }
 
 .product-unit h3{
+    width: 100%;
     font-weight: 700;
-    width: 100vw;
+    text-align: center;
 }
 
 .product-unit p.precio {
     align-self: center;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 
-.product-unit p.precio, .product-unit form.cantidad {
-    width: 20vw;
+.product-unit p.precio, .product-unit form.cantidad{
+    width: 50%;
     margin-top: 0.5rem;
 }
-
-.cantidad input {
-    border: none;
-    border-radius: 1rem;
-    background-color: white;
-    padding: 0.8rem ;
-    width: 3rem;
-    height: 1rem;
-    margin-left: 0.5rem;
-}
-
-.product-delete {
+.product-unit form.cantidad{
     display: flex;
-    flex-flow: row wrap;
-    flex: 1 0 auto;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    
+    flex-flow: row wrap;
 }
-
-.fa-trash-alt {
+.cantidad input {
+    width: 100%;
+    height: 2rem;
+    border-top-left-radius: .3rem;
+    border-bottom-left-radius: .3rem;
+    background-color: white;
+    border: none;
+    outline: none;
+    position: relative;
+    box-shadow: 0 .2rem .3rem rgba(0, 0, 0, .2);
+}
+.product-unit form.cantidad button{
+    width: 2rem;
+    height: 2rem;
     color: #3f3f3f;
-    font-size: 1rem;
-    transition: all .4s ease-in-out;
+    background-color: #f1ba33;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    position: absolute;
+    right: 10%;
+    transition: all .5s ease;
 }
-
-
-.product-delete a:hover .fa-trash-alt {
+.product-unit form.cantidad button i{
+    transition: all .5s ease;
+}
+.product-unit form.cantidad button:hover{
+    background-color: #3f3f3f;
     color: #f1ba33;
 }
-
-#code-box{
-    margin: auto;
+.product-unit form.cantidad button:hover i{
+    transform: rotate(180deg);
+}
+.product-delete {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row wrap;
+    flex: 1 0 auto;
+    margin: .5rem 0;
+}
+.product-delete button{
+    width: 2.3rem;
+    height: 2.3rem;
+    border-radius: .5rem;
+    color: #3f3f3f;
+    background-color: #f1ba33;
+    border: none;
+    outline: none;
+    transition: all .5s ease;
+}
+.product-delete button:hover{
+    background-color: #3f3f3f;
+    color: #f1ba33;
+}
+.code-box{
+    width: 80%;
     margin-top: 1rem;
     display: flex;
-    flex-flow: row wrap;
-    width: 80vw;
     justify-content: space-around;
-    padding-bottom: 1rem;
-    border-bottom: #3f3f3f 0.1rem solid;
+    flex-flow: row wrap;
+    /* border-bottom: #3f3f3f 0.1rem solid; */
 }
-
-form .info {
-    width: 35vw;
-}
-
 form input.info {
+    width: 100%;
+    height: 2rem;
+    background-color: transparent;
+    border-radius: .3rem;
+    padding: .2rem;
+    margin: .5rem 0;
     border: none;
-    background-color: white;
-    border-radius: 0.5rem;
-    padding: 0.5rem;
+    outline: none;
+    box-shadow: 0 .2rem .3rem rgba(0, 0, 0, .2);
 }
 
 #check-out {
@@ -160,30 +199,32 @@ form input.info {
 
 @media screen and (min-width: 768px){
     main{
-        margin-top: 140px;
+        padding-top: 20vh;
     }
-
     .product-info figure{
-        width: 15vw;
+        width: 50%;
     }
-
-    .cantidad input{
-        width: 4rem;
-        padding: 1rem;
+    .product-unit {
+        width: 50%;
     }
-    
-    .fa-trash-alt {
-        color: #3f3f3f;
-        font-size: 1.3rem;
+    .product-delete {
+        justify-content: flex-end;
     }
 }
 
 @media screen and (min-width: 1200px){
-    main {
-        margin-top: 175px;
+    .product-info{
+        width: 80%;
     }
-
     .product-info figure{
-        width: 7vw;
+        width: 30%;
+    }
+    .product-unit {
+        width: 60%;
+    }
+    .product-unit form.cantidad button{
+        width: 2.5rem;
+        height: 2.5rem;
+        right: 13%;
     }
 }
