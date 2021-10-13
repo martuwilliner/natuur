@@ -6,6 +6,7 @@ const session = require('express-session');
 const user = require('./middlewares/user');
 const cart = require('./middlewares/cart');
 const app = express ();
+var cors = require('cors')
 
 // App Server
 app.set("port",process.env.PORT || 3100)
@@ -26,6 +27,8 @@ app.use(session({secret: "natuur", resave:false, saveUninitialized: true}));
 app.use(cookie());
 app.use(user);
 app.use(cart);
+app.use(express.json());
+app.use(cors())
 
 // Web Routes
 app.use (require("./routes/main"));
