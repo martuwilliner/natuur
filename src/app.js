@@ -31,8 +31,8 @@ app.use(cart);
 app.use (require("./routes/main"));
 app.use ("/products",require("./routes/products"));
 app.use ("/users",require("./routes/users"));
-app.use (require("./routes/apiUser"));
-app.use (require("./routes/apiProducts"));
+app.use ("/api/users",require("./routes/apiUser"));
+app.use ("/api/products",require("./routes/apiProducts"));
 
 app.get("*", (req, res) => {
     res.render(path.resolve(__dirname, "./views/error.ejs"), {styles: ["/css/error.css"], title: "Natuur | 404Error"})

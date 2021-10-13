@@ -5,6 +5,7 @@ const apiUserController = require ('../controllers/apiUserController');
 
 const router = express.Router();
 
-router.get('/apiUser', apiUserController.index);
+router.get('/', apiUserController.index);
+router.get('/:id', apiUserController.show);
 
 module.exports = router;
