@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import Cards from './Cards';
 import UserContext from '../context/UserContext';
 import ProductContext from '../context/ProductContext';
+import '../styles/Main.css';
 
 const Main = () => {
     const {getUsers,users} = useContext(UserContext);
@@ -12,14 +13,14 @@ const Main = () => {
     useEffect(() => getProducts(), []);
     
     return (
-        <div>
+        <main>
             <Link to="/usuarios">
                 <Cards title="Usuarios" count={users.count} />
             </Link>
             <Link to="/productos">
                 <Cards title="Productos" count={products.count} />
             </Link>
-        </div>
+        </main>
     )
 }
 

@@ -1,10 +1,14 @@
-import React from 'react'
+import {useContext} from 'react';
+import UserContext from '../context/UserContext';
 
 const User = () => {
+    const {users} = useContext(UserContext)
+
     return (
-        <div>
+        <section>
+            <h2>{}</h2>
             
-        </div>
+        </section>
     )
 }
 

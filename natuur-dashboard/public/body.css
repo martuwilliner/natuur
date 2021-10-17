@@ -1,0 +1,18 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+    font-family: 'Noto Sans', sans-serif;
+    color: #3f3f3f;
+}
+
+:root{
+    /* COLORS */
+    --white: #fff;
+    --yellow: #f1ba33;
+    --grey: #3f3f3f;
+}

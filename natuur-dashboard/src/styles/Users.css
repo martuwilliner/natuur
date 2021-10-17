@@ -1,0 +1,68 @@
+section {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section article{
+    width: 70%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--yellow);
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+section article h2 {
+    width: 80%;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+section article ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section article ul li{
+    margin-bottom: .5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section article ul li h3{
+    margin: 1rem 0 .5rem 0;
+    text-transform: uppercase;
+}
+
+section article ul li .productDescription{
+    width: 50%;
+    margin-bottom: 1rem;
+}
+
+section article ul li .category{
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+section article ul li img{
+    width: 150px;
+    margin-bottom: 1rem;
+}
+
+section article ul li i{
+    text-decoration: none;
+    color: var(--grey);
+    font-size: 1.5rem;
+    width: 100%;
+}

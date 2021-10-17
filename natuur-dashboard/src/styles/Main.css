@@ -1,0 +1,45 @@
+main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+main a{
+    width: 30%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem;
+    padding: 1rem;
+    border-radius: .3rem;
+    box-shadow: 0 .3rem .5rem rgba(0, 0, 0, .3);
+    position: relative;
+    cursor: pointer;
+    transform: translateY(-50%);
+    background-color: var(--yellow);
+    transition: all .5s ease;
+    text-decoration: none;
+}
+
+main a:hover{
+    transform: scale(1.03) translateY(-50%);
+}
+
+main i{
+    color: var(--grey);
+    font-size: 3rem;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+main p, main h1{
+    color: var(--grey);
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 1rem;
+}

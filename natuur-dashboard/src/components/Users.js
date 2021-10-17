@@ -1,14 +1,17 @@
 import {useContext} from 'react';
 import UserContext from '../context/UserContext';
 import Lists from './Lists'
+import '../styles/Users.css';
 
 const Users = () => {
     const {users} = useContext(UserContext)
     
     return (
         <section>
-            <h2>Usuarios</h2>
-            <Lists data={users.users} />
+            <article>
+                <h2>Usuarios</h2>
+                <Lists data={users.users} />
+            </article>
         </section>
     )
 }
