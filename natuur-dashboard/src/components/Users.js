@@ -1,7 +1,7 @@
 import {useContext} from 'react';
 import UserContext from '../context/UserContext';
 import Lists from './Lists'
-import '../styles/Users.css';
+
 
 const Users = () => {
     const {users} = useContext(UserContext)
