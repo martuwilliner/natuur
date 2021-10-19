@@ -10,7 +10,9 @@ const Users = () => {
         <section>
             <article>
                 <h2>Usuarios</h2>
-                <Lists data={users.users} />
+               { users.users.map((user)=> 
+               <Lists user_id={user.user_id} name={user.name} email={user.email} 
+               />)}
             </article>
         </section>
     )

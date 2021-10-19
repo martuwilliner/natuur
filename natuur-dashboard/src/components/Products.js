@@ -11,7 +11,7 @@ const Products = () => {
         <section>
             <article>
                 <h2>Productos</h2>
-                <Lists data={products.products} />
+                { products.products.map((product)=> <Lists product_id={product.product_id} name={product.name} category={product.category} description={product.description} images={product.images} />)}
             </article>
         </section>
     )
