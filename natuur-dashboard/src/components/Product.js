@@ -12,10 +12,12 @@ const Product = () => {
     }, [])
 
     return (
-        <section className="infoProduct"> 
-            <h2>{actual.name}</h2>
-            <p>{actual.description}</p>
-            <img src={actual.images} alt={actual.name} />
+        <section className="infoProduct byId"> 
+            <article>
+                <h2>{actual.name}</h2>
+                <p>{actual.description}</p>
+                <img src={actual.images} alt={actual.name} />
+            </article>
         </section>
     )
 }

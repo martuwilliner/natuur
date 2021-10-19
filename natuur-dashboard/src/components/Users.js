@@ -7,7 +7,7 @@ const Users = () => {
     const {users} = useContext(UserContext)
     
     return (
-        <section>
+        <section className="lists">
             <article>
                 <h2>Usuarios</h2>
                { users.users.map((user)=> 

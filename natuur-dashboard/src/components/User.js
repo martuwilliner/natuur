@@ -1,4 +1,4 @@
-import {useContext,useState,useEffect} from 'react';
+import {useContext,useEffect} from 'react';
 import {useParams} from 'react-router-dom';
 import UserIdContext from '../context/UserIdContext';
 import '../styles/Style.css'
@@ -12,9 +12,11 @@ const User = () => {
     }, [id])
 
     return (
-        <section className="infoUser">
-            <h2>{actual.name}</h2>
-            <p>{actual.email}</p>
+        <section className="infoUser byId">
+            <article>
+                <h2>Nombre de usuario: {actual.name}</h2>
+                <h3>Email: {actual.email}</h3>
+            </article>
         </section>
     )
 }

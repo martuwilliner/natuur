@@ -14,12 +14,14 @@ const Main = () => {
     
     return (
         <main>
+            <section id="cards">
             <Link to="/usuarios">
                 <Cards title="Usuarios" count={users.count} />
             </Link>
             <Link to="/productos">
                 <Cards title="Productos" count={products.count} />
             </Link>
+            </section>
         </main>
     )
 }

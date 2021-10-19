@@ -8,7 +8,7 @@ const Products = () => {
     
 
     return (
-        <section>
+        <section className="lists">
             <article>
                 <h2>Productos</h2>
                 { products.products.map((product)=> <Lists product_id={product.product_id} name={product.name} category={product.category} description={product.description} images={product.images} />)}

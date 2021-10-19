@@ -1,37 +1,42 @@
-section.infoProduct{
-    width: 70%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-flow: row wrap;
-    padding: 1rem;
-    margin: 2rem 0;
-    border-radius: .3rem;
-    box-shadow: 0 .2rem .3rem rgba(0, 0, 0, .3);
-}
-section.infoProduct h2{
+.byId {
     width: 100%;
-    text-align: center;
-    margin-bottom: 1rem;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-flow: row wrap;
+    background-image: url("../assets/banner-2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-section.infoProduct p{
-    width: 70%;
-}
-section.infoProduct img{
-    width: 30%;
-    border-radius: .2rem;
-}
-section.infoUser{
-    width: 50%;
+
+.byId article{
+    width: 95%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 1rem;
-    margin: 2rem 0;
-    border-radius: .3rem;
-    box-shadow: 0 .2rem .3rem rgba(0, 0, 0, .3);
+    margin-top: 1rem;
 }
+
 section.infoUser h2{
     margin-bottom: 1rem;
 }
+
+section.infoProduct article h2{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+section.infoProduct article p{
+    width: 50%;
+    text-align: center;
+}
+
+section.infoProduct article img{
+    margin-top: 1rem;
+    width: 15%;
+    border-radius: .2rem;
+}
+

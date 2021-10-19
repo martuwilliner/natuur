@@ -1,13 +1,21 @@
 main{
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     flex-flow: row wrap;
 }
 
-main a{
+main #cards {
+    width: 95%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cards a{
     width: 30%;
     height: 40vh;
     display: flex;
@@ -25,11 +33,11 @@ main a{
     text-decoration: none;
 }
 
-main a:hover{
+#cards a:hover{
     transform: scale(1.03) translateY(-50%);
 }
 
-main i{
+#cards i{
     color: var(--grey);
     font-size: 3rem;
     text-align: center;
@@ -37,7 +45,7 @@ main i{
     margin-bottom: 1rem;
 }
 
-main p, main h1{
+#cards p, #cards h1{
     color: var(--grey);
     font-size: 2rem;
     text-align: center;
