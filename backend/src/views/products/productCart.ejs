@@ -25,21 +25,13 @@
                     </section>   
                 </article>
             <% }) %>
-            
-            <form class="code-box" method="post" action="/">
-                <input class="info" type="text" placeholder="Ingrese código de descuento">
-                <p>MONTO DE DESCUENTO</p>
-            </form>
-            <form class="code-box" method="post" action="/">
-                <input class="info" type="text" placeholder="Ingrese código postal">
-                <p>MONTO DEL ENVIO</p>
-            </form>
 
-            <form id="check-out" action="/" method="post">
-                <p>TOTAL COMPRA $<%= total %> </p>
+            <form id="check-out" action="/" >
+                <p class="totalCompra">TOTAL COMPRA</p>
+                <p class="totalCompra"> $<%= total %> </p>
             </form>
-            <form id="check-out-button" action="/" method="post">
-                <button>Seguir comprando</button>
+            <form id="check-out-button" action="/" method="get">
+                <button type="submit">Seguir comprando</button>
                 <button>Check out</button>
             </form>
             <% } else { %>
