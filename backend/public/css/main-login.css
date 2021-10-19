@@ -38,17 +38,19 @@ p#mensaje-bienvenida-login{
     outline: none;
 }
 section#errores-form{
-    width: 100%;
+    width: 50%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: center;
     margin: 1rem 0;
+    background-color: #3f3f3f;
+    border-radius:.2rem
 }
 section#errores-form p, p.feedback{
-    font-weight: 700;
-    color: red;
-    font-size: 1.2rem;
+    margin: .5rem 0;
+    color: #f1ba33;
+    font-size: 1rem;
     text-shadow: 0 .3rem .5rem rgba(95, 95, 95, .3);
 }
 i.fa-google{

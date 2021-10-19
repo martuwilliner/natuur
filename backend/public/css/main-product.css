@@ -145,6 +145,11 @@ form input.info {
     box-shadow: 0 .2rem .3rem rgba(0, 0, 0, .2);
 }
 
+.totalCompra {
+    font-weight: 700;
+    margin-bottom: .5rem;
+}
+
 #check-out {
     margin: auto;
     display: flex;
