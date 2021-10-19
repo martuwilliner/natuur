@@ -1,6 +1,7 @@
 import {useContext,useEffect} from 'react';
 import {useParams} from 'react-router-dom';
 import ProductIdContext from '../context/ProductIdContext';
+import '../styles/Style.css'
 
 const Product = () => {
     const {getProduct,actual} = useContext(ProductIdContext)
@@ -11,7 +12,7 @@ const Product = () => {
     }, [])
 
     return (
-        <section>
+        <section className="infoProduct"> 
             <h2>{actual.name}</h2>
             <p>{actual.description}</p>
             <img src={actual.images} alt={actual.name} />
