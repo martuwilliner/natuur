@@ -9,9 +9,9 @@ const Sidebar = () => {
                 <Link to="/"><img src={Logo} alt=""/></Link>
             </figure>
             <nav>
-                <Link to="/"><i class="fas fa-home"></i></Link>
-                <Link to="/usuarios"><i class="fas fa-user"></i></Link>
-                <Link to="/productos"><i class="fas fa-shopping-cart"></i></Link>
+                <Link to="/"><i className="fas fa-home"></i></Link>
+                <Link to="/usuarios"><i className="fas fa-user"></i></Link>
+                <Link to="/productos"><i className="fas fa-shopping-cart"></i></Link>
             </nav>
         </header>
     )

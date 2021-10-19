@@ -15,7 +15,21 @@ const UserProvider = ({children}) => {
             console.error(error);
         }
    }
-    const data = {getUsers,users}
+
+   const getUser = async (id) => {
+    try {
+        const endpoint = "http://localhost:3100/api/users/";
+        const request = await fetch(endpoint);
+        const datas = await request.json();
+        const element = datas.users.find (user => user.user_id == id);
+        console.log('element',element);
+        return element;
+    } catch (error) {
+        console.clear();
+        console.error(error);
+    }
+}
+    const data = {getUsers,users,setUsers,getUser}
     return <UserContext.Provider value={data}>{children}</UserContext.Provider>
 }
 export {UserProvider}
