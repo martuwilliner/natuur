@@ -20,7 +20,7 @@ main a{
     position: relative;
     cursor: pointer;
     transform: translateY(-50%);
-    background-color: var(--yellow);
+    background-color: var(--light-yellow);
     transition: all .5s ease;
     text-decoration: none;
 }

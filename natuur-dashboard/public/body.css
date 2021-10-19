@@ -15,4 +15,24 @@ body{
     --white: #fff;
     --yellow: #f1ba33;
     --grey: #3f3f3f;
+    --light-yellow: #FFEFCB;
+}
+li, a{
+    list-style: none;
+    text-decoration: none;
+}
+h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, p::selection, a::selection, input::selection, button::selection{
+    background-color: var(--yellow);
+    color: var(--light-yellow);
+}
+img::selection{
+    background-color: transparent;
+}
+body::-webkit-scrollbar{
+    width: .6rem;
+    background-color: transparent;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #FFEFCB;
+    border-radius: .2rem;
 }

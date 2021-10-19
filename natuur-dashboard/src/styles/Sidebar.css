@@ -9,7 +9,7 @@ header{
     position: fixed;
     top: 0;
     left: 0;
-    background-color: var(--yellow);
+    background-color: var(--light-yellow);
 }
 
 header figure{
