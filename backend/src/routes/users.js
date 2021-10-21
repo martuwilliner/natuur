@@ -14,8 +14,11 @@ router.get('/registro', usersControllers.register);
 router.get('/logout', usersControllers.logout);
 router.get('/perfil', usersControllers.profile);
 
+router.put('/editPerfil', [hash] , usersControllers.editProfile);
+
 router.post('/access', [login,remember] , usersControllers.access);
 router.post('/save', [register,hash] , usersControllers.save);
+
 
 
 module.exports = router;

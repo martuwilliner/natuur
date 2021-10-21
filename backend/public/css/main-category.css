@@ -66,6 +66,12 @@ main {
 
 /**TABLET**/
 @media screen and (min-width: 768px) {
+
+    main {
+        width: 100vw;
+    }
+
+    
     /*DESTACADOS*/
     #producto {
         display: flex;
@@ -93,6 +99,7 @@ main {
     /*DESTACADOS*/
     main {
         margin-top: 170px;
+        width: 90vw
     }
     #producto {
         width: 16vw;

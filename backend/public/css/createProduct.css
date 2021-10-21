@@ -64,6 +64,23 @@ main.main-register button:hover{
     margin-left: 0.8rem;
 }
 
+section#errores-form{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 1rem 0;
+    background-color: #3f3f3f;
+    border-radius:.2rem
+}
+section#errores-form p, p.feedback{
+    margin: .5rem 0;
+    color: #f1ba33;
+    font-size: 1rem;
+    text-shadow: 0 .3rem .5rem rgba(95, 95, 95, .3);
+}
+
 @media screen and (min-width: 768px) {
     main.main-register{
         margin-top: 150px;

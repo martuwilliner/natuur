@@ -1,3 +1,4 @@
+const {validationResult} = require("express-validator")
 const {Product,Category,Size,Type,Cart,Image,Item} = require ("../database/models");
 const {Op} = require ("sequelize");
 const {like} = Op;
@@ -183,6 +184,19 @@ const productsController = {
             oferts: req.body.oferts == "true" ? true : false,
             files: req.files //porq esta ANY, si es SINGLE es file
         })  */
+        const errors = validationResult(req);
+        const errores = !errors.isEmpty() ? errors.mapped() : null;
+        if(errores){
+            return res.render('products/createProduct',{
+                styles: ["/css/createProduct.css"],
+                category: await Category.findAll(),
+                size: await Size.findAll(),
+                type: await Type.findAll(),
+                title: "Crear nuevo producto",
+                old: req.body,
+                errores: errores
+                }); 
+        }else{
         try {
             let result = await Product.create({
                 name: req.body.name,
@@ -207,7 +221,7 @@ const productsController = {
         } catch (error) {
             return res.send(error)
         }
-
+    }
     },
     edit: async (req,res) => {
         /*return res.send({
@@ -243,6 +257,22 @@ const productsController = {
             oferts: req.body.oferts == "true" ? true : false,
             files: req.files //porq esta ANY, si es SINGLE es file
         }) */  
+        const errors = validationResult(req);
+        const errores = !errors.isEmpty() ? errors.mapped() : null;
+        if(errores){
+            return res.render('products/editProduct',{
+                styles: ["/css/editProduct.css"],
+                product: await Product.findByPk(req.params.id,{
+                    include:["type","category","sizes","images"] }),
+                category: await Category.findAll(),
+                size: await Size.findAll(),
+                types: await Type.findAll(),
+                edit: true,
+                title: "Editar producto",
+                old: req.body,
+                errores: errores
+                }); 
+        }else{
         try {
 
             const edited = await Product.findByPk(req.params.id,{
@@ -287,7 +317,7 @@ const productsController = {
         } catch (error) {
             return res.send(error)
         }
-
+ }
     },
     delete: async (req,res) => {
         try {

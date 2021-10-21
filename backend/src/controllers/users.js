@@ -14,11 +14,27 @@ const usersController = {
         title: "Natuur | Iniciar sesión",
         });
     },
-    profile: (req,res) => {
+    profile: async (req,res) => {
         return res.render('users/userProfile',{
             styles: ["/css/main-profile.css"],
-            title: "Profile"
+            title: "Profile",
+            users: await User.findByPk(req.session.user.id)
         });        
+    },
+    editProfile: async (req,res)=>{
+        try {
+            let edited = await User.findByPk(req.session.user.id);
+
+            let userUpdate= User.update({
+                username: req.body.username,
+                email: req.body.email,
+                password: req.body.password
+            },{where: {id: edited.id}})     
+            return res.redirect("/users/perfil");
+        } catch (error) {
+            return res.send(error)
+        }
+
     },
     save: async (req,res) => {
         const errors = validationResult(req);

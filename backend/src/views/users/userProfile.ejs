@@ -3,19 +3,18 @@
     <%- include ("../partials/header.ejs") %> 
     <main id="main-profile">
         <section id="card">
-            <form action="" id="edit-user">
-                <h1>Info User</h1>
-                <label for="">
-                    <i class="fas fa-user"></i><input type="text"><span></span>
+            <form action="/users/editPerfil?_method=PUT" method="post" id="edit-user">
+                <h1>Perfil del Usuario</h1>
+                <label for="username">
+                    <i class="fas fa-user"></i><input type="text" name="username" id="username" value=<%= users.username %>  > 
                 </label>
-                <label for="">
-                    <i class="fas fa-envelope"></i><input type="email"><span></span>
+                <label for="email">
+                    <i class="fas fa-envelope"></i><input type="email" name="email" id="email" value=<%= users.email %>>
                 </label>
-                <label for="">
-                    <i class="fas fa-lock"></i><input type="password" id="password"><button id="btn-eye"><i class="fas fa-eye"></i></button>
+                <label for="password">
+                    <i class="fas fa-lock"></i><input type="password" id="password" name="password" value="">
                 </label>
                 <section id="buttons">
-                    <button type="reset" id="reset"><i class="fas fa-sync-alt"></i></button>
                     <button type="submit"><i class="fas fa-share-square"></i></button>
                 </section>
             </form>

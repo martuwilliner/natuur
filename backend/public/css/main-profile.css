@@ -13,7 +13,6 @@ section#card{
     align-items: center;
     flex-flow: row wrap;
     padding: 1rem;
-    box-shadow: 0 .3rem .5rem rgba( 0, 0, 0, .3);
     overflow: hidden;
 }
 section#card h1{
@@ -28,20 +27,7 @@ section#card form#photo-user, section#card form#edit-user, form#edit-user sectio
     flex-flow: row wrap;
     margin: .5rem 0;
 }
-section#card form#photo-user figure{
-    width: 70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    /* box-shadow: 0 .2rem .3rem rgba( 0, 0, 0, .2); */
-}
-section#card form#photo-user figure img{
-    width: 100%;
-}
-section#card form#photo-user figure img::selection{
-    background-color: transparent;
-}
+
 section#card form#photo-user label{
     width: 50%;
     display: flex;
@@ -126,18 +112,10 @@ section#card form#edit-user section#buttons button#reset:hover i.fa-sync-alt{
     main#main-profile{
         padding-top: 20vh;
     }
-    section#card{
-        justify-content: space-between;
-    }
     section#card form#photo-user, section#card form#edit-user{
         width: 50%;
     }
 }
 @media screen and (min-width: 1200px) {
-    section#card form#photo-user figure{
-        width: 60%;
-    }
-    section#card form#photo-user label{
-        height: 2.5rem;
-    }
+
 }
